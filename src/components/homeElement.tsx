@@ -1,4 +1,4 @@
-import { Button } from "./Bouton";
+import { Button } from "./bouton";
 import { Check } from "lucide-react";
 import { Title } from "./Title";
 import Flag from "react-world-flags";
