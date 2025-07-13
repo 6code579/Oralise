@@ -52,10 +52,11 @@ function ProductList() {
                 {products.map(product => (
                     <div
                         key={product.id}
-                        className="inline-block bg-white dark:bg-gray-700 shadow-md rounded-full px-8 py-3 text-lg font-semibold main-color mx-2 transition-transform duration-300 hover:scale-105 hover:bg-secondary-color-opacity hover:text-white hover:dark:bg-main-color"
+                        className="inline-block bg-white dark:bg-gray-700 shadow-lg rounded-full px-5 md:px-8 py-3 text-lg font-semibold main-color mx-2 transition-transform duration-300 hover:scale-105 hover:bg-secondary-color-opacity hover:text-white hover:dark:bg-main-color"
                     >
                         <a href="#">{product.name}</a>
                     </div>
+                   
                 ))}
             </div>
             <style>{`
@@ -105,7 +106,7 @@ const Whychoseoralise = () => {
 
 
             {/* Texte */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 items-center md:gap-6 md:items-start text-center md:text-left">
+            <div className="w-full md:w-1/2 flex flex-col gap-4 items-start  md:gap-6   md:text-left">
                 <h2 className="main-color font-extrabold text-5xl md:text-5xl leading-tight tracking-wider transition-all duration-500">Pourquoi choisir Oralise ?</h2>
                 <span className="italic main-color font-semibold text-xl">Parce que bien parler change tout.</span>
                 <p className="text-lg mb-10">
@@ -123,7 +124,7 @@ const Whychoseoralise = () => {
 
                     </div>
                 </p>
-                <Button label="Contactez-nous maintenant" />
+                <Button label="Je prends un rendez-vous" />
             </div>
             {/* Image */}
             <div className="w-full md:w-1/2  lg:h-full relative order-1 md:order-none">
