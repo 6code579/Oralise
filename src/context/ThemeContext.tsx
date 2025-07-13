@@ -1,5 +1,6 @@
 // src/context/ThemeContext.tsx
-import { createContext, useContext, useEffect, useState, ReactNode } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import type { ReactNode } from "react";
 
 type DaisyTheme = "light" | "dark" | "cupcake" | "bumblebee" | "emerald" | "corporate";
 
