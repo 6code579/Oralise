@@ -1,4 +1,3 @@
-// src/context/ThemeContext.tsx
 import { createContext, useContext, useEffect, useState } from "react";
 import type { ReactNode } from "react";
 
@@ -14,7 +13,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   const [theme, setThemeState] = useState<DaisyTheme>(() => {
-    return (localStorage.getItem("theme") as DaisyTheme) || "light";
+    return (localStorage.getItem("theme") as DaisyTheme) || "dark";
   });
 
   useEffect(() => {

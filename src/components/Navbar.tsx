@@ -2,7 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "./bouton"; // Assuming Button is a custom component for buttons
+import { Button } from "./Bouton"; 
+import { Facebook,Linkedin,Instagram,MessageCircle} from "lucide-react";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -208,6 +209,62 @@ const Navbar = () => {
         </div>
       </nav>
       <Outlet />
+
+      {/* Footer professionnel inspiré de Freepik */}
+      <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-10 pt-10 pb-6 px-4 md:px-0">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Logo & description */}
+          <div className="flex flex-col gap-4">
+            <a href="#" className="flex items-center gap-2">
+              <img src="/logo.png" alt="Oralise Logo" className="w-32 h-auto object-contain" />
+            </a>
+            <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              Oralise, votre partenaire pour l’expression orale et la maîtrise des langues. Formations, coaching et accompagnement sur-mesure.
+            </p>
+          </div>
+          {/* Navigation */}
+          <div>
+            <h4 className="font-bold text-gray-800 dark:text-white mb-3">Navigation</h4>
+            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              <li><Link to="/">Accueil</Link></li>
+              <li><Link to="/services">Services</Link></li>
+              <li><Link to="/language">Nos langues</Link></li>
+              <li><Link to="/training">Nos formations</Link></li>
+              <li><Link to="/about">À propos</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </div>
+          {/* Formations */}
+          <div>
+            <h4 className="font-bold text-gray-800 dark:text-white mb-3">Formations</h4>
+            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              <li>Coaching individuel</li>
+              <li>Formation en groupe</li>
+              <li>Formation en entreprise</li>
+              <li>Préparation aux examens</li>
+              <li>Ateliers enfants</li>
+            </ul>
+          </div>
+          {/* Contact & réseaux */}
+          <div>
+            <h4 className="font-bold text-gray-800 dark:text-white mb-3">Contact</h4>
+            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+              <li>Email : <a href="mailto:contact@oralise.com" className="hover:underline main-color">contact@oralise.com</a></li>
+              <li>Téléphone : <a href="tel:+33123456789" className="hover:underline main-color">+33 1 23 45 67 89</a></li>
+              <li className="flex gap-3 mt-2">
+                <a href="https://www.facebook.com/profile.php?id=61571529371866" aria-label="Facebook" className="hover:text-blue-600"><Facebook/></a>
+                <a href="#" aria-label="Instagram" className="hover:text-pink-500"><Instagram/></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-sky-500"><Linkedin/></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-green-600"><MessageCircle/></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 text-xs md:text-sm">
+          <span>&copy; {new Date().getFullYear()} Oralise. Tous droits réservés.</span>
+          <span>Conçu par Oralise Team</span>
+        </div>
+      </footer>
     </>
   );
 };
