@@ -15,4 +15,4 @@ function Button({ label }: ButtonProps) {
 }
 
 
-export { Button };
+export default Button;
