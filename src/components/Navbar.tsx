@@ -188,20 +188,21 @@ const Navbar = () => {
             <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
               <Link to="/about" onClick={toggleMenu}>À propos</Link>
             </li>
-            <li>
+            <li >
               <Link to="/contact" onClick={toggleMenu}>
-                <button className="btn bg-sky-500 text-white w-full mt-2 rounded-full">Contact</button>
+                <Button label="Contact"></Button>
               </Link>
             </li>
             <li>
-              <Button
+              <button
                 onClick={() => {
                   toggleTheme();
                   toggleMenu();
                 }}
-                              >
+                className="w-full mt-2 px-4 py-2 rounded-full border border-gray-400 bg-gray-200 dark:bg-gray-800 dark:text-white"
+              >
                 {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
-              </Button>
+              </button>
             </li>
           </ul>
         </div>
