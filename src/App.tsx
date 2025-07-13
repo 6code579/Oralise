@@ -7,12 +7,14 @@ import { Ourlang } from "./pages/Ourlang"
 import { Services } from "./pages/Services"
 import { About } from "./pages/About"
 import { OurTraining } from "./pages/OurTraining"
+import { ThemeProvider } from "./context/ThemeContext"
 
 function App() {
 
 
   return (
     <>
+    <ThemeProvider>
      <Router>
       <Routes>
         <Route path="/" element={<Navbar />}>
@@ -25,6 +27,7 @@ function App() {
         </Route>
       </Routes>
      </Router>
+    </ThemeProvider>
 
 
     </>

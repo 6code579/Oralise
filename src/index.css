@@ -2,3 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 @plugin "daisyui";
+
+
+@layer utilities {
+  /* Ombre colorée dynamique */
+  .text-shadow {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-blue {
+    text-shadow: 2px 2px 6px rgba(0, 149, 255, 0.6);
+  }
+
+  .text-shadow-red {
+    text-shadow: 2px 2px 6px rgba(255, 0, 0, 0.4);
+  }
+
+  /* Glow effet néon clair */
+  .text-shadow-glow {
+    text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 15px #0ff;
+  }
+
+  /* Version dark mode */
+  .dark\:text-shadow-glow-dark {
+    text-shadow:
+      0 0 6px #fff,
+      0 0 10px #0ff,
+      0 0 15px #0ff;
+  }
+}
+
