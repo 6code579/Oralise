@@ -2,7 +2,7 @@ import { Link, Outlet } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "./Bouton"; 
+import { Button } from "./Bouton";
 import { Facebook,Linkedin,Instagram,MessageCircle} from "lucide-react";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();

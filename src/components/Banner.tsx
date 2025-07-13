@@ -1,4 +1,4 @@
-import { Button } from "./bouton";
+import { Button } from "./Bouton";
 
 const Banner = () => {
   return (
