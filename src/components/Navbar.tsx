@@ -84,7 +84,7 @@ const Navbar = () => {
               >
                 <li>
                   <Link
-                    to="#"
+                    to="/french"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color" 
                   >
                     Français

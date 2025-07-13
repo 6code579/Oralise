@@ -198,26 +198,30 @@ const TrainingAndCoaching = () => {
         {
             id: 1,
             title:"Formation individuelle en ligne",
-            description: "Faites progresser vos équipes avec des modules adaptés à vos objectifs professionnels.Horaires flexibles, résultats mesurables, formateurs spécialisés.",
-            image: "/images/image.jpg"
+            description: "Un formateur dédié, une progression sur mesure.Apprenez à votre rythme, avec un accompagnement 100 % personnalisé.",
+            image: "/images/training1.jpg",
+            status: "Nouveau"
         },
         {
             id: 2,
             title:"Formation en groupe en ligne",
             description: "Rejoignez une dynamique collective dans un cadre interactif et bienveillant.Travaillez l’expression orale dans des situations concrètes et variées.",
-             image: "/images/image.jpg"
+             image: "/images/training2.jpg",
+            status: "Ancien"
         },
         {
             id: 3,
             title:"Formation en entreprise en ligne ou sur site",
             description: "Faites progresser vos équipes avec des modules adaptés à vos objectifs professionnels.Horaires flexibles, résultats mesurables, formateurs spécialisés.",
-            image: "/images/image.jpg"
+            image: "/images/training3.jpg",
+            status: "Nouveau"
         },
         {
             id: 4,
             title:"Formation pour enfants en ligne",
             description: "Apprendre une langue en s’amusant, dès le plus jeune âge.Des séances ludiques, animées par des formateurs spécialisés en pédagogie enfantine.",
-            image: "/images/image.jpg"
+            image: "/images/training4.jpg",
+            status: "Nouveau"
         }
     ]
     return (
@@ -236,7 +240,7 @@ const TrainingAndCoaching = () => {
                     <div key={item.id} className="card bg-white dark:bg-gray-800 shadow-2xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 max-w-xs w-full flex flex-col">
                         <div className="relative w-full h-40 overflow-hidden">
                             <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
-                            <div className="absolute top-2 right-2 bg-main-color text-white text-xs px-3 py-1 rounded-full shadow-md font-bold uppercase tracking-wide">Nouveau</div>
+                            <div className="absolute top-2 right-2 bg-main-color text-white text-xs px-3 py-1 rounded-full shadow-md font-bold uppercase tracking-wide">{item.status}</div>
                         </div>
                         <div className="flex flex-col flex-1 p-5 gap-3 justify-between">
                             <h3 className="text-lg md:text-xl font-bold main-color mb-1">{item.title}</h3>
