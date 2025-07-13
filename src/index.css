@@ -1,3 +1,5 @@
+/* Utilitaire pour bg-secondary-color avec 25% d'opacité */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -32,6 +34,31 @@
       0 0 6px #fff,
       0 0 10px #0ff,
       0 0 15px #0ff;
+  }
+  .main-color{
+    color:#26b2bc;
+  }
+  .bg-main-color{
+    background-color:#26b2bc;
+  }
+   
+  .bg-hover-main-color{
+    background-color:#1a8f96;
+  }
+.bg-secondary-color-opacity {
+  background-color: rgba(196, 30, 58, 0.137);
+}
+  .bg-secondary-color{
+    background-color:#c41e3a;
+  }
+  .secondary-color{
+    color:#c41e3a;
+  }
+  .bg-third-color{
+    background-color:#033356;
+  }
+  .third-color{
+    color:#033356;
   }
 }
 
