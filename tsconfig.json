@@ -1,4 +1,10 @@
 {
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["dom", "esnext"]
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },
