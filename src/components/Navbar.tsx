@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Button from "./Button";
 import { Facebook, Linkedin, Instagram, MessageCircle } from "lucide-react";
+
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -152,9 +153,7 @@ const Navbar = () => {
             </li>
             <li>
               <Link to="/contact">
-                <button className="btn bg-main-color duration-300 hover:bg-hover-main-color text-white rounded-full font-bold shadow-md  border border-none shadow-cyan-500/50">
-                  Contact
-                </button>
+                    <Button label="Contact" changeColor={true}></Button> 
               </Link>
             </li>
             <li>
@@ -220,7 +219,7 @@ const Navbar = () => {
             </li>
             <li >
               <Link to="/contact" onClick={toggleMenu}>
-                <Button label="Contact"></Button>
+                <Button label="Contact" changeColor={true} className="w-full"></Button>
               </Link>
             </li>
             <li>
