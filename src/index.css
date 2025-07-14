@@ -45,11 +45,14 @@
   .bg-hover-main-color{
     background-color:#1a8f96;
   }
-.bg-secondary-color-opacity {
+.bg-main-color-opacity {
   background-color: #26b2bc4d;
 }
   .bg-secondary-color{
     background-color:#c41e3a;
+  }
+   .bg-secondary-color-hover{
+    background-color:#a11b32b7;
   }
   .secondary-color{
     color:#c41e3a;

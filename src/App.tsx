@@ -9,6 +9,7 @@ import { About } from "./pages/About"
 import { French } from "./pages/French"
 import { OurTraining } from "./pages/OurTraining"
 import { ThemeProvider } from "./context/ThemeContext"
+import { English } from "./pages/English"
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/language" element={<Ourlang />} />
           <Route path="/french" element={<French />} />
+          <Route path="/english" element={<English/>}/>
           <Route path="/training" element={<OurTraining />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

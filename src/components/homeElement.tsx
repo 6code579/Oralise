@@ -1,5 +1,5 @@
 import Button  from "./Button";
-import { Check } from "lucide-react";
+import { TextCheck } from "./TextCheck";
 import { Title } from "./Title";
 import Flag from "react-world-flags";
 
@@ -67,7 +67,7 @@ function ProductList() {
                   100% { transform: translateX(-50%); }
                 }
                 .animate-scroll {
-                  animation: scroll 18s linear infinite;
+                  animation: scroll 6s linear infinite;
                 }
             `}</style>
         </div>
@@ -109,7 +109,7 @@ const Whychoseoralise = () => {
 
             {/* Texte */}
             <div className="w-full md:w-1/2 flex flex-col gap-4 items-start  md:gap-6   md:text-left">
-                <Title title="Pourquoi choisir Oralise ?" />
+                <Title title="Pourquoi choisir Oralise ?" color={true} />
                 <span className="italic main-color font-semibold text-lg sm:text-xl md:text-2xl">Parce que bien parler change tout.</span>
                 <p className="text-base sm:text-lg md:text-xl mb-10">
                     Chez Oralise, nous croyons que la parole transforme.
@@ -119,14 +119,14 @@ const Whychoseoralise = () => {
                         {
                             CheckElement.map((item) => (
                                 <span key={item.id} className="flex gap-2 items-center">
-                                    <div className="flex  gap-2"><Check size={20} className="main-color" /> <span className="text-base font-medium">{item.name}</span></div>
+                                    <TextCheck text={item.name} color="main-color"/>
                                 </span>
                             ))
                         }
 
                     </div>
                 </p>
-                <Button label="Je prends un rendez-vous" />
+                <Button label="Je prends un rendez-vous" changeColor={true}/>
             </div>
             {/* Image */}
             <div className="w-full md:w-1/2  lg:h-full relative order-1 md:order-none">
@@ -163,13 +163,13 @@ const Language = () => {
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full px-5 md:px-20 md:mt-12">
                     <div className="w-full md:w-1/2 flex flex-col gap-4 items-start  md:gap-8   md:text-left md:px-20">
-                        <Title title="Parlez français et anglais avec aisance" />
+                        <Title title="Parlez français et anglais avec aisance" color={true}/>
                         <span className="italic main-color font-semibold text-lg sm:text-xl md:text-2xl">Prenez la parole dans la langue qui sert vos ambitions.</span>
                         <p className="text-base sm:text-lg md:text-xl ">
                             Oralise vous offre des formations en français et en anglais, adaptées à vos besoins.
                             Que ce soit pour le travail, les études ou les voyages, nous vous aidons à devenir un orateur confiant et compétent dans les deux langues.
                         </p>
-                        <Button label="Contactez-nous maintenant" />
+                        <Button label="Contactez-nous maintenant" changeColor={true} />
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col gap-8 items-start md:text-left md:px-20">
                         {
@@ -180,7 +180,7 @@ const Language = () => {
                                         <h3 className="font-semibold main-color text-2xl">{item.title}</h3>
                                     </div>
                                     <p className="text-base sm:text-lg md:text-xl">{item.description}</p>
-                                    <Button label=" En savoir plus" />
+                                    <Button label=" En savoir plus"  changeColor={true}/>
                                 </div>
                             ))
                         }
@@ -219,15 +219,15 @@ const TrainingAndCoaching = () => {
         {
             id: 4,
             title:"Formation pour enfants en ligne",
-            description: "Apprendre une langue en s’amusant, dès le plus jeune âge.Des séances ludiques, animées par des formateurs spécialisés en pédagogie enfantine.",
+            description: "Apprendre une langue en s'amusant, dès le plus jeune âge.Des séances ludiques, animées par des formateurs spécialisés en pédagogie enfantine.",
             image: "/images/training4.jpg",
             status: "Nouveau"
-        }
+        },
     ]
     return (
         <>
             <div className="flex flex-col items-center justify-center gap-8 md:mt-8 px-5 md:px-20 py-10 w-full text-center">
-                <Title title="Formations et coaching" />
+                <Title title="Formations et coaching" color={true}/>
                 <span className="italic main-color font-semibold text-lg sm:text-xl md:text-2xl">Développez vos compétences orales avec nos formations et coaching.</span>
                 <p className="text-base sm:text-lg md:text-xl mb-10">
                     Oralise propose des formations interactives et du coaching personnalisé pour vous aider à maîtriser l'art de la communication orale.
@@ -237,7 +237,7 @@ const TrainingAndCoaching = () => {
             <div className="flex flex-wrap justify-center gap-12  md:mt-5 place-items-center">
                 {/*card training*/}
                 {Training.map((item) => (
-                    <div key={item.id} className="card bg-white dark:bg-gray-800 shadow-2xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700 max-w-xs w-full flex flex-col">
+                    <div key={item.id} className="card bg-white dark:bg-gray-800  shadow-2xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105   border border-gray-200  dark:border-gray-700 max-w-xs w-full flex flex-col">
                         <div className="relative w-full h-40 overflow-hidden">
                             <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-300 hover:scale-110" />
                             <div className="absolute top-2 right-2 bg-main-color text-white text-xs px-3 py-1 rounded-full shadow-md font-bold uppercase tracking-wide">{item.status}</div>
@@ -246,7 +246,7 @@ const TrainingAndCoaching = () => {
                             <h3 className="text-lg md:text-xl font-bold main-color mb-1">{item.title}</h3>
                             <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base flex-1">{item.description}</p>
                             <div className="mt-4 flex justify-start">
-                                <Button label="En savoir plus" />
+                                <Button label="En savoir plus"  changeColor={true}/>
                             </div>
                         </div>
                     </div>

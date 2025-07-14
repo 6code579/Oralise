@@ -2,8 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Button  from "./Button";
-import { Facebook,Linkedin,Instagram,MessageCircle} from "lucide-react";
+import Button from "./Button";
+import { Facebook, Linkedin, Instagram, MessageCircle } from "lucide-react";
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
             <li className="hover:main-color duration-300">
               <Link to="/">Accueil</Link>
             </li>
-           <li className="relative group ">
+            <li className="relative group ">
               <button
                 className="hover:main-color dark:hover:text-sky-400 duration-500 inline-flex items-center gap-1"
                 type="button"
@@ -45,12 +45,12 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color" 
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color"
                   >
                     Coaching
                   </Link>
                 </li>
-                 <li>
+                <li>
                   <Link
                     to="#"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
@@ -85,14 +85,14 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/french"
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color" 
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color"
                   >
                     Français
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to="/english"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
                   >
                     English
@@ -101,7 +101,7 @@ const Navbar = () => {
               </ul>
             </li>
 
-             <li className="relative group ">
+            <li className="relative group ">
               <button
                 className="hover:main-color dark:hover:text-sky-400 duration-500 inline-flex items-center gap-1"
                 type="button"
@@ -116,7 +116,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="#"
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color" 
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color"
                   >
                     Formation en entreprise
                   </Link>
@@ -180,8 +180,37 @@ const Navbar = () => {
             <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
               <Link to="/services" onClick={toggleMenu}>Services</Link>
             </li>
-            <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
-              <Link to="/language" onClick={toggleMenu}>Nos langues</Link>
+            <li className="relative group ">
+              <button
+                className="hover:main-color dark:hover:text-sky-400 duration-500 inline-flex items-center gap-1"
+                type="button"
+              >
+                Nos langues
+                <ChevronDown size={16} className="mt-0.5" />
+              </button>
+              <ul
+                className="absolute left-0 mt-0 bg-white dark:bg-gray-800 shadow-lg rounded-md w-36 z-10 border border-gray-100 dark:border-gray-700
+                hidden group-hover:block bg-base-100 "
+              >
+                <li>
+                  <Link
+                    to="/french"
+                    onClick={toggleMenu}
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color"
+                  >
+                    Français
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/english"
+                    onClick={toggleMenu}
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
+                  >
+                    English
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
               <Link to="/training" onClick={toggleMenu}>Nos formations</Link>
@@ -252,10 +281,10 @@ const Navbar = () => {
               <li>Email : <a href="mailto:contact@oralise.com" className="hover:underline main-color">contact@oralise.com</a></li>
               <li>Téléphone : <a href="tel:+33123456789" className="hover:underline main-color">+33 1 23 45 67 89</a></li>
               <li className="flex gap-3 mt-2">
-                <a href="https://www.facebook.com/profile.php?id=61571529371866" aria-label="Facebook" className="hover:text-blue-600"><Facebook/></a>
-                <a href="#" aria-label="Instagram" className="hover:text-pink-500"><Instagram/></a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-sky-500"><Linkedin/></a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-green-600"><MessageCircle/></a>
+                <a href="https://www.facebook.com/profile.php?id=61571529371866" aria-label="Facebook" className="hover:text-blue-600"><Facebook /></a>
+                <a href="#" aria-label="Instagram" className="hover:text-pink-500"><Instagram /></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-sky-500"><Linkedin /></a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-green-600"><MessageCircle /></a>
               </li>
             </ul>
           </div>
