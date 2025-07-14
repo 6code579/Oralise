@@ -7,7 +7,7 @@ import { Banner } from "../components/Banner";
 const BannerFrench = () => {
     return (
         <>
-            <div className="w-full max-w-full mx-auto px-4 mt-6 md:px-20 md:mt-16 ">
+            <div className="w-full max-w-full mb-8 mx-auto px-4 mt-8 md:px-20 md:mt-16 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl overflow-hidden">
 
                     {/* Image femme */}
@@ -109,8 +109,8 @@ const TypeTraining = () => {
                     FrenchList.map((element) => (
                         <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
                             <div className="order-1 sm:ml-6 xl:ml-0">
-                                <h3 className="mb-1 dark:secondary-color  font-semibold">
-                                    <span className="mb-1 block font-bold text-2xl fony-bold  md:py-5 leading-6 secondary-color">{element.title}
+                                <h3 className="mb-3 dark:secondary-color  font-semibold">
+                                    <span className="mb-4 block font-bold text-2xl fony-bold  md:py-5 leading-6 secondary-color">{element.title}
                                     </span>
                                     {element.undertitle}
                                 </h3>
@@ -121,7 +121,7 @@ const TypeTraining = () => {
                                     <TextCheck table={element.checkElement} color="secondary-color" />
                                 </div>
 
-                                <Button label="Je m'inscris" to={element.linkbtn1} className="md:mt-4 md:ml-4 bg-secondary-color hover:bg-secondary-color-hover" />
+                                <Button label="Je m'inscris" to={element.linkbtn1} className="mt-6 md:mt-4 md:ml-4 bg-secondary-color hover:bg-secondary-color-hover" />
 
 
                             </div>

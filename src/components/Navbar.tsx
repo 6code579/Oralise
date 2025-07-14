@@ -179,7 +179,7 @@ const Navbar = () => {
             <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
               <Link to="/services" onClick={toggleMenu}>Services</Link>
             </li>
-            <li className="relative group ">
+            <li className="relative group text-center">
               <button
                 className="hover:main-color dark:hover:text-sky-400 duration-500 inline-flex items-center gap-1"
                 type="button"
@@ -188,7 +188,7 @@ const Navbar = () => {
                 <ChevronDown size={16} className="mt-0.5" />
               </button>
               <ul
-                className="absolute left-0 mt-0 bg-white dark:bg-gray-800 shadow-lg rounded-md w-36 z-10 border border-gray-100 dark:border-gray-700
+                className="absolute left-24 mt-3 bg-white dark:bg-gray-800 shadow-lg rounded-md w-36 z-10 border border-gray-100 dark:border-gray-700
                 hidden group-hover:block bg-base-100 "
               >
                 <li>
