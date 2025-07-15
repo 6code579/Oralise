@@ -109,15 +109,17 @@ const IndividuelTraining = () => {
       <section className="space-y-8 text-center py-16 px-4 md:px-20">
         <Title title="Les avantages Oralise (vs autres formations)" color={true} />
         <div className="grid md:grid-cols-2 gap-6 text-left">
-          <div className="p-6 bg-gray-100  rounded-2xl shadow-xl dark:shadow-img duration-300 hover:scale-95 ">
+          <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70 rounded-2xl shadow-xl dark:shadow-img duration-300 hover:scale-95 ">
             <h3 className="font-semibold text-2xl mb-2 main-color">Oralise 1:1</h3>
             <ul className="list-disc list-inside space-y-1 dark:text-white">
               {advantagesOralise.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
+
+
           </div>
-          <div className="p-6 bg-gray-100  rounded-2xl shadow-xl  dark:shadow-img duration-300 hover:scale-95">
+          <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70   rounded-2xl shadow-xl  dark:shadow-img duration-300 hover:scale-95">
             <h3 className="font-semibold text-2xl mb-2 main-color">Formations classiques</h3>
             <ul className="list-disc list-inside space-y-1  dark:text-white">
               {advantagesOthers.map((item, index) => (
