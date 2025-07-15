@@ -1,42 +1,6 @@
-
-import { Title } from "../components/Title";
 import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { Banner } from "../components/Banner";
-// Banner component for the French page
-const BannerFrench = () => {
-    return (
-        <>
-            <div className="w-full max-w-full mb-8 mx-auto px-4 mt-8 md:px-20 md:mt-16 ">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl overflow-hidden">
-
-                    {/* Image femme */}
-                    <div className="w-full h-64 md:h-auto overflow-hidden order-1 lg:order-none">
-                        <img
-                            src="/images/english/banner.jpg"
-                            alt="jolie-student"
-                            className="w-full h-full object-cover rounded-3xl shadow-2xl duration-300 hover:scale-95 "
-                        />
-                    </div>
-
-                    {/* Texte */}
-                    <div className="flex flex-col justify-center gap-8 px-4 md:px-8 order-2 lg:col-span-2">
-                        <Title title="Step Up !" color={true} className="italic tracking-widest " />
-                        <p className="font-semibold">
-                            Parlez anglais avec aisance, où que vous soyez. <br />
-                            L’anglais est la langue du monde professionnel, des études, et des voyages.
-                            Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact.
-                        </p>
-                        <Button label="Je m'inscris" to="/" changeColor={true} />
-                    </div>
-
-
-                </div>
-               
-            </div>
-        </>
-    )
-}
 
 
 //section type of french training
