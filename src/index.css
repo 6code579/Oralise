@@ -41,6 +41,12 @@
   .bg-main-color{
     background-color:#26b2bc;
   }
+
+  .shadow-img{
+    box-shadow: 0 10px 20px rgba(38, 178, 188, 0.3), 
+            0 6px 6px rgba(38, 178, 188, 0.2);
+
+  }
    
   .bg-hover-main-color{
     background-color:#1a8f96;

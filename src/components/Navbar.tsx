@@ -124,7 +124,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    to="#"
+                    to="/individuelTraining"
                     className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
                   >
                     Formation individuelle
@@ -179,6 +179,7 @@ const Navbar = () => {
             <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
               <Link to="/services" onClick={toggleMenu}>Services</Link>
             </li>
+
             <li className="relative group text-center">
               <button
                 className="hover:main-color dark:hover:text-sky-400 duration-500 inline-flex items-center gap-1"
@@ -211,8 +212,51 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
-              <Link to="/training" onClick={toggleMenu}>Nos formations</Link>
+           <li className="relative group text-center ">
+              <button
+                className="hover:main-color dark:hover:text-sky-400 duration-500 inline-flex items-center gap-1"
+                type="button"
+              >
+                Nos formations
+                <ChevronDown size={16} className="mt-0.5" />
+              </button>
+              <ul
+                className="absolute left-24 mt-3 bg-white dark:bg-gray-800 shadow-lg rounded-md w-36 z-10 border border-gray-100 dark:border-gray-700
+                hidden group-hover:block bg-base-100 "
+              >
+                <li>
+                  <Link
+                    to="#"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:text-white hover:bg-main-color"
+                  >
+                    Formation en entreprise
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/individuelTraining"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
+                  >
+                    Formation individuelle
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="#"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
+                  >
+                    Formation en groupe
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="#"
+                    className="block px-4 py-2 text-gray-700 dark:text-gray-200  hover:text-white hover:bg-main-color "
+                  >
+                    Formation pour enfants
+                  </Link>
+                </li>
+              </ul>
             </li>
             <li className="border border-gray-500  text-center rounded-full hover:main-color transition-colors duration-300  p-2">
               <Link to="/about" onClick={toggleMenu}>À propos</Link>

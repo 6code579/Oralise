@@ -13,15 +13,15 @@ const BannerFrench = () => {
                     {/* Image femme */}
                     <div className="w-full h-64 md:h-auto overflow-hidden order-1 lg:order-none">
                         <img
-                            src="/images/french/frenchBanner.jpg"
-                            alt="Femme"
-                            className="w-full h-full object-cover rounded-3xl shadow-2xl duration-300 hover:scale-95"
+                            src="/images/english/banner.jpg"
+                            alt="jolie-student"
+                            className="w-full h-full object-cover rounded-3xl shadow-2xl duration-300 hover:scale-95 "
                         />
                     </div>
 
                     {/* Texte */}
                     <div className="flex flex-col justify-center gap-8 px-4 md:px-8 order-2 lg:col-span-2">
-                        <Title title="Step Up !" color={true} className="italic tracking-widest" />
+                        <Title title="Step Up !" color={true} className="italic tracking-widest " />
                         <p className="font-semibold">
                             Parlez anglais avec aisance, où que vous soyez. <br />
                             L’anglais est la langue du monde professionnel, des études, et des voyages.
@@ -32,14 +32,7 @@ const BannerFrench = () => {
 
 
                 </div>
-                {/* Image drapeau : visible uniquement sur grand écran */}
-                <div className="hidden lg:block col-span-3 overflow-hidden h-40 md:mt-5">
-                    <img
-                        src="/images/french/flag.jpg"
-                        alt="Drapeau"
-                        className="w-full h-full object-cover rounded-3xl duration-300 hover:scale-95"
-                    />
-                </div>
+               
             </div>
         </>
     )
@@ -53,7 +46,7 @@ const TypeTraining = () => {
     const FrenchList = [
         {
             id: 1,
-            image: '/images/french/fle.jpg',
+            image: '/images/english/general.jpg',
             title: 'Anglais général',
             undertitle: 'Anglais pour la vie quotidienne et les échanges internationaux.',
             description: 'Apprenez à vous exprimer en anglais dans des contextes variés : voyage, conversation, échanges sociaux ou familiaux.Nos formateurs anglophones adaptent les contenus à votre niveau et à vos objectifs.',
@@ -69,7 +62,7 @@ const TypeTraining = () => {
         },
         {
             id: 2,
-            image: '/images/french/pro.jpg',
+            image: '/images/english/pro.jpg',
             title: 'Anglais professionnel',
             undertitle: 'Préparez-vous à évoluer en contexte international.',
             description: 'Renforcez vos compétences orales pour travailler en anglais dans un cadre professionnel : réunions, entretiens, appels clients, négociations…',
@@ -85,7 +78,7 @@ const TypeTraining = () => {
         },
         {
             id: 3,
-            image: '/images/french/tcf.png',
+            image: '/images/english/prepa.jpg',
             title: 'Préparation aux tests et certifications',
             undertitle: 'Passez vos examens d’anglais avec méthode et confiance.',
             description: 'Certifications préparées :',
@@ -151,7 +144,9 @@ const TypeTraining = () => {
 function English() {
     return (
         <>
-            <BannerFrench />
+            <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. <br />
+                            L’anglais est la langue du monde professionnel, des études, et des voyages.
+                            Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" />
             <TypeTraining />
             <Banner
                 title="Méthode Oralise (adaptée à l’anglais)"

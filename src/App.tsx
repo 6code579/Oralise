@@ -10,6 +10,7 @@ import { French } from "./pages/French"
 import { OurTraining } from "./pages/OurTraining"
 import { ThemeProvider } from "./context/ThemeContext"
 import { English } from "./pages/English"
+import { IndividuelTraining } from "./pages/IndividuelTraining"
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/french" element={<French />} />
           <Route path="/english" element={<English/>}/>
           <Route path="/training" element={<OurTraining />} />
+          <Route path="/individuelTraining" element={<IndividuelTraining/>}/>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
