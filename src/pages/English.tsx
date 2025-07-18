@@ -108,7 +108,7 @@ const TypeTraining = () => {
 function English() {
     return (
         <>
-            <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. <br />
+            <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez.
                             L’anglais est la langue du monde professionnel, des études, et des voyages.
                             Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" />
             <TypeTraining />

@@ -1,5 +1,6 @@
 import Button from "../components/Button";
 import { Title } from "../components/Title";
+import { TextCheck } from "../components/TextCheck";
 
 const IndividuelTraining = () => {
   const beneficiaries = [
@@ -37,7 +38,7 @@ const IndividuelTraining = () => {
         <div className="w-full mt-3 md:max-w-4xl text-start md:text-center flex flex-col gap-4">
           <Title
             title="Avancez 3 fois plus vite avec un coach dédié rien que pour vous."
-            color={true}
+            color={true} className="uppercase"
           />
           <p className="text-base md:text-xl md:mt-2">
             Vous avez un objectif précis, peu de temps, et besoin de résultats ?<br />
@@ -55,7 +56,7 @@ const IndividuelTraining = () => {
           <Button
             label="Réserver mon diagnostic gratuit"
             changeColor={true}
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 py-8 md:text-xl "
           />
         </div>
       </div>
@@ -63,7 +64,7 @@ const IndividuelTraining = () => {
       {/* SECTION 2 */}
       <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
-          <img src="/images/individuel/why.jpg" alt="Formation individuelle" className="w-full rounded-2xl object-cover shadow-lg" />
+          <img src="/images/individuel/why.jpg" alt="Formation individuelle" className="w-full rounded-2xl object-cover shadow-lg md:scale-90" />
         </div>
         <div className="md:w-1/2 space-y-4">
           <Title title="Pourquoi faire une formation individuelle ?" color={true} />
@@ -77,13 +78,13 @@ const IndividuelTraining = () => {
       {/* SECTION 3 */}
       <section className="flex flex-col md:flex-row-reverse items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
-          <img src="/images/individuel/why.jpg" alt="Pour qui" className="w-full rounded-2xl object-cover shadow-lg" />
+          <img src="/images/individuel/whom.png" alt="Pour qui" className="w-full rounded-2xl object-cover " />
         </div>
-        <div className="md:w-1/2 space-y-5">
+        <div className="md:w-1/2 space-y-4 md:space-y-12">
           <Title title="Pour qui est-ce fait ?" color={true} />
           <ul className="list-disc list-inside text-base md:text-lg space-y-1">
             {beneficiaries.map((item, index) => (
-              <li key={index}>{item}</li>
+              <TextCheck key={index} text={item} color="main-color" />
             ))}
           </ul>
           <Button label="Je prends rendez-vous" changeColor={true} className="w-fit" />
@@ -91,29 +92,29 @@ const IndividuelTraining = () => {
       </section>
 
       {/* SECTION 4 */}
-      <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
+      <section className="flex flex-col md:flex-row items-center gap-10  md:py-16 px-4 md:px-20">
         <div className="md:w-1/2">
-          <img src="/images/individuel/why.jpg" alt="Contenu de la formation" className="w-full rounded-2xl object-cover shadow-lg" />
+          <img src="/images/individuel/receive.jpg" alt="Contenu de la formation" className="w-full rounded-2xl object-cover shadow-lg md:scale-90" />
         </div>
         <div className="md:w-1/2 space-y-5">
           <Title title="Ce que vous recevez concrètement" color={true} />
           <ul className="list-disc list-inside text-base md:text-lg space-y-1">
             {features.map((item, index) => (
-              <li key={index}>{item}</li>
+              <TextCheck key={index} text={item} color="main-color" />
             ))}
           </ul>
         </div>
       </section>
 
       {/* SECTION 5 */}
-      <section className="space-y-8 text-center py-16 px-4 md:px-20">
-        <Title title="Les avantages Oralise (vs autres formations)" color={true} />
+      <section className="space-y-8 md:space-y-12 text-center py-12 md:py-16 px-4 md:px-20">
+        <Title title="Les avantages Oralise (vs autres formations)" color={true}/>
         <div className="grid md:grid-cols-2 gap-6 text-left">
           <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70 rounded-2xl shadow-xl dark:shadow-img duration-300 hover:scale-95 ">
             <h3 className="font-semibold text-2xl mb-2 main-color">Oralise 1:1</h3>
             <ul className="list-disc list-inside space-y-1 dark:text-white">
               {advantagesOralise.map((item, index) => (
-                <li key={index}>{item}</li>
+                <TextCheck key={index} text={item} color="main-color" />
               ))}
             </ul>
 
@@ -123,7 +124,7 @@ const IndividuelTraining = () => {
             <h3 className="font-semibold text-2xl mb-2 main-color">Formations classiques</h3>
             <ul className="list-disc list-inside space-y-1  dark:text-white">
               {advantagesOthers.map((item, index) => (
-                <li key={index}>{item}</li>
+                <TextCheck key={index} text={item} color="main-color" />
               ))}
             </ul>
           </div>
@@ -138,7 +139,7 @@ const IndividuelTraining = () => {
           vous êtes accompagné, encadré, et valorisé.<br />
           Vous progressez Vraiment !
         </p>
-        <Button label="Commencer mon parcours individuel" changeColor={true} />
+        <Button label="Commencer mon parcours individuel" changeColor={true} className="md:py-8 md:px-8 md:text-xl md:mt-4" />
       </section>
     </>
   );
