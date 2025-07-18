@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import type { ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent } from 'react';
 
 interface FormState {
   name: string;
@@ -9,38 +8,21 @@ interface FormState {
   message: string;
 }
 
-type Status = 'sending' | 'success' | 'error' | null;
-
 function Contact() {
   const [form, setForm] = useState<FormState>({
     name: '',
     email: '',
     numero: '',
     subject: '',
-    message: ''
+    message: '',
   });
 
-  const [status, setStatus] = useState<Status>(null);
+  // Tu peux gérer un état simple de statut si tu veux afficher un message après soumission
+  // Ici, on laisse la soumission classique donc pas de gestion JS du status
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setStatus('sending');
-    try {
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-      setStatus('success');
-      setForm({ name: '', email: '', numero: '', subject: '', message: '' });
-    } catch {
-      setStatus('error');
-    }
   };
 
   return (
@@ -62,21 +44,32 @@ function Contact() {
 
       {/* Bloc principal */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 py-16 max-w-7xl mx-auto">
-        {/* Formulaire */}
+        {/* Formulaire Netlify Forms */}
         <form
-          onSubmit={handleSubmit}
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
           className="bg-white dark:bg-gray-800 shadow-xl p-8 rounded-2xl space-y-6"
         >
+          {/* Champs cachés requis par Netlify */}
+          <input type="hidden" name="form-name" value="contact" />
+          <p className="hidden">
+            <label>
+              Ne pas remplir ce champ: <input name="bot-field" onChange={handleChange} />
+            </label>
+          </p>
+
           {[
             { key: 'name', label: 'Nom' },
             { key: 'email', label: 'Email' },
             { key: 'numero', label: 'Numéro WhatsApp' },
-            { key: 'subject', label: 'Sujet' }
+            { key: 'subject', label: 'Sujet' },
           ].map(({ key, label }) => (
             <div key={key}>
               <label
-                className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200"
                 htmlFor={key}
+                className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200"
               >
                 {label}
               </label>
@@ -93,7 +86,10 @@ function Contact() {
           ))}
 
           <div>
-            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200" htmlFor="message">
+            <label
+              htmlFor="message"
+              className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200"
+            >
               Message
             </label>
             <textarea
@@ -109,25 +105,13 @@ function Contact() {
 
           <button
             type="submit"
-            disabled={status === 'sending'}
-            className="w-full py-3 bg-main-color hover:bg-hover-main-color duration-300 text-white font-semibold rounded-xl transition disabled:opacity-50"
+            className="w-full py-3 bg-main-color hover:bg-hover-main-color duration-300 text-white font-semibold rounded-xl transition"
           >
-            {status === 'sending' ? 'Envoi...' : 'Envoyer'}
+            Envoyer
           </button>
-
-          {status === 'success' && (
-            <p className="text-green-600 dark:text-green-400 mt-2 text-center">
-              Message envoyé avec succès ! Merci 😊
-            </p>
-          )}
-          {status === 'error' && (
-            <p className="text-red-600 dark:text-red-400 mt-2 text-center">
-              Erreur lors de l’envoi. Veuillez réessayer.
-            </p>
-          )}
         </form>
 
-        {/* Coordonnées & Localisation */}
+        {/* Coordonnées & Localisation (inchangés) */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg space-y-8 text-gray-800 dark:text-gray-100">
           <h2 className="text-2xl font-bold mb-4">Nos coordonnées</h2>
 
