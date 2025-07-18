@@ -1,29 +1,144 @@
+import React, { useState } from 'react';
+import { Banner } from "../components/Banner";
 function Contact() {
-    return (
-        <div className="container mx-auto p-4">
-            <h1 className="text-2xl font-bold mb-4">Contact Us</h1>
-            <p>If you have any questions or need further information, feel free to reach out to us.</p>
-            <form className="mt-6">
-                <div className="mb-4">
-                    <label className="block text-sm font-medium mb-2" htmlFor="name">Name</label>
-                    <input type="text" id="name" className="w-full p-2 border rounded" placeholder="Your Name" />
-                </div>
+  const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
+  const [status, setStatus] = useState(null);
 
-                <div className="mb-4">
-                    <label className="block text-sm font-medium mb-2" htmlFor="email">Email</label>
-                    <input type="email" id="email" className="w-full p-2 border rounded" placeholder="Your Email"/>
-                </div>
+  const handleChange = e => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-                <div className="mb-4">
-                    <label className="block text-sm font-medium mb-2" htmlFor="message">Message</label>
-                    <textarea id="message" className="w-full p-2 border rounded"  placeholder="Your Message"></textarea>
-                </div>
-                <button type="submit" className="bg-sky-600 hover:bg-sky-700 transition-colors duration-300 text-white px-6 py-3 rounded-full shadow-md">
-                    Send Message
-                </button>
-            </form>
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setStatus('sending');
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+      setStatus('success');
+      setForm({ name: '', email: '', subject: '', message: '' });
+    } catch {
+      setStatus('error');
+    }
+  };
+
+  return (
+    <div className="min-h-screen  transition duration-300">
+      {/* Hero */}
+       <section className="w-full py-20 px-4 text-center bg-transparent">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-extrabold main-color mb-6">
+          Prêt à échanger avec nous ?
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4">
+          Vous avez une question, une idée, ou besoin d’assistance ? Nous sommes là pour vous écouter et vous guider.
+        </p>
+        <p className="text-md text-gray-500 dark:text-gray-400">
+          Contactez-nous via le formulaire ou avec les informations en bas de page. Nous répondrons rapidement.
+        </p>
+      </div>
+    </section>
+
+      {/* Bloc principal */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 py-16 max-w-7xl mx-auto">
+        {/* Formulaire */}
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white dark:bg-gray-800 shadow-xl p-8 rounded-2xl space-y-6"
+        >
+          {['name', 'email','numero Whatsapp', 'subject'].map(field => (
+            <div key={field}>
+              <label
+                className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200"
+                htmlFor={field}
+              >
+                {field === 'subject' ? 'Sujet' : field.charAt(0).toUpperCase() + field.slice(1)}
+              </label>
+              <input
+                id={field}
+                name={field}
+                type={field === 'email' ? 'email' : 'text'}
+                required
+                value={form[field]}
+                onChange={handleChange}
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          ))}
+
+          <div>
+            <label className="block text-sm font-medium mb-1 text-gray-700 dark:text-gray-200" htmlFor="message">
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              value={form.message}
+              onChange={handleChange}
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === 'sending'}
+            className="w-full py-3 bg-main-color hover:bg-hover-main-color duration-300 text-white font-semibold rounded-xl transition disabled:opacity-50"
+          >
+            {status === 'sending' ? 'Envoi...' : 'Envoyer'}
+          </button>
+
+          {status === 'success' && (
+            <p className="text-green-600 dark:text-green-400 mt-2 text-center">
+              Message envoyé avec succès ! Merci 😊
+            </p>
+          )}
+          {status === 'error' && (
+            <p className="text-red-600 dark:text-red-400 mt-2 text-center">
+              Erreur lors de l’envoi. Veuillez réessayer.
+            </p>
+          )}
+        </form>
+
+        {/* Coordonnées & Localisation */}
+        <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg space-y-8 text-gray-800 dark:text-gray-100">
+          <h2 className="text-2xl font-bold mb-4">Nos coordonnées</h2>
+
+          <div className="space-y-4">
+            <div className='font-semibold'>
+              <p>Adresse</p>
+              <p className='main-color '>123 Rue de l’Avenir, Casablanca, Maroc</p>
+            </div>
+
+            <div className='font-semibold'>
+              <p>Téléphone</p>
+              <a href="tel:+212600000000" className="main-color">+212 6 00 00 00 00</a>
+            </div>
+
+            <div className='font-semibold'>
+              <p>Email</p>
+              <a href="mailto:contact@oralise.com" className="main-color">contact@oralise.com</a>
+            </div>
+          </div>
+           <div className='flex flex-col h-auto w-full overflow-hidden rounded-xl'>
+           <img
+    src='/images/image.jpg'
+    alt='Localisation de notre bureau'
+    className='w-full h-full object-cover object-center'
+  />
+           </div>
+
+           
+
+        
+        
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
-export { Contact }
+export { Contact };
