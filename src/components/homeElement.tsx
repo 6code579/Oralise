@@ -49,12 +49,12 @@ function ProductList() {
 
     ];
     return (
-        <div className="w-full bg-secondary-color-opacity dark:bg-gray-800/70 mx-auto py-4 overflow-hidden mt-5 shadow-lg">
+        <div className="w-full bg-main-color-opacity dark:bg-gray-800/70 mx-auto py-4 overflow-hidden mt-5 shadow-lg">
             <div className="whitespace-nowrap animate-scroll flex gap-9 items-center">
                 {products.map(product => (
                     <div
                         key={product.id}
-                        className="inline-block bg-white dark:bg-gray-700 shadow-lg rounded-full px-5 md:px-8 py-3 text-lg font-semibold main-color mx-2 transition-transform duration-300 hover:scale-105 hover:bg-secondary-color-opacity hover:text-white hover:dark:bg-main-color"
+                        className="inline-block bg-white dark:bg-gray-700 shadow-lg rounded-full px-5 md:px-8 py-3 text-lg font-semibold main-color mx-2 transition-transform duration-300 hover:scale-105 hover:bg-main-color-opacity hover:text-white hover:dark:bg-main-color"
                     >
                         <a href="#">{product.name}</a>
                     </div>
