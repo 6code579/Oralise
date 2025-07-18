@@ -1,5 +1,5 @@
-import type { ChangeEvent, FormEvent,useState } from 'react';
-
+import { useState } from 'react';
+import type { ChangeEvent, FormEvent } from 'react';
 
 interface FormState {
   name: string;
