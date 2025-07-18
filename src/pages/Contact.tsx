@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Banner } from "../components/Banner";
 function Contact() {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState(null);
