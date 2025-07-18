@@ -52,7 +52,7 @@ const Navbar = () => {
                 Nos formations <ChevronDown size={16} />
               </button>
               <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
-                <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
+                <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
                 <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color">Individuelle</Link></li>
                 <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
                 <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
@@ -90,7 +90,7 @@ const Navbar = () => {
 
             {/* Dropdown Formations */}
             <li><MobileDropdown title="Nos formations">
-              <Link to="#" onClick={toggleMenu} className="block px-4 py-2">En entreprise</Link>
+              <Link to="/entrepriseTraining" onClick={toggleMenu} className="block px-4 py-2">En entreprise</Link>
               <Link to="/individuelTraining" onClick={toggleMenu} className="block px-4 py-2">Individuelle</Link>
               <Link to="#" onClick={toggleMenu} className="block px-4 py-2">En groupe</Link>
               <Link to="#" onClick={toggleMenu} className="block px-4 py-2">Pour enfants</Link>
@@ -122,7 +122,7 @@ const Navbar = () => {
       </nav>
 
       <Outlet />
-       {/* Footer professionnel inspiré de Freepik */}
+      {/* Footer professionnel inspiré de Freepik */}
       <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-10 pt-10 pb-6 px-4 md:px-0">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo & description */}
@@ -140,8 +140,26 @@ const Navbar = () => {
             <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
               <li><Link to="/">Accueil</Link></li>
               <li><Link to="/services">Services</Link></li>
-              <li><Link to="/language">Nos langues</Link></li>
-              <li><Link to="/training">Nos formations</Link></li>
+              <li className="group relative">
+                <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
+                  Nos langues <ChevronDown size={16} />
+                </button>
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
+                  <li><Link to="/french" className="block px-4 py-2 hover:bg-main-color">Français</Link></li>
+                  <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color">English</Link></li>
+                </ul>
+              </li>
+              <li className="group relative">
+                <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
+                  Nos formations <ChevronDown size={16} />
+                </button>
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
+                  <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
+                  <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color">Individuelle</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
+                  <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
+                </ul>
+              </li>
               <li><Link to="/about">À propos</Link></li>
               <li><Link to="/contact">Contact</Link></li>
             </ul>
@@ -199,7 +217,7 @@ const MobileDropdown = ({ title, children }: { title: string; children: React.Re
       </div>
     </div>
   );
-  
+
 };
 
 export { Navbar };
