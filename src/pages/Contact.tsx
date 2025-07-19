@@ -18,12 +18,15 @@ function Contact() {
     message: '',
   });
 
-  // Tu peux gérer un état simple de statut si tu veux afficher un message après soumission
-  // Ici, on laisse la soumission classique donc pas de gestion JS du status
-
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setForm(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    // Tu peux intégrer ici une logique d'envoi via une API, EmailJS, etc.
+    console.log('Formulaire soumis', form);
   };
 
   return (
@@ -45,22 +48,11 @@ function Contact() {
 
       {/* Bloc principal */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 py-16 max-w-7xl mx-auto">
-        {/* Formulaire Netlify Forms */}
+        {/* Formulaire classique */}
         <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
           className="bg-white dark:bg-gray-800 shadow-xl p-8 rounded-2xl space-y-6"
         >
-          {/* Champs cachés requis par Netlify */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p className="hidden">
-            <label>
-              Ne pas remplir ce champ: <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-
           {[
             { key: 'name', label: 'Nom' },
             { key: 'email', label: 'Email' },
@@ -112,7 +104,7 @@ function Contact() {
           </button>
         </form>
 
-        {/* Coordonnées & Localisation (inchangés) */}
+        {/* Coordonnées */}
         <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg space-y-8 text-gray-800 dark:text-gray-100">
           <h2 className="text-2xl font-bold mb-4">Nos coordonnées</h2>
 
