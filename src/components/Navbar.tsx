@@ -28,6 +28,7 @@ const Navbar = () => {
           {/* Menu desktop */}
           <ul className="hidden lg:flex gap-6 text-xs font-semibold items-center">
             <li><Link to="/">Accueil</Link></li>
+
             <li className="group relative">
               <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                 Nos services <ChevronDown size={16} />
@@ -38,6 +39,7 @@ const Navbar = () => {
                 <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Préparation aux examens</Link></li>
               </ul>
             </li>
+
             <li className="group relative">
               <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                 Nos langues <ChevronDown size={16} />
@@ -47,6 +49,7 @@ const Navbar = () => {
                 <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color">English</Link></li>
               </ul>
             </li>
+
             <li className="group relative">
               <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                 Nos formations <ChevronDown size={16} />
@@ -54,8 +57,8 @@ const Navbar = () => {
               <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
                 <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
                 <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color">Individuelle</Link></li>
-                <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
-                <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
+                <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
+                <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
               </ul>
             </li>
             <li><Link to="/about">À propos</Link></li>
@@ -92,8 +95,8 @@ const Navbar = () => {
             <li><MobileDropdown title="Nos formations">
               <Link to="/entrepriseTraining" onClick={toggleMenu} className="block px-4 py-2">En entreprise</Link>
               <Link to="/individuelTraining" onClick={toggleMenu} className="block px-4 py-2">Individuelle</Link>
-              <Link to="#" onClick={toggleMenu} className="block px-4 py-2">En groupe</Link>
-              <Link to="#" onClick={toggleMenu} className="block px-4 py-2">Pour enfants</Link>
+              <Link to="/groupTraining" onClick={toggleMenu} className="block px-4 py-2">En groupe</Link>
+              <Link to="/childrenTraining" onClick={toggleMenu} className="block px-4 py-2">Pour enfants</Link>
             </MobileDropdown></li>
 
             <li className="text-center rounded-full border p-2 hover:main-color">
@@ -156,8 +159,8 @@ const Navbar = () => {
                 <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
                   <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
                   <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color">Individuelle</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
-                  <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
+                  <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
+                  <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
                 </ul>
               </li>
               <li><Link to="/about">À propos</Link></li>

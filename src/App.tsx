@@ -10,6 +10,8 @@ import { English } from "./pages/English";
 import { IndividuelTraining } from "./pages/IndividuelTraining";
 import PageLoaderWrapper from "./components/PageLoaderWrapper";
 import { EntrepriseTraining } from "./pages/EntrepriseTraining";
+import { GroupTraining } from "./pages/GroupTraining";
+import { ChildrenTraining } from "./pages/ChildrenTraining";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
               <Route path="/english" element={<English />} />
               <Route path="/entrepriseTraining" element={<EntrepriseTraining />} />
               <Route path="/individuelTraining" element={<IndividuelTraining />} />
+              <Route path="/groupTraining" element={<GroupTraining />} />
+              <Route path="/childrenTraining" element={<ChildrenTraining />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Route>

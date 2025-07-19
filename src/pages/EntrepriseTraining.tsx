@@ -36,19 +36,19 @@ const EntrepriseTraining = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="flex flex-col items-center gap-8 text-center py-16 px-4 md:px-20">
+      <section className="flex flex-col items-center gap-8 text-center py-16 px-4 md:px-20 md:mt-8">
         <Title
           title="Boostez les compétences orales de vos équipes, durablement."
           color={true}
           className="uppercase"
         />
         <p className="max-w-3xl text-base md:text-lg">
-          Que ce soit pour pitcher, convaincre ou manager, Oralise accompagne vos collaborateurs à s’exprimer avec impact et fluidité.  
+          Que ce soit pour pitcher, convaincre ou manager, Oralise accompagne vos collaborateurs à s’exprimer avec impact et fluidité.
         </p>
         <img
-          src="/images/entreprise/banner.jpg"
+          src="/images/image.jpg"
           alt="Formation en entreprise"
-          className="w-full md:w-3/4 rounded-3xl object-cover shadow-lg scale-95 hover:scale-100 transition duration-300"
+          className="w-full md:w-3/4 rounded-3xl object-cover shadow-lg scale-90 hover:scale-100 transition duration-300"
         />
         <Button
           label="Obtenir un devis personnalisé"
@@ -61,7 +61,7 @@ const EntrepriseTraining = () => {
       <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
           <img
-            src="/images/entreprise/why.jpg"
+            src="/images/image.jpg"
             alt="Pourquoi une formation entreprise"
             className="w-full rounded-2xl object-cover shadow-lg"
           />
@@ -80,7 +80,7 @@ const EntrepriseTraining = () => {
       <section className="flex flex-col md:flex-row-reverse items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
           <img
-            src="/images/entreprise/use-cases.jpg"
+            src="/images/image.jpg"
             alt="Cas d’usage"
             className="w-full rounded-2xl object-cover shadow-lg"
           />
@@ -95,12 +95,58 @@ const EntrepriseTraining = () => {
           <Button label="Planifier une session découverte" changeColor={true} className="w-fit mt-4" />
         </div>
       </section>
+      {/* SECTION MODULES À LA CARTE */}
+      <section className="py-16 px-4 md:px-20">
+        <Title title="Modules à la carte" color={true} className="text-center mb-8 md:mb-12" />
+        <div className="grid mb-8 border border-gray-200 rounded-2xl shadow-2xl dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800  ">
+          {[
+            {
+              title: "Prise de parole en public",
+              desc: "Structurer un discours, captiver un auditoire, parler avec confiance devant un groupe (réunion, présentation, conférence…)."
+            },
+            {
+              title: "Rédaction professionnelle",
+              desc: "Apprendre à rédiger des rapports, comptes rendus, emails, notes de service clairs, efficaces et professionnels."
+            },
+            {
+              title: "Communication client",
+              desc: "Gérer les échanges oraux (en face à face ou au téléphone), présenter une offre, répondre aux objections."
+            },
+            {
+              title: "Pitch & présentation commerciale",
+              desc: "Présenter un produit, une idée, une action ou un budget à l’oral."
+            },
+            {
+              title: "Gestion et animation des réunions",
+              desc: "Réunions efficaces en français ou en anglais. Animer, participer, et synthétiser une réunion à l’oral."
+            },
+            {
+              title: "Gestion du stress à l’oral",
+              desc: "Identifier les blocages, adopter des techniques de respiration, gérer les émotions et parler avec assurance même sous pression."
+            },
+          ].map((module, index) => (
+            <figure
+              key={index}
+              className={`flex flex-col items-start  justify-start gap-4 p-8 bg-white border-gray-200 ${index < 4 ? "border-b" : ""
+                } ${index % 2 === 0 ? "md:border-e" : ""} dark:bg-gray-800 dark:border-gray-700`}
+            >
+              <blockquote className="max-w-2xl  text-gray-500 dark:text-white">
+                <h3 className="text-lg font-semibold text-gray-900 dark:main-color mb-2">
+                  {module.title}
+                </h3>
+                <p className="text-sm">{module.desc}</p>
+              </blockquote>
+            </figure>
+          ))}
+        </div>
+      </section>
+
 
       {/* CE QUE VOUS RECEVEZ */}
       <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
           <img
-            src="/images/entreprise/receive.jpg"
+            src="/images/image.jpg"
             alt="Pack entreprise"
             className="w-full rounded-2xl object-cover shadow-lg"
           />
