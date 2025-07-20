@@ -1,6 +1,5 @@
 
 import Button from "../components/Button";
-import { TextCheck } from "../components/TextCheck";
 import { Title } from "../components/Title";
 import { 
   Brain, 
