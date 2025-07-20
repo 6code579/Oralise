@@ -34,7 +34,7 @@ const Navbar = () => {
                 Nos services <ChevronDown size={16} />
               </button>
               <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
-                <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Coaching</Link></li>
+                <li><Link to="/coaching" className="block px-4 py-2 hover:bg-main-color">Coaching</Link></li>
                 <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Formations</Link></li>
                 <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Préparation aux examens</Link></li>
               </ul>
@@ -80,7 +80,7 @@ const Navbar = () => {
 
             {/* Dropdown Services */}
             <li><MobileDropdown title="Services">
-              <Link to="/services" onClick={toggleMenu} className="block px-4 py-2">Coaching</Link>
+              <Link to="/coaching" onClick={toggleMenu} className="block px-4 py-2">Coaching</Link>
               <Link to="/services" onClick={toggleMenu} className="block px-4 py-2">Formations</Link>
               <Link to="/services" onClick={toggleMenu} className="block px-4 py-2">Préparation examens</Link>
             </MobileDropdown></li>
