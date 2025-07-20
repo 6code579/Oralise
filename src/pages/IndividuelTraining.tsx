@@ -35,7 +35,7 @@ const IndividuelTraining = () => {
     <>
       {/* Section Hero */}
       <div className="flex flex-col items-center justify-center gap-12 text-center mt-4 md:py-20 px-4 md:px-0">
-        <div className="w-full mt-3 md:max-w-4xl text-start md:text-center flex flex-col gap-4">
+        <div className="w-full mt-3 md:max-w-5xl text-start md:text-center flex flex-col gap-4">
           <Title
             title="Avancez 3 fois plus vite avec un coach dédié rien que pour vous."
             color={true} className="uppercase"
@@ -51,12 +51,12 @@ const IndividuelTraining = () => {
           <img
             src="/images/individuel/banner.jpg"
             alt="Coaching personnalisé"
-            className="w-full rounded-3xl object-cover scale-90 hover:scale-100 transition-transform duration-300 shadow-[0_10px_20px_rgba(38,178,188,0.3),0_6px_6px_rgba(38,178,188,0.2)]"
+            className="w-full md:w-3/4 h-auto rounded-3xl object-cover shadow-lg scale-90 hover:scale-100 transition duration-300"
           />
           <Button
             label="Réserver mon diagnostic gratuit"
             changeColor={true}
-            className="w-full md:w-1/2 py-8 md:text-xl "
+            className="py-7 text-lg px-6 "
           />
         </div>
       </div>
