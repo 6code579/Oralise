@@ -27,7 +27,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setThemeState(prev => (prev === "dark" ? "emerald" : "dark"));
+    setThemeState(prev => (prev === "dark" ? "light" : "dark"));
   };
 
   const setTheme = (newTheme: DaisyTheme) => {

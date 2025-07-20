@@ -12,6 +12,7 @@ import { EntrepriseTraining } from "./pages/EntrepriseTraining";
 import { GroupTraining } from "./pages/GroupTraining";
 import { ChildrenTraining } from "./pages/ChildrenTraining";
 import { CoachingPage } from "./pages/Coaching";
+import { Training } from "./pages/Training";
 function App() {
   return (
     <ThemeProvider>
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Navbar />}>
               <Route index element={<Home />} />
               <Route path="/coaching" element={<CoachingPage />} />
+              <Route path="/training" element ={<Training />} />
               <Route path="/french" element={<French />} />
               <Route path="/english" element={<English />} />
               <Route path="/entrepriseTraining" element={<EntrepriseTraining />} />

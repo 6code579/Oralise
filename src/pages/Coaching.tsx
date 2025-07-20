@@ -185,7 +185,7 @@ const CoachingPage: React.FC = () => {
             >
               <div className="flex justify-between items-start mb-4">
                 <h3 className="text-xl font-bold main-color">{title}</h3>
-                <span className="inline-block bg-main-color text-white text-xs font-semibold uppercase rounded-full px-3 py-1 select-none">
+                <span className="inline-block bg-main-color-opacity text-white text-xs font-semibold uppercase rounded-full px-3 py-1 select-none">
                   {badge}
                 </span>
               </div>

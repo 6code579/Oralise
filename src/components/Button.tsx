@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export interface ButtonProps {
   onClick?: () => void;
-  label?: string;
+  label?: string | React.ReactNode;
   className?: string;
   to?: string;
   changeColor?: boolean

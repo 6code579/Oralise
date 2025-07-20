@@ -3,9 +3,10 @@ export interface TextCheckProps {
     text?: string | number,
     table?: String[]
     color?: string
+    className : string | undefined
 
 }
-const TextCheck = ({ text, table ,  color }: TextCheckProps) => {
+const TextCheck = ({ text, table ,  color,className }: TextCheckProps) => {
     return (
         <>
             {table && Array.isArray(table) ? (
@@ -18,9 +19,9 @@ const TextCheck = ({ text, table ,  color }: TextCheckProps) => {
                 ))}
             </ul>
             ) : (
-            <div className="flex gap-2">
+            <div className="flex gap-2 items-center">
                 <Check size={20} className={color} />
-                <span className="text-base font-medium">{text}</span>
+                <span className={`text-base font-medium ${className}`}>{text}</span>
             </div>
             )}
         </>
