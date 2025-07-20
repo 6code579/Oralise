@@ -3,7 +3,7 @@ export interface TextCheckProps {
     text?: string | number,
     table?: String[]
     color?: string
-    className : string | undefined
+    className? : string | ''
 
 }
 const TextCheck = ({ text, table ,  color,className }: TextCheckProps) => {
