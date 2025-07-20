@@ -94,18 +94,18 @@ const ChildrenTraining = () => {
                                 <th className="p-4">Fréquence</th>
                             </tr>
                         </thead>
-                        <tbody className="text-gray-700 dark:text-white">
-                            <tr className="border-t">
+                        <tbody className="text-gray-700 dark:text-white ">
+                            <tr className="border-t duration-300 hover:bg-main-color-opacity">
                                 <td className="p-4">Séance individuelle</td>
                                 <td className="p-4">12 heures</td>
                                 <td className="p-4">3x / semaine</td>
                             </tr>
-                            <tr className="border-t">
+                            <tr className="border-t duration-300 hover:bg-main-color-opacity">
                                 <td className="p-4">Mini-groupe (5 max)</td>
                                 <td className="p-4">12 heures</td>
                                 <td className="p-4">3x / semaine</td>
                             </tr>
-                            <tr className="border-t">
+                            <tr className="border-t duration-300 hover:bg-main-color-opacity">
                                 <td className="p-4">Club Oral Créatif</td>
                                 <td className="p-4">4 heures</td>
                                 <td className="p-4">1x / semaine</td>
