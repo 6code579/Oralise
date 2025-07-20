@@ -13,6 +13,7 @@ import { GroupTraining } from "./pages/GroupTraining";
 import { ChildrenTraining } from "./pages/ChildrenTraining";
 import { CoachingPage } from "./pages/Coaching";
 import { Training } from "./pages/Training";
+import { Examen } from "./pages/Examen";
 function App() {
   return (
     <ThemeProvider>
@@ -29,6 +30,7 @@ function App() {
               <Route path="/individuelTraining" element={<IndividuelTraining />} />
               <Route path="/groupTraining" element={<GroupTraining />} />
               <Route path="/childrenTraining" element={<ChildrenTraining />} />
+              <Route path="/examen" element={<Examen />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Route>

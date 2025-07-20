@@ -36,7 +36,7 @@ const Navbar = () => {
               <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
                 <li><Link to="/coaching" className="block px-4 py-2 hover:bg-main-color">Coaching</Link></li>
                 <li><Link to="/training" className="block px-4 py-2 hover:bg-main-color">Formations</Link></li>
-                <li><Link to="#" className="block px-4 py-2 hover:bg-main-color">Préparation aux examens</Link></li>
+                <li><Link to="examen" className="block px-4 py-2 hover:bg-main-color">Préparation aux examens</Link></li>
               </ul>
             </li>
 
@@ -82,7 +82,7 @@ const Navbar = () => {
             <li><MobileDropdown title="Services">
               <Link to="/coaching" onClick={toggleMenu} className="block px-4 py-2">Coaching</Link>
               <Link to="/training" onClick={toggleMenu} className="block px-4 py-2">Formations</Link>
-              <Link to="/services" onClick={toggleMenu} className="block px-4 py-2">Préparation examens</Link>
+              <Link to="examen" onClick={toggleMenu} className="block px-4 py-2">Préparation examens</Link>
             </MobileDropdown></li>
 
             {/* Dropdown Langues */}
