@@ -83,9 +83,9 @@ function GroupTraining() {
                 {/* Image à droite sur desktop */}
                 <div className="w-full md:w-1/2">
                     <img
-                        src="/images/image.jpg"
+                        src="/images/group/group.jpg"
                         alt="Illustration formation en groupe"
-                        className="w-full h-auto object-cover rounded-xl shadow-2xl scale-90"
+                        className="w-full h-auto object-cover rounded-2xl shadow-2xl scale-90 duration-300 hover:scale-95"
                     />
                 </div>
             </section>

@@ -46,9 +46,9 @@ const EntrepriseTraining = () => {
           Que ce soit pour pitcher, convaincre ou manager, Oralise accompagne vos collaborateurs à s’exprimer avec impact et fluidité.
         </p>
         <img
-          src="/images/image.jpg"
+          src="/images/entreprise/Hero.jpg"
           alt="Formation en entreprise"
-          className="w-full md:w-3/4 rounded-3xl object-cover shadow-lg scale-90 hover:scale-100 transition duration-300"
+          className="w-full md:w-1/2 h-auto rounded-3xl object-cover shadow-lg scale-90 hover:scale-100 transition duration-300"
         />
         <Button
           label="Obtenir un devis personnalisé"
@@ -61,9 +61,9 @@ const EntrepriseTraining = () => {
       <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
           <img
-            src="/images/image.jpg"
+            src="/images/entreprise/Pourquoi.jpg"
             alt="Pourquoi une formation entreprise"
-            className="w-full rounded-2xl object-cover shadow-lg"
+            className="w-full rounded-2xl object-cover shadow-lg scale-95 duration-300 hover:scale-90"
           />
         </div>
         <div className="md:w-1/2 space-y-4">
@@ -80,9 +80,9 @@ const EntrepriseTraining = () => {
       <section className="flex flex-col md:flex-row-reverse items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
           <img
-            src="/images/image.jpg"
+            src="/images/entreprise/who.jpg"
             alt="Cas d’usage"
-            className="w-full rounded-2xl object-cover shadow-lg"
+              className="w-full rounded-2xl object-cover shadow-lg scale-95 duration-300 hover:scale-90"
           />
         </div>
         <div className="md:w-1/2 space-y-4">
@@ -146,9 +146,9 @@ const EntrepriseTraining = () => {
       <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
         <div className="md:w-1/2">
           <img
-            src="/images/image.jpg"
+            src="/images/entreprise/what.jpg"
             alt="Pack entreprise"
-            className="w-full rounded-2xl object-cover shadow-lg"
+            className="w-full rounded-2xl object-cover shadow-lg scale-95 duration-300 hover:scale-90"
           />
         </div>
         <div className="md:w-1/2 space-y-4">
