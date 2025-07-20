@@ -11,11 +11,7 @@ import {
   GraduationCap, 
   CheckCircle, 
   ArrowRight,
-  Trophy,
-  Award,
-  Calendar,
-  Users,
-  Star
+  
 } from "lucide-react";
 
 const Examen = () => {
