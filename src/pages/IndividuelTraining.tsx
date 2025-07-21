@@ -62,7 +62,7 @@ const IndividuelTraining = () => {
       </div>
 
       {/* SECTION 2 */}
-      <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
+              <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
         <div className="md:w-1/2">
           <img src="/images/individuel/why.jpg" alt="Formation individuelle" className="w-full rounded-2xl object-cover shadow-lg md:scale-90" />
         </div>
@@ -76,7 +76,7 @@ const IndividuelTraining = () => {
       </section>
 
       {/* SECTION 3 */}
-      <section className="flex flex-col md:flex-row-reverse items-center gap-10 py-16 px-4 md:px-20">
+              <section className="flex flex-col md:flex-row-reverse items-center gap-8 py-10 px-5 md:px-20">
         <div className="md:w-1/2">
           <img src="/images/individuel/whom.png" alt="Pour qui" className="w-full rounded-2xl object-cover " />
         </div>
@@ -92,7 +92,7 @@ const IndividuelTraining = () => {
       </section>
 
       {/* SECTION 4 */}
-      <section className="flex flex-col md:flex-row items-center gap-10  md:py-16 px-4 md:px-20">
+              <section className="flex flex-col md:flex-row items-center gap-8  md:py-10 px-5 md:px-20">
         <div className="md:w-1/2">
           <img src="/images/individuel/receive.jpg" alt="Contenu de la formation" className="w-full rounded-2xl object-cover shadow-lg md:scale-90" />
         </div>
@@ -107,7 +107,7 @@ const IndividuelTraining = () => {
       </section>
 
       {/* SECTION 5 */}
-      <section className="space-y-8 md:space-y-12 text-center py-12 md:py-16 px-4 md:px-20">
+              <section className="space-y-8 md:space-y-12 text-center py-10 px-5 md:px-20">
         <Title title="Les avantages Oralise (vs autres formations)" color={true}/>
         <div className="grid md:grid-cols-2 gap-6 text-left">
           <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70 rounded-2xl shadow-2xl  duration-300 hover:scale-95 ">
@@ -132,7 +132,7 @@ const IndividuelTraining = () => {
       </section>
 
       {/* SECTION 6 */}
-      <section className="flex flex-col items-center gap-6 text-center py-16 px-4 md:px-20">
+              <section className="flex flex-col items-center gap-6 text-center py-10 px-5 md:px-20">
         <Title title="Prêt(e) à faire un vrai bond en avant ?" color={true} />
         <p className="max-w-3xl text-base md:text-lg">
           Avec la formation individuelle Oralise, vous ne suivez pas un cours :<br />

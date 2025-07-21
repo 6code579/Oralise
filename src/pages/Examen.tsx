@@ -17,7 +17,7 @@ const Examen = () => {
   return (
     <div className="min-h-screen ">
       {/* SECTION 1 : Hero */}
-      <section className="py-20 px-5 md:px-20">
+      <section className="py-10 px-5 md:px-20">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="main-color font-extrabold text-4xl md:text-6xl leading-tight mb-8">
             Obtenez votre certification avec précision, pas avec stress.
@@ -42,7 +42,7 @@ const Examen = () => {
       </section>
 
       {/* SECTION 2 : Examens proposés */}
-      <section className="py-20 px-5 md:px-20">
+      <section className="py-10 px-5 md:px-20">
         <div className="max-w-6xl mx-auto">
           <Title title="Examens proposés" color={true} />
           
@@ -114,7 +114,7 @@ const Examen = () => {
       </section>
 
       {/* SECTION 3 : Méthode Oralise */}
-      <section className="py-20 px-5 md:px-20 bg-white dark:bg-gray-800/70">
+      <section className="py-10 px-5 md:px-20 bg-white dark:bg-gray-800/70">
         <div className="max-w-6xl mx-auto">
           <Title title="Méthode Oralise (exclusif)"  color={true}/>
           
@@ -175,7 +175,7 @@ const Examen = () => {
       </section>
 
       {/* SECTION 4 : Formules disponibles */}
-      <section className="py-20 px-5 md:px-20">
+      <section className="py-10 px-5 md:px-20">
         <div className="max-w-6xl mx-auto">
           <Title title="Formules disponibles" color/>
           
@@ -216,7 +216,7 @@ const Examen = () => {
       </section>
 
       {/* SECTION 5 : Bénéfices concrets */}
-      <section className="py-20 px-5 md:px-20 bg-white dark:bg-gray-800">
+      <section className="py-10 px-5 md:px-20 bg-white dark:bg-gray-800">
         <div className="max-w-6xl mx-auto">
           <Title title="Bénéfices concrets" color={true}/>
           
@@ -267,7 +267,7 @@ const Examen = () => {
       </section>
 
       {/* SECTION 6 : Appel à l'action */}
-      <section className="py-20 px-5 md:px-20">
+      <section className="py-10 px-5 md:px-20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 flex items-center justify-center main-color gap-3">
             

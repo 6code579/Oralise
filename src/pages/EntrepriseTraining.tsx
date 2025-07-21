@@ -36,7 +36,7 @@ const EntrepriseTraining = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="flex flex-col items-center gap-8 text-center py-16 px-4 md:px-20 md:mt-8">
+      <section className="flex flex-col items-center gap-8 text-center py-10 px-5 md:px-20 md:mt-8">
         <Title
           title="Boostez les compétences orales de vos équipes, durablement."
           color={true}
@@ -58,7 +58,7 @@ const EntrepriseTraining = () => {
       </section>
 
       {/* POURQUOI UNE FORMATION ENTREPRISE */}
-      <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
+      <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
         <div className="md:w-1/2">
           <img
             src="/images/entreprise/Pourquoi.jpg"
@@ -77,7 +77,7 @@ const EntrepriseTraining = () => {
       </section>
 
       {/* CAS D’USAGE */}
-      <section className="flex flex-col md:flex-row-reverse items-center gap-10 py-16 px-4 md:px-20">
+      <section className="flex flex-col md:flex-row-reverse items-center gap-8 py-10 px-5 md:px-20">
         <div className="md:w-1/2">
           <img
             src="/images/entreprise/who.jpg"
@@ -96,7 +96,7 @@ const EntrepriseTraining = () => {
         </div>
       </section>
       {/* SECTION MODULES À LA CARTE */}
-      <section className="py-16 px-4 md:px-20">
+      <section className="py-10 px-5 md:px-20">
         <Title title="Modules à la carte" color={true} className="text-center mb-8 md:mb-12" />
         <div className="grid mb-8 border border-gray-200 rounded-2xl shadow-2xl dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800  ">
           {[
@@ -143,7 +143,7 @@ const EntrepriseTraining = () => {
 
 
       {/* CE QUE VOUS RECEVEZ */}
-      <section className="flex flex-col md:flex-row items-center gap-10 py-16 px-4 md:px-20">
+      <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
         <div className="md:w-1/2">
           <img
             src="/images/entreprise/what.jpg"
@@ -162,7 +162,7 @@ const EntrepriseTraining = () => {
       </section>
 
       {/* AVANTAGES COMPARATIFS */}
-      <section className="space-y-8 text-center py-16 px-4 md:px-20">
+      <section className="space-y-8 text-center py-10 px-5 md:px-20">
         <Title title="Pourquoi Oralise est différent" color={true} />
         <div className="grid md:grid-cols-2 gap-6 text-left">
           <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70 rounded-2xl shadow-xl hover:scale-95 duration-300">

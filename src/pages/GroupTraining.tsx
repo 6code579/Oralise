@@ -7,7 +7,7 @@ function GroupTraining() {
         <div className="  text-gray-800 dark:text-white">
 
             {/* SECTION 1: HERO */}
-            <section className="min-h-[50vh] flex flex-col items-start text-start md:items-center justify-center md:text-center px-6 md:px-16 gap-2 mt-5">
+            <section className="min-h-[50vh] flex flex-col items-start text-start md:items-center justify-center md:text-center px-5 md:px-20 gap-2 mt-5">
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 main-color">Parler, s’exprimer, échanger… ensemble, c’est plus motivant.</h1>
                 <p className="text-lg md:text-xl max-w-4xl mb-6">
                     Les formations en groupe Oralise vous plongent dans une expérience collective stimulante, bienveillante et 100 % orientée pratique orale.
@@ -16,7 +16,7 @@ function GroupTraining() {
             </section>
 
             {/* SECTION 2: POURQUOI CHOISIR LA FORMATION EN GROUPE */}
-            <section className="py-12 px-6 md:px-20">
+            <section className="py-10 px-5 md:px-20">
                 <Title title="Pourquoi choisir la formation en groupe ?" color />
                 <div className="mt-6 space-y-4">
                     {
@@ -47,7 +47,7 @@ function GroupTraining() {
             </section>
 
             {/* SECTION 3: POUR QUI EST-CE FAIT ? */}
-            <section className="bg-main-color-opacity dark:bg-gray-800 py-16 px-6 md:px-20  ">
+            <section className="bg-main-color-opacity dark:bg-gray-800 py-10 px-5 md:px-20  ">
                 <Title title="Pour qui est-ce fait ?" color className="" />
                 <ul className="mt-6 space-y-3 ">
                     {[
@@ -62,7 +62,7 @@ function GroupTraining() {
             </section>
 
             {/* SECTION 4: CE QUE VOUS RECEVEZ */}
-            <section className="py-20 px-6 md:px-20 flex flex-col-reverse md:flex-row items-center gap-10 md:gap-16">
+            <section className="py-10 px-5 md:px-20 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16">
                 {/* Texte à gauche sur desktop */}
                 <div className="w-full md:w-1/2">
                     <Title title="Ce que vous recevez" color />
@@ -92,7 +92,7 @@ function GroupTraining() {
 
 
             {/* SECTION 5: CONTENU TYPE D’UNE SÉANCE */}
-            <section className="py-16 px-6 md:px-20 bg-white dark:bg-gray-800 shadow-2xl">
+            <section className="py-10 px-5 md:px-20 bg-white dark:bg-gray-800 shadow-2xl">
                 <Title title="Contenu type d’une séance" color className=" md:text-right" />
 
                 <div className="overflow-x-auto mt-8 md:mt-12">

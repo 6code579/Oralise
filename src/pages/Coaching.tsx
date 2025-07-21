@@ -136,7 +136,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
 
 const CoachingPage: React.FC = () => {
   return (
-    <main className="text-gray-900 dark:text-white px-6 md:px-20 py-16 space-y-20">
+    <main className="text-gray-900 dark:text-white px-5 md:px-20 py-10 space-y-20">
       {/* SECTION 1 - HERO */}
       <section className="text-center max-w-4xl mx-auto space-y-6">
         <Title

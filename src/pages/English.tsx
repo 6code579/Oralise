@@ -64,7 +64,7 @@ const TypeTraining = () => {
     return (
         <>
             {/* inspired by tailwindcss.com */}
-            <ul className="grid grid-cols-1 md:my-20 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
+            <ul className="grid grid-cols-1 md:my-8 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
 
                 {
                     FrenchList.map((element) => (

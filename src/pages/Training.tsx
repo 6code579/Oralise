@@ -10,11 +10,11 @@ function Training() {
         <div className="space-y-16">
 
             {/* HERO */}
-            <section className="text-center py-16 px-4 max-w-6xl mx-auto">
+            <section className="text-center py-10 px-5 md:px-20 max-w-6xl mx-auto">
                 <Title title="Exprimez-vous. Dans la bonne langue, au bon rythme, avec la bonne méthode.
 " color/>
-               <div className="flex justify-between items-center gap-12 md:mt-12">
-                 <div className="space-y-2 text-lg text-muted-foreground ">
+               <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-6 sm:gap-8 md:gap-12 md:mt-8 lg:mt-12">
+                 <div className="space-y-2 sm:space-y-3 text-base sm:text-lg text-muted-foreground order-2 sm:order-1">
                     {
                         [
                             'Parler une langue étrangère',
@@ -32,16 +32,16 @@ function Training() {
                     label={
                         <span className="inline-flex items-center gap-2">
                           
-                            Trouvez la formation qui vous correspond  <ChevronRight className="w-5 h-5 font-bold" />
+                            Trouvez la formation qui vous correspond  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 font-bold" />
                         </span>
                     }
-                    changeColor className=""
+                    changeColor className="order-1 sm:order-2 w-full sm:w-auto"
                 />
                </div>
             </section>
 
             {/* LANGUAGES */}
-            <section className="px-4 max-w-5xl mx-auto space-y-10">
+            <section className="px-5 md:px-20 max-w-5xl mx-auto space-y-10">
                 <Title title="Formations en langues" color />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {[
@@ -76,7 +76,7 @@ function Training() {
             </section>
 
             {/* EXPRESSION & LEADERSHIP */}
-            <section className="px-4 max-w-5xl mx-auto space-y-10">
+            <section className="px-5 md:px-20 max-w-5xl mx-auto space-y-10">
                 <Title title="Formations en expression, leadership & soft skills" color className="text-center" />
                 <p className="text-muted-foreground text-center max-w-3xl mx-auto">
                     Des compétences humaines pour s’affirmer, inspirer et communiquer avec impact.

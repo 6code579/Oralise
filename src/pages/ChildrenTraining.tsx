@@ -40,7 +40,7 @@ const ChildrenTraining = () => {
             />
 
             {/* SECTION 2 - Pourquoi une formation orale pour enfants */}
-            <section className="py-16 px-4 md:px-20 md:mt-8 flex flex-col items-start ">
+            <section className="py-10 px-5 md:px-20 md:mt-8 flex flex-col items-start ">
                 <Title title="Parler bien, ça commence tôt." color />
                 <div className="max-w-4xl text-left mt-6 text-lg ">
                     <p>
@@ -55,7 +55,7 @@ const ChildrenTraining = () => {
             </section>
 
             {/* SECTION 3 - Pour qui ? */}
-            <section className="py-16 px-4 md:px-20 flex flex-col justify-center items-start">
+            <section className="py-10 px-5 md:px-20 flex flex-col justify-center items-start">
                 <Title title="Pour qui ?" color />
                 <div className="grid gap-6 md:grid-cols-2 mt-6 items-center ">
                     <div>
@@ -83,7 +83,7 @@ const ChildrenTraining = () => {
             </section>
 
             {/* SECTION 4 - Formules proposées */}
-            <section className="py-16 px-4 md:px-20">
+            <section className="py-10 px-5 md:px-20">
                 <Title title="Formules proposées" color className="text-end" />
                 <div className="overflow-x-auto mt-6  rounded-2xl shadow-2xl">
                     <table className="w-full text-left border border-gray-700">
@@ -116,7 +116,7 @@ const ChildrenTraining = () => {
             </section>
 
             {/* SECTION 5 - Résultats */}
-            <section className="py-16 px-4 md:px-20">
+            <section className="py-10 px-5 md:px-20">
                 <Title title="Résultats observés chez les enfants" color />
                 <div className="mt-6">
                     <TextCheck table={observedResults} color="main-color" />
@@ -124,7 +124,7 @@ const ChildrenTraining = () => {
             </section>
 
             {/* SECTION 6 - Pourquoi Oralise Bourgeons ? */}
-            <section className="py-16 px-4 md:px-20 flex flex-col-reverse md:flex-row gap-12 items-center md:items-end justify-center md:justify-end">
+            <section className="py-10 px-5 md:px-20 flex flex-col-reverse md:flex-row gap-8 items-center md:items-end justify-center md:justify-end">
                 <div className="w-full md:w-auto">
                     <img
                         src="/images/children/banner.jpg"
@@ -150,7 +150,7 @@ const ChildrenTraining = () => {
 
 
             {/* SECTION 7 - Call to action final */}
-            <section className="flex flex-col py-20 px-4 md:px-20 items-start  md:gap-6">
+            <section className="flex flex-col py-10 px-5 md:px-20 items-start  md:gap-6">
                 <Title title=" Chaque enfant mérite de se sentir à l’aise avec sa voix." color className="w-2/3 md:mb-4" />
                 <p className="max-w-3xl  mb-6">
                     Offrez-lui un espace d’expression joyeux, encadré, et pensé pour l’aider à grandir avec assurance.

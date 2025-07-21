@@ -32,7 +32,7 @@ function Contact() {
   return (
     <div className="min-h-screen transition duration-300">
       {/* Hero */}
-      <section className="w-full py-20 px-4 text-center bg-transparent">
+      <section className="w-full py-10 px-5 md:px-20 text-center bg-transparent">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl font-extrabold main-color mb-6">
             Prêt à échanger avec nous ?
@@ -47,7 +47,7 @@ function Contact() {
       </section>
 
       {/* Bloc principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 py-16 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-20 py-10 max-w-7xl mx-auto">
         {/* Formulaire classique */}
         <form
           onSubmit={handleSubmit}

@@ -7,7 +7,7 @@ import { Banner } from "../components/Banner";
 const BannerFrench = () => {
     return (
         <>
-            <div className="w-full max-w-full mb-8 mx-auto px-4 mt-8 md:px-20 md:mt-16 ">
+            <div className="w-full max-w-full mb-8 mx-auto px-5 md:px-20 mt-5 md:mt-8 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl overflow-hidden">
 
                     {/* Image femme */}
@@ -103,7 +103,7 @@ const TypeTraining = () => {
     return (
         <>
             {/* inspired by tailwindcss.com */}
-            <ul className="grid grid-cols-1 md:my-20 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
+            <ul className="grid grid-cols-1 md:my-8 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
 
                 {
                     FrenchList.map((element) => (
