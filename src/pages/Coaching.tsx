@@ -140,7 +140,7 @@ const CoachingPage: React.FC = () => {
     <main className="text-gray-900 dark:text-white px-5 md:px-20 py-10 space-y-20">
       {/* SECTION 1 - HERO */}
       <AnimatedElement animation="fadeIn" delay={200}>
-        <section className="text-center max-w-4xl mx-auto space-y-6">
+        <section className="text-start md:text-center max-w-4xl mx-auto space-y-6">
           <AnimatedText text="Exprimez votre plein potentiel. Avec un coach, tout change." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color" />
           <AnimatedText text="Que ce soit pour améliorer votre parole, développer votre confiance ou faire évoluer votre vie personnelle ou professionnelle, nos coachs vous accompagnent à chaque étape de votre transformation." type="reveal" delay={1000} className="text-lg md:text-xl" />
           <AnimatedElement animation="scaleIn" delay={1200}>
@@ -155,8 +155,8 @@ const CoachingPage: React.FC = () => {
 
       {/* SECTION 2 - Explication */}
       <AnimatedElement animation="slideUp" delay={400}>
-        <section className="max-w-3xl mx-auto text-center text-lg md:text-xl space-y-4">
-          <AnimatedText text="Et si votre parole reflétait vraiment votre puissance intérieure ?" type="reveal" delay={600} className="font-bold" />
+        <section className="max-w-3xl mx-auto md:text-center text-lg md:text-xl space-y-4">
+          <AnimatedText text="Et si votre parole reflétait vraiment votre puissance intérieure ?" type="reveal" delay={600} className="font-bold main-color" />
           <AnimatedText text="Nos coachings ne sont pas des cours, mais des expériences de libération, de clarification et de stratégie personnelle. Nous travaillons avec vous le fond et la forme, pour aligner ce que vous pensez, ce que vous ressentez, et ce que vous dites." type="reveal" delay={1000} />
         </section>
       </AnimatedElement>
@@ -215,12 +215,12 @@ const CoachingPage: React.FC = () => {
 
       {/* SECTION 5 - Call to action final */}
       <AnimatedElement animation="fadeIn" delay={1000}>
-        <section className="text-center max-w-4xl mx-auto space-y-6">
+        <section className="text-start md:text-center max-w-4xl mx-auto space-y-6">
           <AnimatedText text="Et si vous osiez être pleinement vous-même, à travers votre voix ?" type="typing" speed={50} className="text-xl md:text-2xl font-semibold main-color" />
           <AnimatedText text="Nos coachs sont là pour vous écouter, vous guider, vous révéler." type="reveal" delay={1200} />
-          <div className="flex flex-col sm:flex-row justify-center gap-6 mt-4">
+          <div className="flex flex-col sm:flex-row justify-center items-start gap-6 mt-4">
             <AnimatedElement animation="scaleIn" delay={1400}>
-              <Button label="Réserver une séance découverte gratuite" changeColor={true} />
+              <Button label="Réserver une séance découverte gratuite" changeColor={true} className="text-xs md:text-base " />
             </AnimatedElement>
             <AnimatedElement animation="scaleIn" delay={1600}>
               <Button label="Recevoir un devis personnalisé" />

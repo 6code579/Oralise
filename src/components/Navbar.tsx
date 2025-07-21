@@ -139,67 +139,73 @@ const Navbar = () => {
               </Link>
             </li>
 
-            
+
           </ul>
         </div>
       </nav>
 
       <Outlet />
       {/* Footer professionnel inspiré de Freepik */}
-      <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-10 pt-10 pb-6 px-4 md:px-0">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <footer className="bg-gray-100 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 mt-10 pt-10 pb-6 px-4 sm:px-6 lg:px-0">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Logo & description */}
           <div className="flex flex-col gap-4">
             <a href="#" className="flex items-center gap-2">
-              <img src="/logo.png" alt="Oralise Logo" className="w-32 h-auto object-contain" />
+              <img src="/logo.png" alt="Oralise Logo" className="w-28 sm:w-32 h-auto object-contain" />
             </a>
-            <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base">
+            <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base leading-relaxed">
               Oralise, votre partenaire pour l’expression orale et la maîtrise des langues. Formations, coaching et accompagnement sur-mesure.
             </p>
           </div>
+
           {/* Navigation */}
           <div>
-            <h4 className="font-bold text-gray-800 dark:text-white mb-3">Navigation</h4>
-            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+            <h4 className="font-bold text-gray-800 dark:text-white mb-3 text-base sm:text-lg">Navigation</h4>
+            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
               <li className="duration-300 hover:main-color"><Link to="/">Accueil</Link></li>
+
               <li className="group relative">
                 <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                   Nos services <ChevronDown size={16} />
                 </button>
-                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-0 border">
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
                   <li><Link to="/coaching" className="block px-4 py-2 hover:bg-main-color hover:text-white">Coaching</Link></li>
                   <li><Link to="/training" className="block px-4 py-2 hover:bg-main-color hover:text-white">Formations</Link></li>
-                  <li><Link to="examen" className="block px-4 py-2 hover:bg-main-color hover:text-white">Préparation aux examens</Link></li>
+                  <li><Link to="/examen" className="block px-4 py-2 hover:bg-main-color hover:text-white">Préparation aux examens</Link></li>
                 </ul>
               </li>
+
               <li className="group relative">
                 <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                   Nos langues <ChevronDown size={16} />
                 </button>
-                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-0 border">
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
                   <li><Link to="/french" className="block px-4 py-2 hover:bg-main-color hover:text-white">Français</Link></li>
                   <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color hover:text-white">English</Link></li>
                 </ul>
               </li>
+
               <li className="group relative">
                 <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                   Nos formations <ChevronDown size={16} />
                 </button>
-                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-0 border">
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
                   <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">En entreprise</Link></li>
                   <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">Individuelle</Link></li>
                   <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">En groupe</Link></li>
                   <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">Pour enfants</Link></li>
                 </ul>
               </li>
+
               <li className="duration-300 hover:main-color"><Link to="/about">À propos</Link></li>
               <li className="duration-300 hover:main-color"><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
+
           {/* Formations */}
           <div>
-            <h4 className="font-bold text-gray-800 dark:text-white mb-3">Formations</h4>
-            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+            <h4 className="font-bold text-gray-800 dark:text-white mb-3 text-base sm:text-lg">Formations</h4>
+            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
               <li>Coaching individuel</li>
               <li>Formation en groupe</li>
               <li>Formation en entreprise</li>
@@ -207,26 +213,30 @@ const Navbar = () => {
               <li>Ateliers enfants</li>
             </ul>
           </div>
+
           {/* Contact & réseaux */}
           <div>
-            <h4 className="font-bold text-gray-800 dark:text-white mb-3">Contact</h4>
-            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
+            <h4 className="font-bold text-gray-800 dark:text-white mb-3 text-base sm:text-lg">Contact</h4>
+            <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
               <li>Email : <a href="mailto:contact@oralise.com" className="hover:underline main-color">contact@oralise.com</a></li>
-              <li>Téléphone : <a href="tel:+33123456789" className="hover:underline main-color">+212 607041226</a></li>
+              <li>Téléphone : <a href="tel:+212607041226" className="hover:underline main-color">+212 607041226</a></li>
               <li className="flex gap-3 mt-2">
                 <a href="https://www.facebook.com/profile.php?id=61571529371866" aria-label="Facebook" className="hover:text-blue-600"><Facebook /></a>
                 <a href="#" aria-label="Instagram" className="hover:text-pink-500"><Instagram /></a>
                 <a href="#" aria-label="LinkedIn" className="hover:text-sky-500"><Linkedin /></a>
-                <a href="#" aria-label="LinkedIn" className="hover:text-green-600"><MessageCircle /></a>
+                <a href="#" aria-label="Message" className="hover:text-green-600"><MessageCircle /></a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 text-xs md:text-sm">
+
+        {/* Bottom Footer */}
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 text-xs sm:text-sm text-center gap-4 sm:gap-0">
           <span>&copy; {new Date().getFullYear()} Oralise. Tous droits réservés.</span>
           <span>Oralise Team</span>
         </div>
       </footer>
+
     </>
   );
 };

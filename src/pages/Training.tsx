@@ -13,7 +13,7 @@ function Training() {
 
             {/* HERO */}
             <AnimatedElement animation="fadeIn" delay={200}>
-                <section className="text-center py-10 px-5 md:px-20 max-w-6xl mx-auto">
+                <section className="text-start md:text-center py-7 md:py-10 px-5 md:px-20 max-w-6xl mx-auto">
                     <AnimatedText 
                         text="Exprimez-vous. Dans la bonne langue, au bon rythme, avec la bonne méthode."
                         type="typing"
@@ -67,10 +67,10 @@ function Training() {
                     ].map((label, i) => (
                             <AnimatedElement key={i} animation="scaleIn" delay={600 + i * 100}>
                         <div
-                            className="dark:bg-gray-800/70 rounded-2xl p-6 shadow-2xl hover:shadow-md transition-shadow duration-800 hover:scale-90"
+                            className="dark:bg-gray-800/70 rounded-2xl p-6 shadow-2xl hover:shadow-md  duration-300 hover:scale-90 "
                         >
                             <TextCheck text={label}  color="main-color" className="main-color text-xl" />
-                            <p className="dark:text-white md:my-4">
+                            <p className="dark:text-white my-3 md:my-4">
                                 {
                                     [
                                         "Apprendre ou perfectionner son français pour la vie quotidienne, le travail ou les études. Niveaux : A1 à C2",
@@ -82,7 +82,7 @@ function Training() {
                                     ][i]
                                 }
                             </p>
-                            <Button label='Je prends un rendez-vous' changeColor/>
+                            <Button label='Je prends un rendez-vous' changeColor className=" mt-2 md:mt-3"/>
                         </div>
                             </AnimatedElement>
                     ))}
@@ -92,7 +92,7 @@ function Training() {
 
             {/* EXPRESSION & LEADERSHIP */}
             <AnimatedElement animation="slideUp" delay={800}>
-                <section className="px-5 md:px-20 max-w-5xl mx-auto space-y-10">
+                <section className="px-5 md:px-20 max-w-5xl  mx-auto space-y-10">
                 <Title title="Formations en expression, leadership & soft skills" color className="text-center" />
                     <AnimatedText 
                         text="Des compétences humaines pour s'affirmer, inspirer et communiquer avec impact. Ces modules vous aident à maîtriser l'art de parler juste et fort."
@@ -150,7 +150,7 @@ function Training() {
                             </div>
                             <p className="italic dark:texte-white">{item.subtitle}</p>
                             <p className="dark:text-white  ">{item.desc}</p>
-                            <Button label='Je prends un rendez-vous' changeColor to="/" className="md:mt-4"/>
+                            <Button label='Je prends un rendez-vous' changeColor to="/" className="mt-4 md:mt-4"/>
                         </div>
                             </AnimatedElement>
                     ))}
@@ -160,7 +160,7 @@ function Training() {
 
             {/* CTA */}
             <AnimatedElement animation="fadeIn" delay={1200}>
-            <section className="text-start md:text-center py-16 px-4 max-w-4xl mx-auto space-y-6">
+            <section className="text-start md:text-center md:py-16 px-4 max-w-4xl mx-auto space-y-6">
                     <AnimatedText 
                         text="Quand on travaille sa parole, on travaille sa posture. Et quand on change sa posture, tout change."
                         type="typing"
