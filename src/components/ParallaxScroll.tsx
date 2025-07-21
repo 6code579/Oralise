@@ -13,7 +13,6 @@ const ParallaxScroll: React.FC<ParallaxScrollProps> = ({
   speed = 0.5,
   direction = 'up',
   className = '',
-  threshold = 0.1,
 }) => {
   const [offset, setOffset] = useState(0);
   const elementRef = useRef<HTMLDivElement>(null);
