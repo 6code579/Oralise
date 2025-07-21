@@ -14,18 +14,17 @@ import { ChildrenTraining } from "./pages/ChildrenTraining";
 import { CoachingPage } from "./pages/Coaching";
 import { Training } from "./pages/Training";
 import { Examen } from "./pages/Examen";
-import { ParticleBackground } from "./components/ParticleBackground";
 function App() {
   return (
     <ThemeProvider>
       <Router> {/* <Router> en haut */}
-        <ParticleBackground />
+
         <PageLoaderWrapper>
           <Routes>
             <Route path="/" element={<Navbar />}>
               <Route index element={<Home />} />
               <Route path="/coaching" element={<CoachingPage />} />
-              <Route path="/training" element ={<Training />} />
+              <Route path="/training" element={<Training />} />
               <Route path="/french" element={<French />} />
               <Route path="/english" element={<English />} />
               <Route path="/entrepriseTraining" element={<EntrepriseTraining />} />

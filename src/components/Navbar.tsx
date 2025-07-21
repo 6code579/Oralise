@@ -1,8 +1,10 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, Route, Routes, BrowserRouter } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp, Facebook, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import Button from "./Button";
+import { Sun, Moon } from "lucide-react";
+
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -12,18 +14,32 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-11/12 mx-auto mt-5 md:mt-10 shadow-2xl bg-base-100 rounded-xl lg:rounded-full transition-all duration-300">
+      <nav className="w-11/12 mx-auto items-center mt-5 md:mt-10 shadow-2xl bg-base-100 rounded-xl lg:rounded-full transition-all duration-300">
         <div className="flex justify-between items-center py-4 px-6">
-          <a href="#">
+          <Link to="/">
             <img src="/logo.png" alt="Logo" className="w-32 sm:w-40 h-auto object-cover" />
-          </a>
+          </Link>
 
-          {/* Toggle menu mobile */}
-          <div className="lg:hidden">
+          {/* Zone regroupée pour les boutons mobile */}
+          <div className="lg:hidden flex items-center gap-3">
+            {/* Toggle menu mobile */}
             <button onClick={toggleMenu} className="text-2xl">
               {menuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
+
+            {/* Toggle dark-light mode mobile */}
+            <button
+              onClick={toggleTheme}
+              className="flex items-center gap-2 p-1 rounded-full border border-main-color-mobile dark:border-yellow-400 duration-300  hover:bg-main-color-opacity hover:text-white dark:bg-gray-800/70 dark:hover:bg-gray-600 shadow-2xl"
+            >
+              {theme === "dark" ? (
+                <Sun className="text-yellow-400 " size={15} />
+              ) : (
+                <Moon className="main-color" size={15} />
+              )}
+            </button>
           </div>
+
 
           {/* Menu desktop */}
           <ul className="hidden lg:flex gap-6 text-xs font-semibold items-center">
@@ -33,10 +49,10 @@ const Navbar = () => {
               <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                 Nos services <ChevronDown size={16} />
               </button>
-              <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
-                <li><Link to="/coaching" className="block px-4 py-2 hover:bg-main-color">Coaching</Link></li>
-                <li><Link to="/training" className="block px-4 py-2 hover:bg-main-color">Formations</Link></li>
-                <li><Link to="examen" className="block px-4 py-2 hover:bg-main-color">Préparation aux examens</Link></li>
+              <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-0 border">
+                <li><Link to="/coaching" className="block px-4 py-2 hover:bg-main-color hover:text-white">Coaching</Link></li>
+                <li><Link to="/training" className="block px-4 py-2 hover:bg-main-color hover:text-white">Formations</Link></li>
+                <li><Link to="examen" className="block px-4 py-2 hover:bg-main-color hover:text-white">Préparation aux examens</Link></li>
               </ul>
             </li>
 
@@ -44,9 +60,9 @@ const Navbar = () => {
               <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                 Nos langues <ChevronDown size={16} />
               </button>
-              <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
-                <li><Link to="/french" className="block px-4 py-2 hover:bg-main-color">Français</Link></li>
-                <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color">English</Link></li>
+              <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-0 border">
+                <li><Link to="/french" className="block px-4 py-2 hover:bg-main-color hover:text-white">Français</Link></li>
+                <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color hover:text-white">English</Link></li>
               </ul>
             </li>
 
@@ -54,19 +70,33 @@ const Navbar = () => {
               <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                 Nos formations <ChevronDown size={16} />
               </button>
-              <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
-                <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
-                <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color">Individuelle</Link></li>
-                <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
-                <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
+              <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-0 border ">
+                <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">En entreprise</Link></li>
+                <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">Individuelle</Link></li>
+                <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">En groupe</Link></li>
+                <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">Pour enfants</Link></li>
               </ul>
             </li>
             <li><Link to="/about">À propos</Link></li>
             <li><Link to="/contact"><Button label="Contact" changeColor={true} /></Link></li>
             <li>
-              <button onClick={toggleTheme} className="ml-2 px-4 py-2 rounded-full border bg-gray-200 dark:bg-gray-800">
-                {theme === "dark" ? "☀️" : "🌙"}
+              <button
+                onClick={toggleTheme}
+                className="flex items-center gap-2 p-2 rounded-full border dark:border-yellow-400 border-main-color  duration-300 hover:bg-main-color-opacity hover:text-white dark:bg-gray-800/70 dark:hover:bg-gray-600 shadow-2xl"
+              >
+                {theme === "dark" ? (
+                  <>
+                    <Sun className="text-yellow-400" size={20} />
+
+                  </>
+                ) : (
+                  <>
+                    <Moon className="main-color" size={20} />
+
+                  </>
+                )}
               </button>
+
             </li>
           </ul>
         </div>
@@ -109,17 +139,7 @@ const Navbar = () => {
               </Link>
             </li>
 
-            <li>
-              <button
-                onClick={() => {
-                  toggleTheme();
-                  toggleMenu();
-                }}
-                className="w-full mt-2 px-4 py-2 rounded-full border bg-gray-200 dark:bg-gray-800 dark:text-white"
-              >
-                {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
-              </button>
-            </li>
+            
           </ul>
         </div>
       </nav>
@@ -141,30 +161,39 @@ const Navbar = () => {
           <div>
             <h4 className="font-bold text-gray-800 dark:text-white mb-3">Navigation</h4>
             <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm md:text-base">
-              <li><Link to="/">Accueil</Link></li>
-              <li><Link to="/services">Services</Link></li>
+              <li className="duration-300 hover:main-color"><Link to="/">Accueil</Link></li>
+              <li className="group relative">
+                <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
+                  Nos services <ChevronDown size={16} />
+                </button>
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-0 border">
+                  <li><Link to="/coaching" className="block px-4 py-2 hover:bg-main-color hover:text-white">Coaching</Link></li>
+                  <li><Link to="/training" className="block px-4 py-2 hover:bg-main-color hover:text-white">Formations</Link></li>
+                  <li><Link to="examen" className="block px-4 py-2 hover:bg-main-color hover:text-white">Préparation aux examens</Link></li>
+                </ul>
+              </li>
               <li className="group relative">
                 <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                   Nos langues <ChevronDown size={16} />
                 </button>
-                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-1 border">
-                  <li><Link to="/french" className="block px-4 py-2 hover:bg-main-color">Français</Link></li>
-                  <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color">English</Link></li>
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-40 mt-0 border">
+                  <li><Link to="/french" className="block px-4 py-2 hover:bg-main-color hover:text-white">Français</Link></li>
+                  <li><Link to="/english" className="block px-4 py-2 hover:bg-main-color hover:text-white">English</Link></li>
                 </ul>
               </li>
               <li className="group relative">
                 <button className="inline-flex items-center gap-1 hover:main-color dark:hover:text-sky-400">
                   Nos formations <ChevronDown size={16} />
                 </button>
-                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-1 border">
-                  <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color">En entreprise</Link></li>
-                  <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color">Individuelle</Link></li>
-                  <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color">En groupe</Link></li>
-                  <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color">Pour enfants</Link></li>
+                <ul className="absolute hidden group-hover:block bg-base-100 rounded-md shadow-lg z-10 w-44 mt-0 border">
+                  <li><Link to="/entrepriseTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">En entreprise</Link></li>
+                  <li><Link to="/individuelTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">Individuelle</Link></li>
+                  <li><Link to="/groupTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">En groupe</Link></li>
+                  <li><Link to="/childrenTraining" className="block px-4 py-2 hover:bg-main-color hover:text-white">Pour enfants</Link></li>
                 </ul>
               </li>
-              <li><Link to="/about">À propos</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
+              <li className="duration-300 hover:main-color"><Link to="/about">À propos</Link></li>
+              <li className="duration-300 hover:main-color"><Link to="/contact">Contact</Link></li>
             </ul>
           </div>
           {/* Formations */}
@@ -195,14 +224,14 @@ const Navbar = () => {
         </div>
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mt-10 pt-6 border-t border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 text-xs md:text-sm">
           <span>&copy; {new Date().getFullYear()} Oralise. Tous droits réservés.</span>
-          <span>Conçu par Oralise Team</span>
+          <span>Oralise Team</span>
         </div>
       </footer>
     </>
   );
 };
 
-// ✅ Composant Dropdown Mobile (accordéon animé)
+// Composant Dropdown Mobile (accordéon animé)
 const MobileDropdown = ({ title, children }: { title: string; children: React.ReactNode }) => {
   const [open, setOpen] = useState(false);
 
