@@ -10,6 +10,7 @@ export interface BannerProps {
   btnText?: string;
   paraColor?: string;
   image?: string;
+  link:string
 }
 
 const Banner: React.FC<BannerProps> = ({
@@ -19,6 +20,7 @@ const Banner: React.FC<BannerProps> = ({
   btnText,
   paraColor,
   image,
+  link
 }) => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:mt-16 px-5 md:px-20 py-10 duration-500">
@@ -39,7 +41,7 @@ const Banner: React.FC<BannerProps> = ({
           text={title || ""} 
           type="typing" 
           speed={80} 
-          className="main-color font-extrabold text-5xl md:text-5xl leading-tight tracking-wider transition-all duration-500"
+          className="main-color font-extrabold text-4xl md:text-5xl leading-tight tracking-wider transition-all duration-500"
         />
 
         <AnimatedText 
@@ -60,7 +62,7 @@ const Banner: React.FC<BannerProps> = ({
 
         {btnText && (
           <AnimatedElement animation="scaleIn" delay={2000}>
-            <Button label={btnText} changeColor={true} />
+            <Button label={btnText} changeColor={true} to={link}/>
           </AnimatedElement>
         )}
       </div>

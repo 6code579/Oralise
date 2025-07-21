@@ -129,7 +129,7 @@ function GroupTraining() {
             </AnimatedElement>
             {/* SECTION 6: AVANTAGES SPÉCIFIQUES */}
             <AnimatedElement animation="slideUp" delay={1200}>
-                <section className="py-16 px-6 md:px-20">
+                <section className="py-8 md:py-16 px-6 md:px-20">
                     <AnimatedText text="Avantages spécifiques du groupe" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <ul className="mt-6 space-y-3 ">
                         {[
@@ -147,7 +147,7 @@ function GroupTraining() {
             </AnimatedElement>
             {/* SECTION 7: APPEL FINAL */}
             <AnimatedElement animation="fadeIn" delay={1400}>
-                <section className="bg-none  py-24 px-6 md:px-20 text-center">
+                <section className="bg-none py-8  md:py-24 px-6 md:px-20 text-center">
                     <AnimatedText text="Et si parler devenait enfin un plaisir ?" type="typing" speed={60} className="main-color text-3xl md:text-4xl font-bold mb-6" />
                     <AnimatedText text="Rejoignez un groupe, trouvez votre voix, et transformez votre oral. Avec Oralise, vous êtes entendu, accompagné et encouragé." type="reveal" delay={1600} className="text-lg mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed" />
                     <AnimatedElement animation="scaleIn" delay={1800}>

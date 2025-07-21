@@ -90,7 +90,7 @@ const ChildrenTraining = () => {
             {/* SECTION 4 - Formules proposées */}
             <AnimatedElement animation="slideUp" delay={800}>
                 <section className="py-10 px-5 md:px-20">
-                    <AnimatedText text="Formules proposées" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color text-end" />
+                    <AnimatedText text="Formules proposées" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color md:text-end" />
                     <div className="overflow-x-auto mt-6  rounded-2xl shadow-2xl">
                         <AnimatedElement animation="fadeIn" delay={1000}>
                             <table className="w-full text-left border border-gray-700">

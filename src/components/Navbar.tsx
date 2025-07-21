@@ -1,4 +1,4 @@
-import { Link, Outlet, Route, Routes, BrowserRouter } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import { Menu, X, ChevronDown, ChevronUp, Facebook, Linkedin, Instagram, MessageCircle } from "lucide-react";

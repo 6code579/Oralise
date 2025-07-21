@@ -3,13 +3,15 @@ import { TextCheck } from "./TextCheck";
 import { Title } from "./Title";
 import Flag from "react-world-flags";
 import { AnimatedElement } from "./AnimatedElement";
-
+import { WhatsAppButton } from "./WhatsappBtn";
+import { link } from "framer-motion/client";
 // ProductList component to display the products in a scrolling banner
 function ProductList() {
     const products = [
         {
             id: 1,
             name: "Coaching",
+          
         },
         {
             id: 2,
@@ -124,7 +126,9 @@ const Whychoseoralise = () => {
                             ))
                         }
                     </div>
-                    <Button label="Je prends un rendez-vous" changeColor={true}/>
+                    <WhatsAppButton text="Je prends un rendez-vous" textMessage="  Bonjour, je suis intéressé(e) par vos services Oralise et je voudrais discuter avec vous pour prendre rendez-vous!
+"/>
+                    
                 </div>
                 {/* Image */}
                 <div className="w-full md:w-1/2  lg:h-full relative order-1 md:order-none">
@@ -143,6 +147,7 @@ const Language = () => {
             title: "Français",
             description: "Du niveau débutant (A1) au niveau avancé (C2), nous vous aidons à développer votre aisance à l’oral dans la vie quotidienne, en contexte professionnel ou pour des concours.",
             flagCode: "FR",
+            link:'/french',
 
         },
         {
@@ -150,6 +155,7 @@ const Language = () => {
             title: "Anglais",
             description: "Pour travailler à l’international, réussir un entretien ou vivre à l’étranger, Oralise vous accompagne dans l’apprentissage d’un anglais fluide et impactant de zéro à héro.",
             flagCode: "GB",
+             link:'/english',
         }
     ]
 
@@ -169,7 +175,7 @@ const Language = () => {
                             Oralise vous offre des formations en français et en anglais, adaptées à vos besoins.
                             Que ce soit pour le travail, les études ou les voyages, nous vous aidons à devenir un orateur confiant et compétent dans les deux langues.
                         </p>
-                        <Button label="Contactez-nous maintenant" changeColor={true} />
+                        <Button label="Contactez-nous maintenant" changeColor={true} to="/contact" />
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col gap-8 items-start md:text-left md:px-20">
                         {
@@ -180,7 +186,7 @@ const Language = () => {
                                         <h3 className="font-semibold main-color text-2xl">{item.title}</h3>
                                     </div>
                                     <p className="text-base sm:text-lg md:text-xl">{item.description}</p>
-                                    <Button label=" En savoir plus"  changeColor={true}/>
+                                    <Button label=" En savoir plus"  changeColor={true} to={item.link}/>
                                 </div>
                             ))
                         }
@@ -200,28 +206,33 @@ const TrainingAndCoaching = () => {
             title:"Formation individuelle en ligne",
             description: "Un formateur dédié, une progression sur mesure.Apprenez à votre rythme, avec un accompagnement 100 % personnalisé.",
             image: "/images/training1.jpg",
-            status: "Nouveau"
+            status: "Nouveau",
+            link:"/individuelTraining"
         },
         {
             id: 2,
             title:"Formation en groupe en ligne",
             description: "Rejoignez une dynamique collective dans un cadre interactif et bienveillant.Travaillez l’expression orale dans des situations concrètes et variées.",
              image: "/images/training2.jpg",
-            status: "Ancien"
+            status: "Ancien",
+            link:"/groupTraining"
         },
         {
             id: 3,
             title:"Formation en entreprise en ligne ou sur site",
             description: "Faites progresser vos équipes avec des modules adaptés à vos objectifs professionnels.Horaires flexibles, résultats mesurables, formateurs spécialisés.",
             image: "/images/training3.jpg",
-            status: "Nouveau"
+            status: "Nouveau",
+            link:"/entrepriseTraining"
         },
         {
             id: 4,
             title:"Formation pour enfants en ligne",
             description: "Apprendre une langue en s'amusant, dès le plus jeune âge.Des séances ludiques, animées par des formateurs spécialisés en pédagogie enfantine.",
             image: "/images/training4.jpg",
-            status: "Nouveau"
+            status: "Nouveau",
+            link:"/childrenTraining"
+
         },
     ]
     return (
@@ -249,7 +260,9 @@ const TrainingAndCoaching = () => {
                             <h3 className="text-lg md:text-xl font-bold main-color mb-1">{item.title}</h3>
                             <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base flex-1">{item.description}</p>
                             <div className="mt-4 flex justify-start">
-                                <Button label="En savoir plus"  changeColor={true}/>
+                                <Button label="En savoir plus"  changeColor={true} to={item.link
+
+                                }/>
                             </div>
                         </div>
                     </div>

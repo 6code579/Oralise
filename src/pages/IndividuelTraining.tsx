@@ -51,7 +51,7 @@ const IndividuelTraining = () => {
               <Button
                 label="Réserver mon diagnostic gratuit"
                 changeColor={true}
-                className="py-7 text-lg px-6 "
+                className="text-xs md:py-7  md:text-md px-6 "
               />
             </AnimatedElement>
           </div>

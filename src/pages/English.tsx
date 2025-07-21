@@ -70,7 +70,7 @@ const TypeTraining = () => {
                                 <div className="prose prose-slate prose-sm text-slate-600 dark:text-white ">
                                         <AnimatedText text={element.description} type="reveal" delay={600} />
                                 </div>
-                                <div className="prose prose-slate prose-sm text-slate-600 dark:text-white md:mt-4">
+                                <div className="prose prose-slate prose-sm text-slate-600 dark:text-white mt-3 md:mt-4">
                                         <AnimatedElement animation="slideLeft" delay={800}>
                                     <TextCheck table={element.checkElement} color="main-color" />
                                         </AnimatedElement>
@@ -97,15 +97,12 @@ function English() {
     return (
         <>
             <AnimatedElement animation="fadeIn" delay={200}>
-                <AnimatedText text="Step Up !" type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color mb-2" />
-                <AnimatedText text="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." type="reveal" delay={1000} className="text-lg md:text-xl mb-2" />
+               
                 <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" />
             </AnimatedElement>
             <TypeTraining />
             <AnimatedElement animation="slideUp" delay={600}>
-                <AnimatedText text="Méthode Oralise (adaptée à l’anglais)" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color mb-2" />
-                <AnimatedText text="Apprenez à parler anglais en parlant, tout simplement." type="reveal" delay={800} className="mb-2" />
-                <AnimatedText text="Nos formations en anglais privilégient l’interaction, la répétition guidée et la spontanéité. Pas de longs cours théoriques, mais de la pratique orale, ciblée, avec correction bienveillante. Les + Oralise : Formation centrée sur la communication active, Coachs expérimentés bilingues, Plateforme de suivi, Flexibilité horaire complète" type="reveal" delay={1200} className="mb-2" />
+               
             <Banner
                 title="Méthode Oralise (adaptée à l’anglais)"
                 description="Apprenez à parler anglais en parlant, tout simplement."

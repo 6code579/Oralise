@@ -114,7 +114,7 @@ function Contact() {
               <AnimatedElement animation="scaleIn" delay={800}>
           <button
             type="submit"
-            className="w-full py-3 bg-main-color hover:bg-hover-main-color duration-300 text-white font-semibold rounded-xl transition"
+            className="w-full py-3 bg-main-color hover:bg-hover-main-color duration-300 text-white font-semibold rounded-full transition"
           >
             Envoyer
           </button>
@@ -128,11 +128,7 @@ function Contact() {
           <h2 className="text-2xl font-bold mb-4">Nos coordonnées</h2>
 
           <div className="space-y-4">
-            <div className="font-semibold">
-              <p>Adresse</p>
-                  <p className="main-color">123 Rue de l'Avenir, Casablanca, Maroc</p>
-            </div>
-
+            
             <div className="font-semibold">
               <p>Téléphone</p>
               <a href="tel:+212600000000" className="main-color">+212 6 00 00 00 00</a>
@@ -144,13 +140,7 @@ function Contact() {
             </div>
           </div>
 
-          <div className="flex flex-col h-auto w-full overflow-hidden rounded-xl">
-            <img
-              src="/images/image.jpg"
-              alt="Localisation de notre bureau"
-              className="w-full h-full object-cover object-center"
-            />
-          </div>
+          
         </div>
           </AnimatedElement>
       </div>

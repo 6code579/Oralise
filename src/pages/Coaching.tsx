@@ -4,6 +4,7 @@ import { TextCheck } from "../components/TextCheck";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import { WhatsAppButton } from "../components/WhatsappBtn";
 
 interface CoachingModule {
   id: number;
@@ -11,17 +12,19 @@ interface CoachingModule {
   description: string;
   image: string;
   badge: string;
-  link:string;
+  link: string;
+  message: string
 }
 
 const coachingModules: CoachingModule[] = [
   {
     id: 1,
     title: "Prise de parole en public",
-    description:"Gérer le trac, captiver un auditoire, structurer une intervention, parler avec confiance… sur scène, en réunion, en vidéo ou devant un jury.",
+    description: "Gérer le trac, captiver un auditoire, structurer une intervention, parler avec confiance… sur scène, en réunion, en vidéo ou devant un jury.",
     image: "/images/image.jpg",
     badge: "Classique",
-    link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
   {
     id: 2,
@@ -30,7 +33,8 @@ const coachingModules: CoachingModule[] = [
       "Apprendre à respirer, se centrer, transformer l’émotion en énergie positive. Techniques pratiques et puissantes pour l’oral, le quotidien, les situations sensibles.",
     image: "/images/training2.jpg",
     badge: "Pratique",
-      link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Gestion de stress et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
   {
     id: 3,
@@ -39,7 +43,8 @@ const coachingModules: CoachingModule[] = [
       "Comprendre ses émotions, maîtriser ses réactions, développer une parole empathique, assertive et responsable. Idéal pour leaders, éducateurs, formateurs.",
     image: "/images/training1.jpg",
     badge: "Leadership",
-      link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Intelligence émotionnelle et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
   {
     id: 4,
@@ -48,7 +53,8 @@ const coachingModules: CoachingModule[] = [
       "Construire un message clair, mémorable et percutant. Écrire pour convaincre, motiver, mobiliser. Coaching rédactionnel + oral.",
     image: "/images/training3.jpg",
     badge: "Spécialisé",
-      link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Rédaction de discours et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
   {
     id: 5,
@@ -57,7 +63,8 @@ const coachingModules: CoachingModule[] = [
       "Reprendre le contrôle, faire des choix, retrouver une clarté intérieure et une direction alignée. Confiance, estime, affirmation personnelle.",
     image: "/images/training4.jpg",
     badge: "Personnel",
-      link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching de vie et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
   {
     id: 6,
@@ -66,7 +73,8 @@ const coachingModules: CoachingModule[] = [
       "Réussir une prise de poste, mieux communiquer au travail, négocier, s’affirmer, manager. Coaching ciblé pour carrière & leadership.",
     image: "/images/training1.jpg",
     badge: "Carrière",
-      link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching Professionnel et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
   {
     id: 7,
@@ -75,7 +83,8 @@ const coachingModules: CoachingModule[] = [
       "Un accompagnement intensif et complet sur 3 à 6 mois. Mix personnalisé entre expression orale, posture, stratégie de vie et leadership personnel. Pour profils à haut potentiel, en reconversion ou quête de transformation profonde.",
     image: "/images/training4.jpg",
     badge: "Intensif",
-      link:"/",
+    link: "/",
+    message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Master Coaching et je voudrais discuter avec vous pour prendre rendez-vous!"
   },
 ];
 
@@ -144,11 +153,9 @@ const CoachingPage: React.FC = () => {
           <AnimatedText text="Exprimez votre plein potentiel. Avec un coach, tout change." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color" />
           <AnimatedText text="Que ce soit pour améliorer votre parole, développer votre confiance ou faire évoluer votre vie personnelle ou professionnelle, nos coachs vous accompagnent à chaque étape de votre transformation." type="reveal" delay={1000} className="text-lg md:text-xl" />
           <AnimatedElement animation="scaleIn" delay={1200}>
-            <Button
-              label="Prendre rendez-vous pour un appel découverte"
-              changeColor={true}
-              className="mx-auto py-4 px-8 md:text-lg"
-            />
+            <WhatsAppButton text="Prendre rendez-vous pour un appel découverte
+" className="text-sm" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching et je voudrais discuter avec vous pour prendre rendez-vous!
+"/>
           </AnimatedElement>
         </section>
       </AnimatedElement>
@@ -173,7 +180,7 @@ const CoachingPage: React.FC = () => {
 
           {/* Cards grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            {coachingModules.map(({ id, title, description, badge }) => (
+            {coachingModules.map(({ id, title, description, badge, message }) => (
               <AnimatedElement key={id} animation="scaleIn" delay={1000 + id * 100}>
                 <div
                   className="bg-white dark:bg-gray-800/70 rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-solid   transition-shadow duration-300 "
@@ -185,7 +192,7 @@ const CoachingPage: React.FC = () => {
                     </span>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 flex-grow">{description}</p>
-                  <Button label="Je prends un rendez-vous" changeColor={true} className="mt-6 self-start scale-95" />
+                  <WhatsAppButton text="Prendre un rendez-vous" textMessage={message} className="mt-4" />
                 </div>
               </AnimatedElement>
             ))}
@@ -220,11 +227,12 @@ const CoachingPage: React.FC = () => {
           <AnimatedText text="Nos coachs sont là pour vous écouter, vous guider, vous révéler." type="reveal" delay={1200} />
           <div className="flex flex-col sm:flex-row justify-center items-start gap-6 mt-4">
             <AnimatedElement animation="scaleIn" delay={1400}>
-              <Button label="Réserver une séance découverte gratuite" changeColor={true} className="text-xs md:text-base " />
+              <WhatsAppButton text=" Réserver une séance gratuite" textMessage="Bonjour Oralise, je voudrais réserver une séance découverte" />
+
             </AnimatedElement>
             <AnimatedElement animation="scaleIn" delay={1600}>
-              <Button label="Recevoir un devis personnalisé" />
-            </AnimatedElement>
+              <WhatsAppButton text=" Récevoir un dévis personnalisé" textMessage="Bonjour Oralise, je voudrais Récevoir un dévis personnalisé" className="bg-secondary-color shadow-none" /> 
+              </AnimatedElement>
           </div>
         </section>
       </AnimatedElement>
@@ -232,4 +240,4 @@ const CoachingPage: React.FC = () => {
   );
 };
 
-export {CoachingPage}
+export { CoachingPage }

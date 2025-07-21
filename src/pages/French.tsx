@@ -4,6 +4,7 @@ import { TextCheck } from "../components/TextCheck";
 import { Banner } from "../components/Banner";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import { WhatsAppButton } from "../components/WhatsappBtn";
 
 const BannerFrench = () => {
     return (
@@ -22,7 +23,7 @@ const BannerFrench = () => {
                     <div className="flex flex-col justify-center gap-4 px-4 md:px-8 order-2 lg:col-span-2">
                         <AnimatedText text="Maîtrisez le français à l’oral, avec méthode et confiance." type="typing" speed={60} className="text-2xl md:text-4xl font-bold main-color" />
                         <AnimatedText text="Parler français, c’est se faire entendre, se faire comprendre, et progresser dans sa vie personnelle comme professionnelle." type="reveal" delay={800} />
-                        <Button label="Je m'inscris" to="/" changeColor={true} />
+                        <Button label="Je m'inscris" to="/contact" changeColor={true} />
                     </div>
                 </div>
                 {/* Image drapeau : visible uniquement sur grand écran */}
@@ -53,8 +54,7 @@ const TypeTraining = () => {
                 'Jeux de rôle, mises en situation',
                 'Formateurs spécialisés FLE'
             ],
-            link: '/',
-            linkbtn2: '/'
+            message:"Bonjour Oralise, je suis intéressé(e) par votre formation en Formation FLE (Français Langue Étrangère) et je voudrais discuter avec vous pour prendre rendez-vous!"
         },
         {
             id: 2,
@@ -69,8 +69,7 @@ const TypeTraining = () => {
                 'Présenter oralement avec fluidité',
                 'Prendre la parole en réunion'
             ],
-            link: '/',
-            linkbtn2: '/'
+            message:"Bonjour Oralise, je suis intéressé(e) par votre formation en Français professionnel et je voudrais discuter avec vous pour prendre rendez-vous!"
         },
         {
             id: 3,
@@ -87,8 +86,7 @@ const TypeTraining = () => {
                 'Correction personnalisée',
                 'Conseils méthodologiques'
             ],
-            linkbtn1: '/',
-            linkbtn2: '/'
+              message:"Bonjour Oralise, je suis intéressé(e) par votre formation en Préparation aux examens / certifications et je voudrais discuter avec vous pour prendre rendez-vous!"
         }
     ]
     return (
@@ -104,13 +102,13 @@ const TypeTraining = () => {
                                     <div className="prose prose-slate prose-sm text-slate-600 dark:text-white ">
                                         <AnimatedText text={element.description} type="reveal" delay={600} />
                                     </div>
-                                    <div className="prose prose-slate prose-sm text-slate-600 dark:text-white md:mt-4">
+                                    <div className="prose prose-slate prose-sm text-slate-600 dark:text-white mt-3 md:mt-4">
                                         <AnimatedElement animation="slideLeft" delay={800}>
                                             <TextCheck table={element.checkElement} color="secondary-color" />
                                         </AnimatedElement>
                                     </div>
                                     <AnimatedElement animation="scaleIn" delay={1000}>
-                                        <Button label="Je m'inscris" to={element.linkbtn1} className="mt-6 md:mt-4 md:ml-4 bg-secondary-color hover:bg-secondary-color-hover" />
+                                       <WhatsAppButton text="Je m'inscris" textMessage={element.message} className="mt-4 bg-secondary-color shadow-none"/>
                                     </AnimatedElement>
                                 </div>
                                 <img
@@ -133,9 +131,9 @@ function French() {
             <BannerFrench />
             <TypeTraining />
             <AnimatedElement animation="slideUp" delay={600}>
-                <AnimatedText text="Méthode Oralise" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color mb-2" />
-                <AnimatedText text="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." type="reveal" delay={800} className="mb-2" />
-                <Banner title="Méthode Oralise" description="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse : Vous bénéficiez d'une séance d'essai Vous pratiquez dès la 1ère séance Vous êtes écouté, corrigé, encouragé Vous suivez vos progrès grâce à un tableau personnalisé Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.png"/>
+               
+                <Banner title="Méthode Oralise" description="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse : Vous bénéficiez d'une séance d'essai Vous pratiquez dès la 1ère séance Vous êtes écouté, corrigé, encouragé Vous suivez vos progrès grâce à un tableau personnalisé Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.png"
+                link="/contact"/>
             </AnimatedElement>
         </>
     );
