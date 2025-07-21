@@ -2,6 +2,7 @@ import Button  from "./Button";
 import { TextCheck } from "./TextCheck";
 import { Title } from "./Title";
 import Flag from "react-world-flags";
+import { AnimatedElement } from "./AnimatedElement";
 
 // ProductList component to display the products in a scrolling banner
 function ProductList() {
@@ -104,18 +105,17 @@ const Whychoseoralise = () => {
         }
     ]
     return (
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-5 px-5 md:px-20 py-10 w-full md:w-full md:max-w-none">
-
-
-            {/* Texte */}
-            <div className="w-full md:w-1/2 flex flex-col gap-4 items-start  md:gap-6   md:text-left">
-                <Title title="Pourquoi choisir Oralise ?" color={true} />
-                <span className="italic main-color font-semibold text-lg sm:text-xl md:text-2xl">Parce que bien parler change tout.</span>
-                <p className="text-base sm:text-lg md:text-xl mb-10">
-                    Chez Oralise, nous croyons que la parole transforme.
-                    Nous vous aidons à libérer votre voix, renforcer votre confiance et maîtriser la communication dans la langue de votre choix
+        <AnimatedElement animation="slideUp" delay={200}>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mt-5 px-5 md:px-20 py-10 w-full md:w-full md:max-w-none">
+                {/* Texte */}
+                <div className="w-full md:w-1/2 flex flex-col gap-4 items-start  md:gap-6   md:text-left">
+                    <Title title="Pourquoi choisir Oralise ?" color={true} />
+                    <span className="italic main-color font-semibold text-lg sm:text-xl md:text-2xl">Parce que bien parler change tout.</span>
+                    <p className="text-base sm:text-lg md:text-xl mb-4">
+                        Chez Oralise, nous croyons que la parole transforme.
+                        Nous vous aidons à libérer votre voix, renforcer votre confiance et maîtriser la communication dans la langue de votre choix
+                    </p>
                     <div className="ml-6 mt-4 gap-2">
-
                         {
                             CheckElement.map((item) => (
                                 <span key={item.id} className="flex gap-2 items-center">
@@ -123,16 +123,15 @@ const Whychoseoralise = () => {
                                 </span>
                             ))
                         }
-
                     </div>
-                </p>
-                <Button label="Je prends un rendez-vous" changeColor={true}/>
+                    <Button label="Je prends un rendez-vous" changeColor={true}/>
+                </div>
+                {/* Image */}
+                <div className="w-full md:w-1/2  lg:h-full relative order-1 md:order-none">
+                    <img src="/images/why.png" alt="whychooseOralise" className="w-full h-full object-cover   transition-transform duration-300 hover:scale-90 " />
+                </div>
             </div>
-            {/* Image */}
-            <div className="w-full md:w-1/2  lg:h-full relative order-1 md:order-none">
-                <img src="/images/why.png" alt="whychooseOralise" className="w-full h-full object-cover   transition-transform duration-300 hover:scale-90 " />
-            </div>
-        </div>
+        </AnimatedElement>
     )
 }
 
@@ -156,7 +155,8 @@ const Language = () => {
 
     return (
         <>
-            <div className="flex flex-col items-start justify-start gap-8 mt-5 py-10 w-full">
+            <AnimatedElement animation="fadeIn" delay={300}>
+                <div className="flex flex-col items-start justify-start gap-8 mt-5 py-10 w-full">
 
                 <div className="w-full h-40 md:h-96 items-start">
                     <img src="/images/language.jpg" alt="image des langues" className="w-full h-40 md:h-96 object-cover" />
@@ -185,9 +185,9 @@ const Language = () => {
                             ))
                         }
                     </div>
-
+                    </div>
                 </div>
-            </div>
+            </AnimatedElement>
         </>
     )
 }
@@ -226,7 +226,8 @@ const TrainingAndCoaching = () => {
     ]
     return (
         <>
-            <div className="flex flex-col items-center justify-center gap-8 md:mt-8 px-5 md:px-20 py-10 w-full text-center">
+            <AnimatedElement animation="slideUp" delay={400}>
+                <div className="flex flex-col items-center justify-center gap-8 md:mt-8 px-5 md:px-20 py-10 w-full text-center">
                 <Title title="Formations et coaching" color={true}/>
                 <span className="italic main-color font-semibold text-lg sm:text-xl md:text-2xl">Développez vos compétences orales avec nos formations et coaching.</span>
                 <p className="text-base sm:text-lg md:text-xl mb-10">
@@ -234,7 +235,9 @@ const TrainingAndCoaching = () => {
                     Que ce soit pour le travail, les études ou la vie quotidienne, nous vous accompagnons dans votre parcours d'apprentissage et dans celui de vos enfants.
                 </p>
                 </div>
-            <div className="flex flex-wrap justify-center gap-12  md:mt-5 place-items-center">
+            </AnimatedElement>
+            <AnimatedElement animation="scaleIn" delay={600}>
+                <div className="flex flex-wrap justify-center gap-12  md:mt-5 place-items-center">
                 {/*card training*/}
                 {Training.map((item) => (
                     <div key={item.id} className="card bg-white dark:bg-gray-800  shadow-2xl rounded-2xl overflow-hidden transition-transform duration-300 hover:scale-105   border border-gray-200  dark:border-gray-700 max-w-xs w-full flex flex-col">
@@ -253,6 +256,7 @@ const TrainingAndCoaching = () => {
                 ))}
             
             </div>
+            </AnimatedElement>
         </>
     )
 }

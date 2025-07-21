@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "./Button";
+import { AnimatedText } from "./AnimatedText";
+import { AnimatedElement } from "./AnimatedElement";
 
 export interface BannerProps {
   title?: string;
@@ -33,17 +35,34 @@ const Banner: React.FC<BannerProps> = ({
 
       {/* Texte */}
       <div className="w-full sm:text-start md:w-1/2 flex flex-col gap-4 md:gap-6 md:items-start md:text-left">
-        <h1 className="main-color font-extrabold text-5xl md:text-5xl leading-tight tracking-wider transition-all duration-500">
-          {title}
-        </h1>
+        <AnimatedText 
+          text={title || ""} 
+          type="typing" 
+          speed={80} 
+          className="main-color font-extrabold text-5xl md:text-5xl leading-tight tracking-wider transition-all duration-500"
+        />
 
-        <p className="text-gray-600 text-lg leading-relaxed transition-colors duration-500 dark:text-white">
-          {description}
-        </p>
+        <AnimatedText 
+          text={description || ""} 
+          type="reveal" 
+          delay={1000}
+          className="text-gray-600 text-lg leading-relaxed transition-colors duration-500 dark:text-white"
+        />
 
-        {para && <p className={`text-gray-500 text-base ${paraColor}`}>{para}</p>}
+        {para && (
+          <AnimatedText 
+            text={para as string} 
+            type="fadeIn" 
+            delay={1500}
+            className={`text-gray-500 text-base ${paraColor}`}
+          />
+        )}
 
-        {btnText && <Button label={btnText} changeColor={true} />}
+        {btnText && (
+          <AnimatedElement animation="scaleIn" delay={2000}>
+            <Button label={btnText} changeColor={true} />
+          </AnimatedElement>
+        )}
       </div>
     </div>
   );

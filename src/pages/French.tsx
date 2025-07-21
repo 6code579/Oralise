@@ -1,15 +1,15 @@
 
-import { Title } from "../components/Title";
 import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { Banner } from "../components/Banner";
-// Banner component for the French page
+import { AnimatedElement } from "../components/AnimatedElement";
+import { AnimatedText } from "../components/AnimatedText";
+
 const BannerFrench = () => {
     return (
-        <>
+        <AnimatedElement animation="fadeIn" delay={200}>
             <div className="w-full max-w-full mb-8 mx-auto px-5 md:px-20 mt-5 md:mt-8 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl overflow-hidden">
-
                     {/* Image femme */}
                     <div className="w-full h-64 md:h-auto overflow-hidden order-1 lg:order-none">
                         <img
@@ -18,17 +18,12 @@ const BannerFrench = () => {
                             className="w-full h-full object-cover rounded-3xl shadow-2xl duration-300 hover:scale-95"
                         />
                     </div>
-
                     {/* Texte */}
                     <div className="flex flex-col justify-center gap-4 px-4 md:px-8 order-2 lg:col-span-2">
-                        <Title title="Maîtrisez le français à l’oral, avec méthode et confiance." color={true} />
-                        <p>
-                            Parler français, c’est se faire entendre, se faire comprendre, et progresser dans sa vie personnelle comme professionnelle.
-                        </p>
+                        <AnimatedText text="Maîtrisez le français à l’oral, avec méthode et confiance." type="typing" speed={60} className="text-2xl md:text-4xl font-bold main-color" />
+                        <AnimatedText text="Parler français, c’est se faire entendre, se faire comprendre, et progresser dans sa vie personnelle comme professionnelle." type="reveal" delay={800} />
                         <Button label="Je m'inscris" to="/" changeColor={true} />
                     </div>
-
-
                 </div>
                 {/* Image drapeau : visible uniquement sur grand écran */}
                 <div className="hidden lg:block col-span-3 overflow-hidden h-40 md:mt-5">
@@ -39,15 +34,11 @@ const BannerFrench = () => {
                     />
                 </div>
             </div>
-        </>
+        </AnimatedElement>
     )
 }
 
-
-//section type of french training
-
 const TypeTraining = () => {
-
     const FrenchList = [
         {
             id: 1,
@@ -101,64 +92,51 @@ const TypeTraining = () => {
         }
     ]
     return (
-        <>
-            {/* inspired by tailwindcss.com */}
+        <AnimatedElement animation="fadeIn" delay={200}>
             <ul className="grid grid-cols-1 md:my-8 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
-
                 {
-                    FrenchList.map((element) => (
-                        <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
-                            <div className="order-1 sm:ml-6 xl:ml-0">
-                                <h3 className="mb-3 dark:secondary-color  font-semibold">
-                                    <span className="mb-4 block font-bold text-2xl fony-bold  md:py-5 leading-6 secondary-color">{element.title}
-                                    </span>
-                                    {element.undertitle}
-                                </h3>
-                                <div className="prose prose-slate prose-sm text-slate-600 dark:text-white ">
-                                    <p>{element.description}</p>
+                    FrenchList.map((element, idx) => (
+                        <AnimatedElement key={element.id} animation="scaleIn" delay={400 + idx * 200}>
+                            <li className="relative flex flex-col sm:flex-row xl:flex-col items-start">
+                                <div className="order-1 sm:ml-6 xl:ml-0">
+                                    <AnimatedText text={element.title} type="typing" speed={50} className="mb-4 block font-bold text-2xl md:py-5 leading-6 secondary-color" />
+                                    <span className="mb-3 dark:secondary-color font-semibold">{element.undertitle}</span>
+                                    <div className="prose prose-slate prose-sm text-slate-600 dark:text-white ">
+                                        <AnimatedText text={element.description} type="reveal" delay={600} />
+                                    </div>
+                                    <div className="prose prose-slate prose-sm text-slate-600 dark:text-white md:mt-4">
+                                        <AnimatedElement animation="slideLeft" delay={800}>
+                                            <TextCheck table={element.checkElement} color="secondary-color" />
+                                        </AnimatedElement>
+                                    </div>
+                                    <AnimatedElement animation="scaleIn" delay={1000}>
+                                        <Button label="Je m'inscris" to={element.linkbtn1} className="mt-6 md:mt-4 md:ml-4 bg-secondary-color hover:bg-secondary-color-hover" />
+                                    </AnimatedElement>
                                 </div>
-                                <div className="prose prose-slate prose-sm text-slate-600 dark:text-white md:mt-4">
-                                    <TextCheck table={element.checkElement} color="secondary-color" />
-                                </div>
-
-                                <Button label="Je m'inscris" to={element.linkbtn1} className="mt-6 md:mt-4 md:ml-4 bg-secondary-color hover:bg-secondary-color-hover" />
-
-
-                            </div>
-                            <img
-                                src={element.image}
-                                alt={element.title}
-                                className="w-full md:h-96 object-cover rounded-3xl shadow-lg bg-slate-50 mb-6 sm:w-full sm:mb-0 xl:mb-6 xl:w-full duration-300 hover:scale-95"
-                            />
-                        </li>
+                                <img
+                                    src={element.image}
+                                    alt={element.title}
+                                    className="w-full md:h-96 object-cover rounded-3xl shadow-lg bg-slate-50 mb-6 sm:w-full sm:mb-0 xl:mb-6 xl:w-full duration-300 hover:scale-95"
+                                />
+                            </li>
+                        </AnimatedElement>
                     ))
                 }
-
             </ul>
-        </>
+        </AnimatedElement>
     )
 }
 
-
-
-
-
-//main element for french page
 function French() {
     return (
         <>
             <BannerFrench />
             <TypeTraining />
-            <Banner title=" Méthode Oralise" description="
-Une méthode centrée sur la parole, pas sur les fiches.
-Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. 
-Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions.
-Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse :
-Vous bénéficiez d'une séance d'essai
-Vous pratiquez dès la 1ère séance
-Vous êtes écouté, corrigé, encouragé
-Vous suivez vos progrès grâce à un tableau personnalisé
-Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.png"/>
+            <AnimatedElement animation="slideUp" delay={600}>
+                <AnimatedText text="Méthode Oralise" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color mb-2" />
+                <AnimatedText text="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." type="reveal" delay={800} className="mb-2" />
+                <Banner title="Méthode Oralise" description="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse : Vous bénéficiez d'une séance d'essai Vous pratiquez dès la 1ère séance Vous êtes écouté, corrigé, encouragé Vous suivez vos progrès grâce à un tableau personnalisé Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.png"/>
+            </AnimatedElement>
         </>
     );
 }

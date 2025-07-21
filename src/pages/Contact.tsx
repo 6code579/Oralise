@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { ChangeEvent, FormEvent } from 'react';
+import { AnimatedElement } from "../components/AnimatedElement";
+import { AnimatedText } from "../components/AnimatedText";
 
 interface FormState {
   name: string;
@@ -32,23 +34,36 @@ function Contact() {
   return (
     <div className="min-h-screen transition duration-300">
       {/* Hero */}
-      <section className="w-full py-10 px-5 md:px-20 text-center bg-transparent">
+      <AnimatedElement animation="fadeIn" delay={200}>
+        <section className="w-full py-10 px-5 md:px-20 text-center bg-transparent">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl font-extrabold main-color mb-6">
-            Prêt à échanger avec nous ?
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4">
-            Vous avez une question, une idée, ou besoin d’assistance ? Nous sommes là pour vous écouter et vous guider.
-          </p>
-          <p className="text-md text-gray-500 dark:text-gray-400">
-            Contactez-nous via le formulaire ou avec les informations en bas de page. Nous répondrons rapidement.
-          </p>
+            <AnimatedText 
+              text="Prêt à échanger avec nous ?"
+              type="typing"
+              speed={70}
+              className="text-4xl sm:text-5xl font-extrabold main-color mb-6"
+            />
+            <AnimatedText 
+              text="Vous avez une question, une idée, ou besoin d'assistance ? Nous sommes là pour vous écouter et vous guider."
+              type="reveal"
+              delay={1000}
+              className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-4"
+            />
+            <AnimatedText 
+              text="Contactez-nous via le formulaire ou avec les informations en bas de page. Nous répondrons rapidement."
+              type="reveal"
+              delay={1500}
+              className="text-md text-gray-500 dark:text-gray-400"
+            />
         </div>
       </section>
+      </AnimatedElement>
 
       {/* Bloc principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-20 py-10 max-w-7xl mx-auto">
+      <AnimatedElement animation="slideUp" delay={400}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-20 py-10 max-w-7xl mx-auto">
         {/* Formulaire classique */}
+          <AnimatedElement animation="slideLeft" delay={600}>
         <form
           onSubmit={handleSubmit}
           className="bg-white dark:bg-gray-800 shadow-xl p-8 rounded-2xl space-y-6"
@@ -96,22 +111,26 @@ function Contact() {
             />
           </div>
 
+              <AnimatedElement animation="scaleIn" delay={800}>
           <button
             type="submit"
             className="w-full py-3 bg-main-color hover:bg-hover-main-color duration-300 text-white font-semibold rounded-xl transition"
           >
             Envoyer
           </button>
+              </AnimatedElement>
         </form>
+          </AnimatedElement>
 
         {/* Coordonnées */}
+          <AnimatedElement animation="slideRight" delay={600}>
         <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 shadow-lg space-y-8 text-gray-800 dark:text-gray-100">
           <h2 className="text-2xl font-bold mb-4">Nos coordonnées</h2>
 
           <div className="space-y-4">
             <div className="font-semibold">
               <p>Adresse</p>
-              <p className="main-color">123 Rue de l’Avenir, Casablanca, Maroc</p>
+                  <p className="main-color">123 Rue de l'Avenir, Casablanca, Maroc</p>
             </div>
 
             <div className="font-semibold">
@@ -133,7 +152,9 @@ function Contact() {
             />
           </div>
         </div>
+          </AnimatedElement>
       </div>
+      </AnimatedElement>
     </div>
   );
 }

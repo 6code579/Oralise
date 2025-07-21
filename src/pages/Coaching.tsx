@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
-import { Title } from "../components/Title";
 import { TextCheck } from "../components/TextCheck";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { AnimatedElement } from "../components/AnimatedElement";
+import { AnimatedText } from "../components/AnimatedText";
 
 interface CoachingModule {
   id: number;
@@ -138,91 +139,95 @@ const CoachingPage: React.FC = () => {
   return (
     <main className="text-gray-900 dark:text-white px-5 md:px-20 py-10 space-y-20">
       {/* SECTION 1 - HERO */}
-      <section className="text-center max-w-4xl mx-auto space-y-6">
-        <Title
-          title="Exprimez votre plein potentiel. Avec un coach, tout change."
-          color={true}
-    
-        />
-        <p className="text-lg md:text-xl">
-          Que ce soit pour améliorer votre parole, développer votre confiance ou faire évoluer votre vie personnelle ou
-          professionnelle, nos coachs vous accompagnent à chaque étape de votre transformation.
-        </p>
-        <Button
-          label="Prendre rendez-vous pour un appel découverte"
-          changeColor={true}
-          className="mx-auto py-4 px-8 md:text-lg"
-        />
-      </section>
+      <AnimatedElement animation="fadeIn" delay={200}>
+        <section className="text-center max-w-4xl mx-auto space-y-6">
+          <AnimatedText text="Exprimez votre plein potentiel. Avec un coach, tout change." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color" />
+          <AnimatedText text="Que ce soit pour améliorer votre parole, développer votre confiance ou faire évoluer votre vie personnelle ou professionnelle, nos coachs vous accompagnent à chaque étape de votre transformation." type="reveal" delay={1000} className="text-lg md:text-xl" />
+          <AnimatedElement animation="scaleIn" delay={1200}>
+            <Button
+              label="Prendre rendez-vous pour un appel découverte"
+              changeColor={true}
+              className="mx-auto py-4 px-8 md:text-lg"
+            />
+          </AnimatedElement>
+        </section>
+      </AnimatedElement>
 
       {/* SECTION 2 - Explication */}
-      <section className="max-w-3xl mx-auto text-center text-lg md:text-xl space-y-4">
-        <p>
-          <strong>Et si votre parole reflétait vraiment votre puissance intérieure ?</strong>
-        </p>
-        <p>
-          Nos coachings ne sont pas des cours, mais des expériences de libération, de clarification et de stratégie
-          personnelle.
-          <br />
-          Nous travaillons avec vous le fond et la forme, pour aligner ce que vous pensez, ce que vous ressentez, et ce que
-          vous dites.
-        </p>
-      </section>
+      <AnimatedElement animation="slideUp" delay={400}>
+        <section className="max-w-3xl mx-auto text-center text-lg md:text-xl space-y-4">
+          <AnimatedText text="Et si votre parole reflétait vraiment votre puissance intérieure ?" type="reveal" delay={600} className="font-bold" />
+          <AnimatedText text="Nos coachings ne sont pas des cours, mais des expériences de libération, de clarification et de stratégie personnelle. Nous travaillons avec vous le fond et la forme, pour aligner ce que vous pensez, ce que vous ressentez, et ce que vous dites." type="reveal" delay={1000} />
+        </section>
+      </AnimatedElement>
 
       {/* SECTION 3 - Carousel + Cards des modules */}
-      <section className="space-y-12 max-w-7xl mx-auto">
-        <Title title="Nos modules de coaching" color={true} className="text-center" />
+      <AnimatedElement animation="fadeIn" delay={600}>
+        <section className="space-y-12 max-w-7xl mx-auto">
+          <AnimatedText text="Nos modules de coaching" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color text-center" />
 
-        {/* Carousel images */}
-        <Carousel items={coachingModules} />
+          {/* Carousel images */}
+          <AnimatedElement animation="slideUp" delay={800}>
+            <Carousel items={coachingModules} />
+          </AnimatedElement>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {coachingModules.map(({ id, title, description, badge }) => (
-            <div
-              key={id}
-              className="bg-white dark:bg-gray-800/70 rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-solid   transition-shadow duration-300 "
-            >
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="text-xl font-bold main-color">{title}</h3>
-                <span className="inline-block bg-main-color-opacity text-white text-xs font-semibold uppercase rounded-full px-3 py-1 select-none">
-                  {badge}
-                </span>
-              </div>
-              <p className="text-gray-700 dark:text-gray-300 flex-grow">{description}</p>
-              <Button label="Je prends un rendez-vous" changeColor={true} className="mt-6 self-start scale-95" />
-            </div>
-          ))}
-        </div>
-      </section>
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            {coachingModules.map(({ id, title, description, badge }) => (
+              <AnimatedElement key={id} animation="scaleIn" delay={1000 + id * 100}>
+                <div
+                  className="bg-white dark:bg-gray-800/70 rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-solid   transition-shadow duration-300 "
+                >
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-xl font-bold main-color">{title}</h3>
+                    <span className="inline-block bg-main-color-opacity text-white text-xs font-semibold uppercase rounded-full px-3 py-1 select-none">
+                      {badge}
+                    </span>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 flex-grow">{description}</p>
+                  <Button label="Je prends un rendez-vous" changeColor={true} className="mt-6 self-start scale-95" />
+                </div>
+              </AnimatedElement>
+            ))}
+          </div>
+        </section>
+      </AnimatedElement>
 
       {/* SECTION 4 - Déroulement */}
-      <section className="max-w-4xl  space-y-6">
-        <Title title="Comment se déroule un coaching Oralise ?" color={true} />
-        <ul className="list-disc list-inside text-lg text-gray-700 dark:text-white space-y-2">
-          {[
-            "Diagnostic offert (30 min en visio)",
-            "Objectif et plan d’action clair",
-            "Séances régulières en ligne (45 min à 1h15)",
-            "Suivi, exercices, feedback entre chaque séance",
-            "Bilan, transformation et projection future",
-          ].map((item, i) => (
-            <TextCheck key={i} text={item} color="main-color" />
-          ))}
-        </ul>
-      </section>
+      <AnimatedElement animation="slideUp" delay={800}>
+        <section className="max-w-4xl  space-y-6">
+          <AnimatedText text="Comment se déroule un coaching Oralise ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
+          <ul className="list-disc list-inside text-lg text-gray-700 dark:text-white space-y-2">
+            {[
+              "Diagnostic offert (30 min en visio)",
+              "Objectif et plan d’action clair",
+              "Séances régulières en ligne (45 min à 1h15)",
+              "Suivi, exercices, feedback entre chaque séance",
+              "Bilan, transformation et projection future",
+            ].map((item, i) => (
+              <AnimatedElement key={i} animation="slideLeft" delay={1000 + i * 100}>
+                <TextCheck text={item} color="main-color" />
+              </AnimatedElement>
+            ))}
+          </ul>
+        </section>
+      </AnimatedElement>
 
       {/* SECTION 5 - Call to action final */}
-      <section className="text-center max-w-4xl mx-auto space-y-6">
-        <p className="text-xl md:text-2xl font-semibold main-color">
-           Et si vous osiez être pleinement vous-même, à travers votre voix ?
-        </p>
-        <p>Nos coachs sont là pour vous écouter, vous guider, vous révéler.</p>
-        <div className="flex flex-col sm:flex-row justify-center gap-6 mt-4">
-          <Button label="Réserver une séance découverte gratuite" changeColor={true} />
-          <Button label="Recevoir un devis personnalisé" />
-        </div>
-      </section>
+      <AnimatedElement animation="fadeIn" delay={1000}>
+        <section className="text-center max-w-4xl mx-auto space-y-6">
+          <AnimatedText text="Et si vous osiez être pleinement vous-même, à travers votre voix ?" type="typing" speed={50} className="text-xl md:text-2xl font-semibold main-color" />
+          <AnimatedText text="Nos coachs sont là pour vous écouter, vous guider, vous révéler." type="reveal" delay={1200} />
+          <div className="flex flex-col sm:flex-row justify-center gap-6 mt-4">
+            <AnimatedElement animation="scaleIn" delay={1400}>
+              <Button label="Réserver une séance découverte gratuite" changeColor={true} />
+            </AnimatedElement>
+            <AnimatedElement animation="scaleIn" delay={1600}>
+              <Button label="Recevoir un devis personnalisé" />
+            </AnimatedElement>
+          </div>
+        </section>
+      </AnimatedElement>
     </main>
   );
 };
