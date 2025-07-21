@@ -1,8 +1,8 @@
-import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { Banner } from "../components/Banner";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import { WhatsAppButton } from "../components/WhatsappBtn";
 
 //section type of english training
 const TypeTraining = () => {
@@ -20,7 +20,7 @@ const TypeTraining = () => {
                 'Jeux de rôle et mises en situation',
                 'Vocabulaire de la vie réelle'
             ],
-            link: '/',
+            message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Anglais général et je voudrais discuter avec vous pour prendre rendez-vous!"
         },
         {
             id: 2,
@@ -35,7 +35,7 @@ const TypeTraining = () => {
                 'Pitch et présentation orale',
                 'Rédiger un mail professionnel et le défendre à l’oral'
             ],
-            link: '/',
+            message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Anglais professionnel et je voudrais discuter avec vous pour prendre rendez-vous!"
         },
         {
             id: 3,
@@ -54,7 +54,7 @@ const TypeTraining = () => {
                 'Simulations chronométrées',
                 'Feedback personnalisé'
             ],
-            linkbtn1: '/',
+            message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Préparation aux tests et certifications et je voudrais discuter avec vous pour prendre rendez-vous!"
         }
     ]
     return (
@@ -76,7 +76,7 @@ const TypeTraining = () => {
                                         </AnimatedElement>
                                 </div>
                                     <AnimatedElement animation="scaleIn" delay={1000}>
-                                <Button label="Je m'inscris" to={element.linkbtn1} className="mt-6 md:mt-4 md:ml-4 " changeColor={true} />
+                                 <WhatsAppButton text="Je m'inscris" textMessage={element.message} className="mt-4"/>
                                     </AnimatedElement>
                             </div>
                             <img
@@ -98,7 +98,7 @@ function English() {
         <>
             <AnimatedElement animation="fadeIn" delay={200}>
                
-                <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" />
+                <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" link="/contact"/>
             </AnimatedElement>
             <TypeTraining />
             <AnimatedElement animation="slideUp" delay={600}>
@@ -109,7 +109,7 @@ function English() {
                     para="Nos formations en anglais privilégient l’interaction, la répétition guidée et la spontanéité. Pas de longs cours théoriques, mais de la pratique orale, ciblée, avec correction bienveillante. Les + Oralise : Formation centrée sur la communication active, Coachs expérimentés bilingues, Plateforme de suivi, Flexibilité horaire complète"
                 btnText="Je prends rendez-vous"
                 paraColor="main-color"
-                image="/images/french/1.png"
+                image="/images/french/1.png" link='/contact'
             />
             </AnimatedElement>
         </>

@@ -4,7 +4,6 @@ import { Title } from "./Title";
 import Flag from "react-world-flags";
 import { AnimatedElement } from "./AnimatedElement";
 import { WhatsAppButton } from "./WhatsappBtn";
-import { link } from "framer-motion/client";
 // ProductList component to display the products in a scrolling banner
 function ProductList() {
     const products = [

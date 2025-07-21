@@ -2,6 +2,7 @@ import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import { WhatsAppButton } from "../components/WhatsappBtn";
 
 const IndividuelTraining = () => {
   const beneficiaries = [
@@ -51,7 +52,7 @@ const IndividuelTraining = () => {
               <Button
                 label="Réserver mon diagnostic gratuit"
                 changeColor={true}
-                className="text-xs md:py-7  md:text-md px-6 "
+                className="text-xs md:py-7  md:text-md px-6 " to="/contact"
               />
             </AnimatedElement>
           </div>
@@ -85,7 +86,7 @@ const IndividuelTraining = () => {
               ))}
             </ul>
             <AnimatedElement animation="scaleIn" delay={1200}>
-              <Button label="Je prends rendez-vous" changeColor={true} className="w-fit" />
+              <WhatsAppButton text="Je prends rendez-vous" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation individuelle et je voudrais prendre rendez-vous" className="w-fit"/>
             </AnimatedElement>
           </div>
         </section>
@@ -146,7 +147,7 @@ const IndividuelTraining = () => {
           <AnimatedText text="Prêt(e) à faire un vrai bond en avant ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <AnimatedText text="Avec la formation individuelle Oralise, vous ne suivez pas un cours : vous êtes accompagné, encadré, et valorisé. Vous progressez Vraiment !" type="reveal" delay={1400} className="max-w-3xl text-base md:text-lg" />
           <AnimatedElement animation="scaleIn" delay={1600}>
-            <Button label="Commencer mon parcours individuel" changeColor={true} className="md:py-8 md:px-8 md:text-xl md:mt-4" />
+           <WhatsAppButton text="Commencer mon parcours individuel" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation individuelle et je voudrais débuter avec." className="w-fit"/>
           </AnimatedElement>
         </section>
       </AnimatedElement>

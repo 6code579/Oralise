@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { AnimatedElement } from "../components/AnimatedElement";

@@ -2,7 +2,7 @@ import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
-
+import { WhatsAppButton } from "../components/WhatsappBtn";
 function GroupTraining() {
     return (
         <div className="  text-gray-800 dark:text-white">
@@ -12,7 +12,7 @@ function GroupTraining() {
                     <AnimatedText text="Parler, s’exprimer, échanger… ensemble, c’est plus motivant." type="typing" speed={60} className="text-4xl md:text-5xl font-bold mb-4 main-color" />
                     <AnimatedText text="Les formations en groupe Oralise vous plongent dans une expérience collective stimulante, bienveillante et 100 % orientée pratique orale." type="reveal" delay={800} className="text-lg md:text-xl max-w-4xl mb-6" />
                     <AnimatedElement animation="scaleIn" delay={1000}>
-                        <Button label="Rejoignez un groupe maintenant" changeColor={true} />
+                        <Button label="Rejoignez un groupe maintenant" changeColor={true} to="/contact" />
                     </AnimatedElement>
                 </section>
             </AnimatedElement>
@@ -82,8 +82,7 @@ function GroupTraining() {
                             ))}
                         </ul>
                         <AnimatedElement animation="scaleIn" delay={1400}>
-                            <Button label="Je prends rendez-vous" changeColor className="mt-8"/>
-                        </AnimatedElement>
+                            <WhatsAppButton text="Je prends rendez-vous" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation de Groupe et je voudrais prendre rendez-vous" className="w-fit mt-4" />                        </AnimatedElement>
                     </div>
                     {/* Image à droite sur desktop */}
                     <div className="w-full md:w-1/2">
@@ -151,7 +150,7 @@ function GroupTraining() {
                     <AnimatedText text="Et si parler devenait enfin un plaisir ?" type="typing" speed={60} className="main-color text-3xl md:text-4xl font-bold mb-6" />
                     <AnimatedText text="Rejoignez un groupe, trouvez votre voix, et transformez votre oral. Avec Oralise, vous êtes entendu, accompagné et encouragé." type="reveal" delay={1600} className="text-lg mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed" />
                     <AnimatedElement animation="scaleIn" delay={1800}>
-                        <Button label="Réservez une séance d’essai gratuite" changeColor={true} />
+                        <Button label="Réservez une séance d’essai gratuite" changeColor={true} to="/contact" />
                     </AnimatedElement>
                 </section>
             </AnimatedElement>

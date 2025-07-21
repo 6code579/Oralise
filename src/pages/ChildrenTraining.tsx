@@ -1,9 +1,9 @@
 import { Banner } from "../components/Banner";
-import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { Users, Smile, BookOpenCheck, Speech } from "lucide-react";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import { WhatsAppButton } from "../components/WhatsappBtn";
 
 const ChildrenTraining = () => {
     const trainingBenefits = [
@@ -36,7 +36,7 @@ const ChildrenTraining = () => {
                     title="Oralise Bourgeons : l’oral épanoui dès l’enfance."
                     description="Développer la parole, la confiance et l’expression des enfants dès le plus jeune âge. Des séances ludiques, vivantes et bienveillantes pour faire germer leur voix."
                     btnText="Réserver une séance d’essai gratuite"
-                    image="/images/children/banner.jpg"
+                    image="/images/children/banner.jpg"link="/contact"
                 />
             </AnimatedElement>
 
@@ -141,7 +141,7 @@ const ChildrenTraining = () => {
                 <section className="py-10 px-5 md:px-20 flex flex-col-reverse md:flex-row gap-8 items-center md:items-end justify-center md:justify-end">
                     <div className="w-full md:w-auto">
                         <img
-                            src="/images/children/banner.jpg"
+                            src="/images/children/child.jpg"
                             alt="Formation Oralise Bourgeons"
                             className="rounded-xl border-2 border-main-color max-w-lg w-full object-cover"
                         />
@@ -170,10 +170,12 @@ const ChildrenTraining = () => {
                     <AnimatedText text="Offrez-lui un espace d’expression joyeux, encadré, et pensé pour l’aider à grandir avec assurance." type="reveal" delay={1600} className="max-w-3xl  mb-6" />
                     <div className="flex flex-col sm:flex-row justify-center items-center mx-auto gap-4">
                         <AnimatedElement animation="scaleIn" delay={1800}>
-                            <Button label="Réserver une séance d’essai gratuite" to="/contact" changeColor={true} />
+                            <WhatsAppButton text=" Réserver une séance d’essai gratuite" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation pour enfants et je voudrais réserver une séance gratuite"/>
+                           
                         </AnimatedElement>
                         <AnimatedElement animation="scaleIn" delay={2000}>
-                            <Button label="Discuter d’un programme personnalisé" to="/contact" className="outlined" />
+                            <WhatsAppButton text="Discuter d’un programme personnalisé" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation pour enfants et je voudrais réserver une séance gratuite" className="bg-secondary-color shadow-none"/>
+                            
                         </AnimatedElement>
                     </div>
                 </section>

@@ -2,6 +2,7 @@ import Button from "../components/Button";
 import { TextCheck } from "../components/TextCheck";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import { WhatsAppButton } from "../components/WhatsappBtn";
 
 const EntrepriseTraining = () => {
   const useCases = [
@@ -47,11 +48,7 @@ const EntrepriseTraining = () => {
             className="w-full md:w-1/2 h-auto rounded-3xl object-cover shadow-lg scale-90 hover:scale-100 transition duration-300"
           />
           <AnimatedElement animation="scaleIn" delay={1200}>
-            <Button
-              label="Obtenir un devis personnalisé"
-              changeColor={true}
-              className="md:py-6 md:px-8 md:text-xl"
-            />
+             <WhatsAppButton text="Obtenir un devis personnalisé" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation de Langue en Entreprise et je voudrais discuter avec vous pour prendre rendez-vous!"/>
           </AnimatedElement>
         </section>
       </AnimatedElement>
@@ -93,7 +90,7 @@ const EntrepriseTraining = () => {
               ))}
             </ul>
             <AnimatedElement animation="scaleIn" delay={1200}>
-              <Button label="Planifier une session découverte" changeColor={true} className="w-fit mt-4" />
+              <Button label="Planifier une session découverte" changeColor={true} className="w-fit mt-4" to="/contact" />
             </AnimatedElement>
           </div>
         </section>
@@ -210,7 +207,7 @@ const EntrepriseTraining = () => {
           <AnimatedText text="Prêt à renforcer les soft skills de vos équipes ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <AnimatedText text="Oralise propose un accompagnement sur-mesure, pensé pour vos enjeux de communication. Faites le choix d’une formation humaine, impactante et orientée résultats." type="reveal" delay={1600} className="max-w-3xl text-base md:text-lg" />
           <AnimatedElement animation="scaleIn" delay={1800}>
-            <Button label="Je demande une proposition" changeColor={true} className="md:py-8 md:px-8 md:text-xl" />
+            <WhatsAppButton text="Je demande une proposition" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation de Langue en Entreprise et je demande une proposition"/>
           </AnimatedElement>
         </section>
       </AnimatedElement>
