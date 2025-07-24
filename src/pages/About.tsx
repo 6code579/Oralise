@@ -4,6 +4,8 @@ import { Leaf, Target, UserCog, Star, Handshake, MessageCircle, Heart, Mic } fro
 import { Title } from "../components/Title";
 import { AnimatedElement } from "../components/AnimatedElement";
 import { AnimatedText } from "../components/AnimatedText";
+import CountUp from 'react-countup';
+
 //import VisibilitySensor from "react-visibility-sensor";
 
 function About() {
