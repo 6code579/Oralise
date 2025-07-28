@@ -20,7 +20,7 @@ const coachingModules: CoachingModule[] = [
     id: 1,
     title: "Prise de parole en public",
     description: "Gérer le trac, captiver un auditoire, structurer une intervention, parler avec confiance… sur scène, en réunion, en vidéo ou devant un jury.",
-    image: "/images/image.jpg",
+    image: "/images/coaching/prise_de_parole.jpg",
     badge: "Classique",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -30,7 +30,7 @@ const coachingModules: CoachingModule[] = [
     title: "Gestion du stress",
     description:
       "Apprendre à respirer, se centrer, transformer l’émotion en énergie positive. Techniques pratiques et puissantes pour l’oral, le quotidien, les situations sensibles.",
-    image: "/images/training2.jpg",
+    image: "/images/coaching/stress.jpg",
     badge: "Pratique",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Gestion de stress et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -40,7 +40,7 @@ const coachingModules: CoachingModule[] = [
     title: "Intelligence émotionnelle",
     description:
       "Comprendre ses émotions, maîtriser ses réactions, développer une parole empathique, assertive et responsable. Idéal pour leaders, éducateurs, formateurs.",
-    image: "/images/training1.jpg",
+    image: "/images/coaching/intelligence.jpg",
     badge: "Leadership",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Intelligence émotionnelle et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -50,7 +50,7 @@ const coachingModules: CoachingModule[] = [
     title: "Rédaction de discours",
     description:
       "Construire un message clair, mémorable et percutant. Écrire pour convaincre, motiver, mobiliser. Coaching rédactionnel + oral.",
-    image: "/images/training3.jpg",
+    image: "/images/coaching/redaction.jpg",
     badge: "Spécialisé",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Rédaction de discours et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -60,7 +60,7 @@ const coachingModules: CoachingModule[] = [
     title: "Coaching de vie",
     description:
       "Reprendre le contrôle, faire des choix, retrouver une clarté intérieure et une direction alignée. Confiance, estime, affirmation personnelle.",
-    image: "/images/training4.jpg",
+    image: "/images/coaching/vie_coaching.jpg",
     badge: "Personnel",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching de vie et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -70,7 +70,7 @@ const coachingModules: CoachingModule[] = [
     title: "Coaching professionnel",
     description:
       "Réussir une prise de poste, mieux communiquer au travail, négocier, s’affirmer, manager. Coaching ciblé pour carrière & leadership.",
-    image: "/images/training1.jpg",
+    image: "/images/coaching/coaching_pro.jpg",
     badge: "Carrière",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching Professionnel et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -80,7 +80,7 @@ const coachingModules: CoachingModule[] = [
     title: "Master Coaching",
     description:
       "Un accompagnement intensif et complet sur 3 à 6 mois. Mix personnalisé entre expression orale, posture, stratégie de vie et leadership personnel. Pour profils à haut potentiel, en reconversion ou quête de transformation profonde.",
-    image: "/images/training4.jpg",
+    image: "/images/coaching/master_coaching.jpg",
     badge: "Intensif",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Master Coaching et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -128,16 +128,17 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
       <button
         onClick={prev}
         aria-label="Précédent"
-        className="absolute top-1/2 -left-6 transform -translate-y-1/2 bg-main-color-opacity hover:bg-main-color text-white rounded-full p-2 shadow-md"
+        className="absolute top-1/2 left-4 bg-main-color-opacity hover:bg-main-color text-white rounded-full p-2 shadow-md z-10"
       >
-        <ChevronLeft className="w-6 h-6 " />
+        <ChevronLeft className="w-6 h-6" />
       </button>
+
       <button
         onClick={next}
         aria-label="Suivant"
-        className="absolute top-1/2 -right-6 transform -translate-y-1/2 bg-main-color-opacity hover:bg-main-color text-white rounded-full p-2 shadow-md"
+        className="absolute top-1/2 right-4 bg-main-color-opacity hover:bg-main-color text-white rounded-full p-2 shadow-md z-10"
       >
-        <ChevronRight className="w-6 h-6 " />
+        <ChevronRight className="w-6 h-6" />
       </button>
     </div>
   );
@@ -178,24 +179,29 @@ const CoachingPage: React.FC = () => {
           </AnimatedElement>
 
           {/* Cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-stretch">
             {coachingModules.map(({ id, title, description, badge, message }) => (
               <AnimatedElement key={id} animation="scaleIn" delay={1000 + id * 100}>
                 <div
-                  className="bg-white dark:bg-gray-800/70 rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-solid   transition-shadow duration-300 "
+                  className="bg-white dark:bg-gray-800/70 rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-solid transition-shadow duration-300 h-full"
                 >
-                  <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-xl font-bold main-color">{title}</h3>
-                    <span className="inline-block bg-main-color-opacity text-white text-xs font-semibold uppercase rounded-full px-3 py-1 select-none">
-                      {badge}
-                    </span>
+                  <div className="flex flex-col justify-between h-full">
+                    <div>
+                      <div className="flex justify-between items-start mb-4">
+                        <h3 className="text-xl font-bold main-color">{title}</h3>
+                        <span className="inline-block bg-main-color-opacity text-white text-xs font-semibold uppercase rounded-full px-3 py-1 select-none">
+                          {badge}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 dark:text-gray-300">{description}</p>
+                    </div>
+                    <WhatsAppButton text="Prendre un rendez-vous" textMessage={message} className="mt-4" />
                   </div>
-                  <p className="text-gray-700 dark:text-gray-300 flex-grow">{description}</p>
-                  <WhatsAppButton text="Prendre un rendez-vous" textMessage={message} className="mt-4" />
                 </div>
               </AnimatedElement>
             ))}
           </div>
+
         </section>
       </AnimatedElement>
 
@@ -230,8 +236,8 @@ const CoachingPage: React.FC = () => {
 
             </AnimatedElement>
             <AnimatedElement animation="scaleIn" delay={1600}>
-              <WhatsAppButton text=" Récevoir un dévis personnalisé" textMessage="Bonjour Oralise, je voudrais Récevoir un dévis personnalisé" className="bg-secondary-color shadow-none" /> 
-              </AnimatedElement>
+              <WhatsAppButton text=" Récevoir un dévis personnalisé" textMessage="Bonjour Oralise, je voudrais Récevoir un dévis personnalisé" className="bg-secondary-color shadow-none" />
+            </AnimatedElement>
           </div>
         </section>
       </AnimatedElement>
