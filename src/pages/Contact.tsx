@@ -207,7 +207,7 @@ function Contact() {
 
                 <div className="font-semibold">
                   <p>Email</p>
-                  <a href="mailto:contact@oralise.com" className="main-color">contact@oralise.pro</a>
+                  <a href="mailto:contact@oralise.pro" className="main-color">contact@oralise.pro</a>
                 </div>
               </div>
             </div>
