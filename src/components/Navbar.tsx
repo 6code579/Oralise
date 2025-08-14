@@ -218,7 +218,7 @@ const Navbar = () => {
           <div>
             <h4 className="font-bold text-gray-800 dark:text-white mb-3 text-base sm:text-lg">Contact</h4>
             <ul className="flex flex-col gap-2 text-gray-600 dark:text-gray-300 text-sm sm:text-base">
-              <li>Email : <a href="mailto:contact@oralise.com" className="hover:underline main-color">contact@oralise.com</a></li>
+              <li>Email : <a href="mailto:contact@oralise.pro" className="hover:underline main-color">contact@oralise.pro</a></li>
               <li>Téléphone : <a href="tel:+212607041226" className="hover:underline main-color">+212 607041226</a></li>
               <li className="flex gap-3 mt-2">
                 <a href="https://www.facebook.com/profile.php?id=61571529371866"  target="_blank" aria-label="Facebook" className="hover:text-blue-600"><Facebook /></a>
