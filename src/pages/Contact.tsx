@@ -202,12 +202,12 @@ function Contact() {
               <div className="space-y-4">
                 <div className="font-semibold">
                   <p>Téléphone</p>
-                  <a href="tel:+212600000000" className="main-color">+212 6 00 00 00 00</a>
+                  <a href="tel:+212065596946" className="main-color">+212 06 559 69 46</a>
                 </div>
 
                 <div className="font-semibold">
                   <p>Email</p>
-                  <a href="mailto:contact@oralise.com" className="main-color">contact@oralise.com</a>
+                  <a href="mailto:contact@oralise.com" className="main-color">contact@oralise.pro</a>
                 </div>
               </div>
             </div>
