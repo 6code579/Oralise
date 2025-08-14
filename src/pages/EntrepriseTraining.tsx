@@ -43,7 +43,7 @@ const EntrepriseTraining = () => {
           <AnimatedText text="Boostez les compétences orales de vos équipes, durablement." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color uppercase" />
           <AnimatedText text="Que ce soit pour pitcher, convaincre ou manager, Oralise accompagne vos collaborateurs à s’exprimer avec impact et fluidité." type="reveal" delay={1000} className="max-w-3xl text-base md:text-lg" />
           <img
-            src="/images/entreprise/Hero.jpg"
+            src="/images/entreprise/Hero.webp"
             alt="Formation en entreprise"
             className="w-full md:w-1/2 h-auto rounded-3xl object-cover shadow-lg scale-90 hover:scale-100 transition duration-300"
           />
@@ -57,7 +57,7 @@ const EntrepriseTraining = () => {
         <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img
-              src="/images/entreprise/Pourquoi.jpg"
+              src="/images/entreprise/Pourquoi.webp"
               alt="Pourquoi une formation entreprise"
               className="w-full rounded-2xl object-cover shadow-lg scale-95 duration-300 hover:scale-90"
             />
@@ -74,7 +74,7 @@ const EntrepriseTraining = () => {
         <section className="flex flex-col md:flex-row-reverse items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img
-              src="/images/entreprise/who.jpg"
+              src="/images/entreprise/who.webp"
               alt="Cas d’usage"
               className="w-full rounded-2xl object-cover shadow-lg scale-95 duration-300 hover:scale-90"
             />
@@ -149,7 +149,7 @@ const EntrepriseTraining = () => {
         <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img
-              src="/images/entreprise/what.jpg"
+              src="/images/entreprise/what.webp"
               alt="Pack entreprise"
               className="w-full rounded-2xl object-cover shadow-lg scale-95 duration-300 hover:scale-90"
             />

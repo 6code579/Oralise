@@ -9,7 +9,7 @@ const TypeTraining = () => {
     const FrenchList = [
         {
             id: 1,
-            image: '/images/english/general.jpg',
+            image: '/images/english/general.webp',
             title: 'Anglais général',
             undertitle: 'Anglais pour la vie quotidienne et les échanges internationaux.',
             description: 'Apprenez à vous exprimer en anglais dans des contextes variés : voyage, conversation, échanges sociaux ou familiaux.Nos formateurs anglophones adaptent les contenus à votre niveau et à vos objectifs.',
@@ -24,7 +24,7 @@ const TypeTraining = () => {
         },
         {
             id: 2,
-            image: '/images/english/pro.jpg',
+            image: '/images/english/pro.webp',
             title: 'Anglais professionnel',
             undertitle: 'Préparez-vous à évoluer en contexte international.',
             description: 'Renforcez vos compétences orales pour travailler en anglais dans un cadre professionnel : réunions, entretiens, appels clients, négociations…',
@@ -39,7 +39,7 @@ const TypeTraining = () => {
         },
         {
             id: 3,
-            image: '/images/english/prepa.jpg',
+            image: '/images/english/prepa.webp',
             title: 'Préparation aux tests et certifications',
             undertitle: 'Passez vos examens d’anglais avec méthode et confiance.',
             description: 'Certifications préparées :',
@@ -96,7 +96,7 @@ function English() {
         <>
             <AnimatedElement animation="fadeIn" delay={100}>
                
-                <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" link="/contact"/>
+                <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.webp" link="/contact"/>
             </AnimatedElement>
             <TypeTraining />
             <AnimatedElement animation="slideUp" delay={200}>
@@ -107,7 +107,7 @@ function English() {
                     para="Nos formations en anglais privilégient l’interaction, la répétition guidée et la spontanéité. Pas de longs cours théoriques, mais de la pratique orale, ciblée, avec correction bienveillante. Les + Oralise : Formation centrée sur la communication active, Coachs expérimentés bilingues, Plateforme de suivi, Flexibilité horaire complète"
                 btnText="Je prends rendez-vous"
                 paraColor="main-color"
-                image="/images/french/1.png" link='/contact'
+                image="/images/french/1.webp" link='/contact'
             />
             </AnimatedElement>
         </>

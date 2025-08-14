@@ -36,7 +36,7 @@ const ChildrenTraining = () => {
                     title="Oralise Bourgeons : l’oral épanoui dès l’enfance."
                     description="Développer la parole, la confiance et l’expression des enfants dès le plus jeune âge. Des séances ludiques, vivantes et bienveillantes pour faire germer leur voix."
                     btnText="Réserver une séance d’essai gratuite"
-                    image="/images/children/banner.jpg"link="/contact"
+                    image="/images/children/banner.webp"link="/contact"
                 />
             </AnimatedElement>
 
@@ -140,7 +140,7 @@ const ChildrenTraining = () => {
                 <section className="py-10 px-5 md:px-20 flex flex-col-reverse md:flex-row gap-8 items-center md:items-end justify-center md:justify-end">
                     <div className="w-full md:w-auto">
                         <img
-                            src="/images/children/child.jpg"
+                            src="/images/children/child.webp"
                             alt="Formation Oralise Bourgeons"
                             className="rounded-xl border-2 border-main-color max-w-lg w-full object-cover"
                         />

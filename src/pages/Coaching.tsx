@@ -20,7 +20,7 @@ const coachingModules: CoachingModule[] = [
     id: 1,
     title: "Prise de parole en public",
     description: "Gérer le trac, captiver un auditoire, structurer une intervention, parler avec confiance… sur scène, en réunion, en vidéo ou devant un jury.",
-    image: "/images/coaching/prise_de_parole.jpg",
+    image: "/images/coaching/prise_de_parole.webp",
     badge: "Classique",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -30,7 +30,7 @@ const coachingModules: CoachingModule[] = [
     title: "Gestion du stress",
     description:
       "Apprendre à respirer, se centrer, transformer l’émotion en énergie positive. Techniques pratiques et puissantes pour l’oral, le quotidien, les situations sensibles.",
-    image: "/images/coaching/stress.jpg",
+    image: "/images/coaching/stress.webp",
     badge: "Pratique",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Gestion de stress et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -40,7 +40,7 @@ const coachingModules: CoachingModule[] = [
     title: "Intelligence émotionnelle",
     description:
       "Comprendre ses émotions, maîtriser ses réactions, développer une parole empathique, assertive et responsable. Idéal pour leaders, éducateurs, formateurs.",
-    image: "/images/coaching/intelligence.jpg",
+    image: "/images/coaching/intelligence.webp",
     badge: "Leadership",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Intelligence émotionnelle et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -50,7 +50,7 @@ const coachingModules: CoachingModule[] = [
     title: "Rédaction de discours",
     description:
       "Construire un message clair, mémorable et percutant. Écrire pour convaincre, motiver, mobiliser. Coaching rédactionnel + oral.",
-    image: "/images/coaching/redaction.jpg",
+    image: "/images/coaching/redaction.webp",
     badge: "Spécialisé",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Rédaction de discours et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -60,7 +60,7 @@ const coachingModules: CoachingModule[] = [
     title: "Coaching de vie",
     description:
       "Reprendre le contrôle, faire des choix, retrouver une clarté intérieure et une direction alignée. Confiance, estime, affirmation personnelle.",
-    image: "/images/coaching/vie_coaching.jpg",
+    image: "/images/coaching/vie_coaching.webp",
     badge: "Personnel",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching de vie et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -70,7 +70,7 @@ const coachingModules: CoachingModule[] = [
     title: "Coaching professionnel",
     description:
       "Réussir une prise de poste, mieux communiquer au travail, négocier, s’affirmer, manager. Coaching ciblé pour carrière & leadership.",
-    image: "/images/coaching/coaching_pro.jpg",
+    image: "/images/coaching/coaching_pro.webp",
     badge: "Carrière",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching Professionnel et je voudrais discuter avec vous pour prendre rendez-vous!"
@@ -80,7 +80,7 @@ const coachingModules: CoachingModule[] = [
     title: "Master Coaching",
     description:
       "Un accompagnement intensif et complet sur 3 à 6 mois. Mix personnalisé entre expression orale, posture, stratégie de vie et leadership personnel. Pour profils à haut potentiel, en reconversion ou quête de transformation profonde.",
-    image: "/images/coaching/master_coaching.jpg",
+    image: "/images/coaching/master_coaching.webp",
     badge: "Intensif",
     link: "/",
     message: "Bonjour Oralise, je suis intéressé(e) par votre formation en Master Coaching et je voudrais discuter avec vous pour prendre rendez-vous!"

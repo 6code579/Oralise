@@ -34,7 +34,7 @@ function About() {
                 <section className="py-10 px-5 md:px-20 grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <img
-                            src="/images/about/banner.jpg"
+                            src="/images/about/banner.webp"
                             alt="Participants en session"
                             className="rounded-2xl shadow-2xl object-cover w-full h-80 duration-300 scale-95 hover:scale-90"
                         />
@@ -120,7 +120,7 @@ function About() {
                     />
                     <AnimatedElement animation="scaleIn" delay={300}>
                         <img
-                            src="/images/about/foundator.png"
+                            src="/images/about/foundator.webp"
                             alt="icon du fondateur"
                             className="w-24 h-24 rounded-full shadow-2xl object-cover border-4 border-main-color mx-auto my-6 duration-300 hover:scale-90"
                         />

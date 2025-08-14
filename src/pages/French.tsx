@@ -14,7 +14,7 @@ const BannerFrench = () => {
                     {/* Image femme */}
                     <div className="w-full h-64 md:h-auto overflow-hidden order-1 lg:order-none">
                         <img
-                            src="/images/french/frenchBanner.jpg"
+                            src="/images/french/frenchBanner.webp"
                             alt="Femme"
                             className="w-full h-full object-cover rounded-3xl shadow-2xl duration-300 hover:scale-95"
                         />
@@ -29,7 +29,7 @@ const BannerFrench = () => {
                 {/* Image drapeau : visible uniquement sur grand écran */}
                 <div className="hidden lg:block col-span-3 overflow-hidden h-40 md:mt-5">
                     <img
-                        src="/images/french/flag.jpg"
+                        src="/images/french/flag.webp"
                         alt="Drapeau"
                         className="w-full h-full object-cover rounded-3xl duration-300 hover:scale-95"
                     />
@@ -43,7 +43,7 @@ const TypeTraining = () => {
     const FrenchList = [
         {
             id: 1,
-            image: '/images/french/fle.jpg',
+            image: '/images/french/fle.webp',
             title: 'Formation FLE (Français Langue Étrangère)',
             undertitle: 'Français général pour le quotidien, les échanges, la vie courante.',
             description: 'Nos parcours FLE sont conçus pour les apprenants de tous niveaux (A1 à C2).Vous y apprendrez à vous exprimer dans des situations concrètes : se présenter, poser une question, expliquer une idée, débattre…',
@@ -58,7 +58,7 @@ const TypeTraining = () => {
         },
         {
             id: 2,
-            image: '/images/french/pro.jpg',
+            image: '/images/french/pro.webp',
             title: 'Français professionnel',
             undertitle: 'Le français pour booster votre carrière.',
             description: 'Préparez-vous à parler français dans le monde du travail avec aisance et clarté. Idéal pour les entretiens, réunions, présentations, négociations et interactions en entreprise.',
@@ -73,7 +73,7 @@ const TypeTraining = () => {
         },
         {
             id: 3,
-            image: '/images/french/tcf.png',
+            image: '/images/french/tcf.webp',
             title: 'Préparation aux examens / certifications',
             undertitle: 'Préparez-vous pour réussir vos examens officiels.',
             description: 'Nous vous accompagnons pour réussir vos tests de langue française à visée universitaire et professionnelle ou pour le voyage.',
@@ -132,7 +132,7 @@ function French() {
             <TypeTraining />
            
                
-                <Banner title="Méthode Oralise" description="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse : Vous bénéficiez d'une séance d'essai Vous pratiquez dès la 1ère séance Vous êtes écouté, corrigé, encouragé Vous suivez vos progrès grâce à un tableau personnalisé Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.png"
+                <Banner title="Méthode Oralise" description="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse : Vous bénéficiez d'une séance d'essai Vous pratiquez dès la 1ère séance Vous êtes écouté, corrigé, encouragé Vous suivez vos progrès grâce à un tableau personnalisé Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.webp"
                 link="/contact"/>
        
         </>

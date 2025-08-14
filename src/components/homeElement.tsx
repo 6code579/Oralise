@@ -131,7 +131,7 @@ const Whychoseoralise = () => {
                 </div>
                 {/* Image */}
                 <div className="w-full md:w-1/2  lg:h-full relative order-1 md:order-none">
-                    <img src="/images/why.png" alt="whychooseOralise" className="w-full h-full object-cover   transition-transform duration-300 hover:scale-90 " />
+                    <img src="/images/why.webp" alt="whychooseOralise" className="w-full h-full object-cover   transition-transform duration-300 hover:scale-90 " />
                 </div>
             </div>
         </AnimatedElement>
@@ -164,7 +164,7 @@ const Language = () => {
                 <div className="flex flex-col items-start justify-start gap-8 mt-5 py-10 w-full">
 
                 <div className="w-full h-40 md:h-96 items-start">
-                    <img src="/images/language.jpg" alt="image des langues" className="w-full h-40 md:h-96 object-cover" />
+                    <img src="/images/language.webp" alt="image des langues" className="w-full h-40 md:h-96 object-cover" />
                 </div>
                 <div className="flex flex-col md:flex-row items-center justify-between gap-8 w-full px-5 md:px-20 md:mt-12">
                     <div className="w-full md:w-1/2 flex flex-col gap-4 items-start  md:gap-8   md:text-left md:px-20">
@@ -204,7 +204,7 @@ const TrainingAndCoaching = () => {
             id: 1,
             title:"Formation individuelle en ligne",
             description: "Un formateur dédié, une progression sur mesure.Apprenez à votre rythme, avec un accompagnement 100 % personnalisé.",
-            image: "/images/training1.jpg",
+            image: "/images/training1.webp",
             status: "Nouveau",
             link:"/individuelTraining"
         },
@@ -212,7 +212,7 @@ const TrainingAndCoaching = () => {
             id: 2,
             title:"Formation en groupe en ligne",
             description: "Rejoignez une dynamique collective dans un cadre interactif et bienveillant.Travaillez l’expression orale dans des situations concrètes et variées.",
-             image: "/images/training2.jpg",
+             image: "/images/training2.webp",
             status: "Ancien",
             link:"/groupTraining"
         },
@@ -220,7 +220,7 @@ const TrainingAndCoaching = () => {
             id: 3,
             title:"Formation en entreprise en ligne ou sur site",
             description: "Faites progresser vos équipes avec des modules adaptés à vos objectifs professionnels.Horaires flexibles, résultats mesurables, formateurs spécialisés.",
-            image: "/images/training3.jpg",
+            image: "/images/training3.webp",
             status: "Nouveau",
             link:"/entrepriseTraining"
         },
@@ -228,7 +228,7 @@ const TrainingAndCoaching = () => {
             id: 4,
             title:"Formation pour enfants en ligne",
             description: "Apprendre une langue en s'amusant, dès le plus jeune âge.Des séances ludiques, animées par des formateurs spécialisés en pédagogie enfantine.",
-            image: "/images/training4.jpg",
+            image: "/images/training4.webp",
             status: "Nouveau",
             link:"/childrenTraining"
 
