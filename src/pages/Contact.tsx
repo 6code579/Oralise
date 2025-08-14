@@ -95,11 +95,11 @@ function Contact() {
       </AnimatedElement>
 
       {/* Bloc principal */}
-      <AnimatedElement animation="slideUp" delay={400}>
+      <AnimatedElement animation="slideUp" delay={300}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 px-5 md:px-20 py-10 max-w-7xl mx-auto">
 
           {/* Formulaire */}
-          <AnimatedElement animation="slideLeft" delay={600}>
+          <AnimatedElement animation="slideLeft" delay={500}>
             <form
               onSubmit={handleSubmit}
               className="bg-white dark:bg-gray-800 shadow-xl p-8 rounded-2xl space-y-6"

@@ -58,7 +58,6 @@ const TypeTraining = () => {
         }
     ]
     return (
-        <AnimatedElement animation="fadeIn" delay={200}>
             <ul className="grid grid-cols-1 md:my-8 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
                 {
                     FrenchList.map((element, idx) => (
@@ -89,19 +88,18 @@ const TypeTraining = () => {
                     ))
                 }
             </ul>
-        </AnimatedElement>
     )
 }
 
 function English() {
     return (
         <>
-            <AnimatedElement animation="fadeIn" delay={200}>
+            <AnimatedElement animation="fadeIn" delay={100}>
                
                 <Banner title="Step Up !" description="Parlez anglais avec aisance, où que vous soyez. L’anglais est la langue du monde professionnel, des études, et des voyages. Oralise vous accompagne pour parler anglais avec fluidité, confiance et impact." btnText="Je m'inscris" image="/images/english/banner.jpg" link="/contact"/>
             </AnimatedElement>
             <TypeTraining />
-            <AnimatedElement animation="slideUp" delay={600}>
+            <AnimatedElement animation="slideUp" delay={200}>
                
             <Banner
                 title="Méthode Oralise (adaptée à l’anglais)"

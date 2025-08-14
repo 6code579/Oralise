@@ -8,7 +8,7 @@ import { WhatsAppButton } from "../components/WhatsappBtn";
 
 const BannerFrench = () => {
     return (
-        <AnimatedElement animation="fadeIn" delay={200}>
+        
             <div className="w-full max-w-full mb-8 mx-auto px-5 md:px-20 mt-5 md:mt-8 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 rounded-xl overflow-hidden">
                     {/* Image femme */}
@@ -35,7 +35,7 @@ const BannerFrench = () => {
                     />
                 </div>
             </div>
-        </AnimatedElement>
+       
     )
 }
 
@@ -90,7 +90,7 @@ const TypeTraining = () => {
         }
     ]
     return (
-        <AnimatedElement animation="fadeIn" delay={200}>
+       
             <ul className="grid grid-cols-1 md:my-8 bg-main-color-opacity dark:bg-gray-700 shadow-lg xl:grid-cols-3 gap-y-10 gap-x-6 items-start p-8">
                 {
                     FrenchList.map((element, idx) => (
@@ -121,7 +121,7 @@ const TypeTraining = () => {
                     ))
                 }
             </ul>
-        </AnimatedElement>
+        
     )
 }
 
@@ -130,11 +130,11 @@ function French() {
         <>
             <BannerFrench />
             <TypeTraining />
-            <AnimatedElement animation="slideUp" delay={600}>
+           
                
                 <Banner title="Méthode Oralise" description="Une méthode centrée sur la parole, pas sur les fiches. Avec Oralise, vous bénéficiez de formations sur mesure, axées sur la pratique, pour développer votre aisance et votre fluidité en communication. Notre objectif est simple : vous permettre de gagner en confiance, de vous exprimer clairement et de rayonner dans toutes vos interactions. Vous apprenez en pratiquant, en répétant, en interagissant." para="Notre promesse : Vous bénéficiez d'une séance d'essai Vous pratiquez dès la 1ère séance Vous êtes écouté, corrigé, encouragé Vous suivez vos progrès grâce à un tableau personnalisé Vous pratiquez dans un club de communication" btnText="Je prends rendez-vous" paraColor="main-color"  image="/images/french/1.png"
                 link="/contact"/>
-            </AnimatedElement>
+       
         </>
     );
 }

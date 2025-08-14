@@ -18,7 +18,6 @@ const Examen = () => {
   return (
     <div className="min-h-screen ">
       {/* SECTION 1 : Hero */}
-      <AnimatedElement animation="fadeIn" delay={200}>
         <section className="py-10 px-5 md:px-20">
           <div className="max-w-6xl mx-auto text-center">
             <AnimatedText text="Obtenez votre certification avec précision, pas avec stress." type="typing" speed={60} className="main-color font-extrabold text-4xl md:text-6xl leading-tight mb-8" />
@@ -30,16 +29,16 @@ const Examen = () => {
             </div>
           </div>
         </section>
-      </AnimatedElement>
+      
 
       {/* SECTION 2 : Examens proposés */}
-      <AnimatedElement animation="slideUp" delay={400}>
+
         <section className="py-10 px-5 md:px-20">
           <div className="max-w-6xl mx-auto">
             <AnimatedText text="Examens proposés" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
             <div className="grid md:grid-cols-2 gap-8 mt-12">
               {/* Français langue étrangère */}
-              <AnimatedElement animation="scaleIn" delay={600}>
+              <AnimatedElement animation="scaleIn" delay={200}>
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mr-4">
@@ -70,7 +69,7 @@ const Examen = () => {
                 </div>
               </AnimatedElement>
               {/* Anglais */}
-              <AnimatedElement animation="scaleIn" delay={800}>
+              <AnimatedElement animation="scaleIn" delay={300}>
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl">
                   <div className="flex items-center mb-6">
                     <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mr-4">
@@ -102,10 +101,9 @@ const Examen = () => {
             </div>
           </div>
         </section>
-      </AnimatedElement>
+    
 
       {/* SECTION 3 : Méthode Oralise */}
-      <AnimatedElement animation="fadeIn" delay={600}>
   <section className="py-10 px-5 md:px-20 bg-white dark:bg-gray-800/70">
     <div className="max-w-6xl mx-auto">
       <AnimatedText
@@ -145,7 +143,7 @@ const Examen = () => {
             text: "Pour ne pas perdre de points \"bêtement\" : introduction claire, exemples, mots de liaison, conclusion",
           },
         ].map((step, index) => (
-          <AnimatedElement key={index} animation="scaleIn" delay={800 + index * 200}>
+          <AnimatedElement key={index} animation="scaleIn" delay={400 + index * 200}>
             <div className={`flex flex-col items-center text-center h-full bg-gradient-to-br ${step.gradient} rounded-2xl p-6 shadow-lg`}>
               <div className={`w-12 h-12 ${step.iconBg} rounded-full flex items-center justify-center mb-4`}>
                 {step.icon}
@@ -158,11 +156,11 @@ const Examen = () => {
       </div>
     </div>
   </section>
-</AnimatedElement>
+
 
 
       {/* SECTION 4 : Formules disponibles */}
-      <AnimatedElement animation="slideUp" delay={800}>
+ 
   <section className="py-10 px-5 md:px-20">
     <div className="max-w-6xl mx-auto">
       <AnimatedText
@@ -172,7 +170,7 @@ const Examen = () => {
         className="text-2xl md:text-4xl font-bold main-color"
       />
       <div className="overflow-x-auto mt-12">
-        <AnimatedElement animation="fadeIn" delay={1000}>
+        <AnimatedElement animation="fadeIn" delay={300}>
           <table className="w-full bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
             <thead className="bg-main-color text-white">
               <tr>
@@ -233,11 +231,11 @@ const Examen = () => {
       </div>
     </div>
   </section>
-</AnimatedElement>
+
 
 
       {/* SECTION 5 : Bénéfices concrets */}
-      <AnimatedElement animation="fadeIn" delay={1000}>
+      
   <section className="py-10 px-5 md:px-20 bg-white dark:bg-gray-800">
     <div className="max-w-6xl mx-auto">
       <AnimatedText
@@ -260,7 +258,7 @@ const Examen = () => {
                 <AnimatedElement
                   key={index}
                   animation="slideLeft"
-                  delay={1200 + colIndex * 200 + index * 100}
+                  delay={300 + colIndex * 200 + index * 100}
                 >
                   <div className="flex items-start space-x-4">
                     <TextCheck text={text} color="main-color" />
@@ -273,11 +271,11 @@ const Examen = () => {
       </div>
     </div>
   </section>
-</AnimatedElement>
+
 
 
       {/* SECTION 6 : Appel à l'action */}
-      <AnimatedElement animation="fadeIn" delay={1200}>
+      
         <section className="py-10 px-5 md:px-20">
           <div className="max-w-4xl mx-auto text-center">
             <AnimatedText text="Votre certification est un tremplin. Donnez-vous les moyens de réussir." type="typing" speed={50} className="text-3xl md:text-4xl font-bold text-white mb-6 flex items-center justify-center main-color gap-3" />
@@ -285,12 +283,12 @@ const Examen = () => {
               <AnimatedText text="Réservez une séance diagnostic gratuite" type="reveal" delay={1400} className="text-xl text-white/90 flex items-center justify-center gap-2" />
               <AnimatedText text="Commencez votre plan de préparation en 48h" type="reveal" delay={1600} className="text-xl text-white/90 flex items-center justify-center gap-2" />
             </div>
-            <AnimatedElement animation="scaleIn" delay={1800}>
+            <AnimatedElement animation="scaleIn" delay={800}>
               <Button label="Réserver ma séance gratuite" changeColor={true} className="mt-4"/>
             </AnimatedElement>
           </div>
         </section>
-      </AnimatedElement>
+     
     </div>
   );
 };

@@ -12,7 +12,7 @@ function About() {
     return (
         <main className="text-gray-800 dark:text-white">
             {/* SECTION 1 - Hero */}
-            <AnimatedElement animation="fadeIn" delay={200}>
+    
                 <section className="py-10 px-5 md:px-20 text-center">
                     <AnimatedText
                         text="Oralise. La parole pour transformer."
@@ -27,10 +27,10 @@ function About() {
                         className="text-lg max-w-4xl mx-auto"
                     />
                 </section>
-            </AnimatedElement>
+  
 
             {/* SECTION 2 - Ce que vous recevez */}
-            <AnimatedElement animation="slideUp" delay={400}>
+            <AnimatedElement animation="slideUp" delay={200}>
                 <section className="py-10 px-5 md:px-20 grid md:grid-cols-2 gap-8 items-center">
                     <div>
                         <img
@@ -56,7 +56,7 @@ function About() {
             </AnimatedElement>
 
             {/* SECTION 3 - Notre mission */}
-            <AnimatedElement animation="fadeIn" delay={600}>
+            <AnimatedElement animation="fadeIn" delay={300}>
                 <section className="flex flex-col py-10 px-5 md:px-20 text-center gap-6">
                     <Title title="Notre mission" color />
                     <AnimatedText
@@ -75,7 +75,7 @@ function About() {
             </AnimatedElement>
 
             {/* SECTION 4 - Pourquoi Oralise ? */}
-            <AnimatedElement animation="slideUp" delay={800}>
+            <AnimatedElement animation="slideUp" delay={300}>
                 <section className="flex flex-col items-center py-10 px-5 md:px-20">
                     <Title title="Pourquoi Oralise ?" color className="mb-8 md:mb-12" />
                     <div className="grid md:grid-cols-3 gap-6">
@@ -96,7 +96,7 @@ function About() {
                                 text: "Pas de formule unique. Chaque parcours est adapté à votre profil, votre objectif et votre rythme."
                             }
                         ].map(({ icon, title, text }, index) => (
-                            <AnimatedElement key={index} animation="scaleIn" delay={1000 + index * 200}>
+                            <AnimatedElement key={index} animation="scaleIn" delay={300 + index * 200}>
                                 <div className="flex flex-col bg-main-color-opacity dark:bg-gray-800/70 items-center text-center p-6 rounded-xl shadow-md duration-300 hover:scale-90">
                                     <div className="mb-2 text-gray-700 dark:main-color rounded-full shadow-2xl p-3">{icon}</div>
                                     <h3 className="text-xl font-semibold mb-2 text-gray-700 dark:main-color">{title}</h3>
@@ -109,7 +109,7 @@ function About() {
             </AnimatedElement>
 
             {/* SECTION 5 - Le mot du fondateur */}
-            <AnimatedElement animation="fadeIn" delay={1000}>
+            <AnimatedElement animation="fadeIn" delay={100}>
                 <section className="py-10 px-5 md:px-20 text-center max-w-4xl mx-auto">
                     <Title title="Le mot du fondateur" color className="md:mb-6" />
                     <AnimatedText
@@ -118,7 +118,7 @@ function About() {
                         delay={1200}
                         className="italic text-lg"
                     />
-                    <AnimatedElement animation="scaleIn" delay={1400}>
+                    <AnimatedElement animation="scaleIn" delay={300}>
                         <img
                             src="/images/about/foundator.png"
                             alt="icon du fondateur"
@@ -135,7 +135,7 @@ function About() {
             </AnimatedElement>
 
             {/* SECTION 6 - Nos valeurs */}
-            <AnimatedElement animation="slideUp" delay={1200}>
+         
                 <section className="bg-main-color-opacity dark:bg-gray-800 py-10 px-5 md:px-20">
                     <Title title="Nos valeurs" color className="text-center mb-6 md:mb-12" />
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -155,10 +155,10 @@ function About() {
                         ))}
                     </div>
                 </section>
-            </AnimatedElement>
+      
 
             {/* SECTION 7 - Oralise en chiffres */}
-            <AnimatedElement animation="fadeIn" delay={1400}>
+            <AnimatedElement animation="fadeIn" delay={200}>
                 <section className="py-10 px-5 md:px-20 text-center">
                     <Title title="Oralise en chiffres" color className="mb-6 md:mb-8" />
                     <div className="grid md:grid-cols-3 gap-6">
@@ -173,7 +173,7 @@ function About() {
                             const prefix = value.startsWith('+') ? '+' : '';
                             const suffix = value.replace(/[+]?\d+\s?/, '');
                             return (
-                                <AnimatedElement key={index} animation="bounceIn" delay={1600 + index * 300}>
+                                <AnimatedElement key={index} animation="bounceIn" delay={300 + index * 300}>
                                     <div className="bg-white dark:bg-gray-800/70 p-6 rounded-2xl shadow-2xl text-center duration-300 hover:scale-90">
                                         <div className="text-4xl font-bold main-color mb-2">
                                             <CountUp end={number} duration={2} enableScrollSpy scrollSpyOnce prefix={prefix} suffix={suffix} />

@@ -148,11 +148,11 @@ const CoachingPage: React.FC = () => {
   return (
     <main className="text-gray-900 dark:text-white px-5 md:px-20 py-10 space-y-20">
       {/* SECTION 1 - HERO */}
-      <AnimatedElement animation="fadeIn" delay={200}>
+      <AnimatedElement animation="fadeIn" delay={100}>
         <section className="text-start md:text-center max-w-4xl mx-auto space-y-6">
           <AnimatedText text="Exprimez votre plein potentiel. Avec un coach, tout change." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color" />
           <AnimatedText text="Que ce soit pour améliorer votre parole, développer votre confiance ou faire évoluer votre vie personnelle ou professionnelle, nos coachs vous accompagnent à chaque étape de votre transformation." type="reveal" delay={1000} className="text-lg md:text-xl" />
-          <AnimatedElement animation="scaleIn" delay={1200}>
+          <AnimatedElement animation="scaleIn" delay={200}>
             <WhatsAppButton text="Prendre rendez-vous pour un appel découverte
 " className="text-sm" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation en Coaching et je voudrais discuter avec vous pour prendre rendez-vous!
 "/>
@@ -161,7 +161,7 @@ const CoachingPage: React.FC = () => {
       </AnimatedElement>
 
       {/* SECTION 2 - Explication */}
-      <AnimatedElement animation="slideUp" delay={400}>
+      <AnimatedElement animation="slideUp" delay={300}>
         <section className="max-w-3xl mx-auto md:text-center text-lg md:text-xl space-y-4">
           <AnimatedText text="Et si votre parole reflétait vraiment votre puissance intérieure ?" type="reveal" delay={600} className="font-bold main-color" />
           <AnimatedText text="Nos coachings ne sont pas des cours, mais des expériences de libération, de clarification et de stratégie personnelle. Nous travaillons avec vous le fond et la forme, pour aligner ce que vous pensez, ce que vous ressentez, et ce que vous dites." type="reveal" delay={1000} />
@@ -169,19 +169,19 @@ const CoachingPage: React.FC = () => {
       </AnimatedElement>
 
       {/* SECTION 3 - Carousel + Cards des modules */}
-      <AnimatedElement animation="fadeIn" delay={600}>
+      <AnimatedElement animation="fadeIn" delay={400}>
         <section className="space-y-12 max-w-7xl mx-auto">
           <AnimatedText text="Nos modules de coaching" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color text-center" />
 
           {/* Carousel images */}
-          <AnimatedElement animation="slideUp" delay={800}>
+          <AnimatedElement animation="slideUp" delay={400}>
             <Carousel items={coachingModules} />
           </AnimatedElement>
 
           {/* Cards grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 items-stretch">
             {coachingModules.map(({ id, title, description, badge, message }) => (
-              <AnimatedElement key={id} animation="scaleIn" delay={1000 + id * 100}>
+              <AnimatedElement key={id} animation="scaleIn" delay={300 + id * 100}>
                 <div
                   className="bg-white dark:bg-gray-800/70 rounded-2xl shadow-2xl p-6 flex flex-col justify-between border border-solid transition-shadow duration-300 h-full"
                 >
@@ -206,7 +206,6 @@ const CoachingPage: React.FC = () => {
       </AnimatedElement>
 
       {/* SECTION 4 - Déroulement */}
-      <AnimatedElement animation="slideUp" delay={800}>
         <section className="max-w-4xl  space-y-6">
           <AnimatedText text="Comment se déroule un coaching Oralise ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <ul className="list-disc list-inside text-lg text-gray-700 dark:text-white space-y-2">
@@ -223,10 +222,8 @@ const CoachingPage: React.FC = () => {
             ))}
           </ul>
         </section>
-      </AnimatedElement>
 
       {/* SECTION 5 - Call to action final */}
-      <AnimatedElement animation="fadeIn" delay={1000}>
         <section className="text-start md:text-center max-w-4xl mx-auto space-y-6">
           <AnimatedText text="Et si vous osiez être pleinement vous-même, à travers votre voix ?" type="typing" speed={50} className="text-xl md:text-2xl font-semibold main-color" />
           <AnimatedText text="Nos coachs sont là pour vous écouter, vous guider, vous révéler." type="reveal" delay={1200} />
@@ -240,7 +237,6 @@ const CoachingPage: React.FC = () => {
             </AnimatedElement>
           </div>
         </section>
-      </AnimatedElement>
     </main>
   );
 };

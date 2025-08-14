@@ -38,7 +38,7 @@ const EntrepriseTraining = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <AnimatedElement animation="fadeIn" delay={200}>
+
         <section className="flex flex-col items-center gap-8 text-center py-10 px-5 md:px-20 md:mt-8">
           <AnimatedText text="Boostez les compétences orales de vos équipes, durablement." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color uppercase" />
           <AnimatedText text="Que ce soit pour pitcher, convaincre ou manager, Oralise accompagne vos collaborateurs à s’exprimer avec impact et fluidité." type="reveal" delay={1000} className="max-w-3xl text-base md:text-lg" />
@@ -51,10 +51,9 @@ const EntrepriseTraining = () => {
              <WhatsAppButton text="Obtenir un devis personnalisé" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation de Langue en Entreprise et je voudrais discuter avec vous pour prendre rendez-vous!"/>
           </AnimatedElement>
         </section>
-      </AnimatedElement>
-
+   
       {/* POURQUOI UNE FORMATION ENTREPRISE */}
-      <AnimatedElement animation="slideUp" delay={400}>
+      <AnimatedElement animation="slideUp" delay={200}>
         <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img
@@ -71,7 +70,7 @@ const EntrepriseTraining = () => {
       </AnimatedElement>
 
       {/* CAS D’USAGE */}
-      <AnimatedElement animation="slideUp" delay={600}>
+      <AnimatedElement animation="slideUp" delay={100}>
         <section className="flex flex-col md:flex-row-reverse items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img
@@ -84,12 +83,12 @@ const EntrepriseTraining = () => {
             <AnimatedText text="À qui s’adresse la formation entreprise ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
             <ul className="space-y-2 text-base md:text-lg">
               {useCases.map((item, index) => (
-                <AnimatedElement key={index} animation="slideLeft" delay={800 + index * 100}>
+                <AnimatedElement key={index} animation="slideLeft" delay={300 + index * 100}>
                   <TextCheck text={item} color="main-color" />
                 </AnimatedElement>
               ))}
             </ul>
-            <AnimatedElement animation="scaleIn" delay={1200}>
+            <AnimatedElement animation="scaleIn" delay={400}>
               <Button label="Planifier une session découverte" changeColor={true} className="w-fit mt-4" to="/contact" />
             </AnimatedElement>
           </div>
@@ -97,7 +96,7 @@ const EntrepriseTraining = () => {
       </AnimatedElement>
 
       {/* SECTION MODULES À LA CARTE */}
-      <AnimatedElement animation="fadeIn" delay={800}>
+    
         <section className="py-10 px-5 md:px-20">
           <AnimatedText text="Modules à la carte" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color text-center mb-8 md:mb-12" />
           <div className="grid mb-8 border border-gray-200 rounded-2xl shadow-2xl dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800  ">
@@ -127,7 +126,7 @@ const EntrepriseTraining = () => {
                 desc: "Identifier les blocages, adopter des techniques de respiration, gérer les émotions et parler avec assurance même sous pression."
               },
             ].map((module, index) => (
-              <AnimatedElement key={index} animation="scaleIn" delay={1000 + index * 100}>
+              <AnimatedElement key={index} animation="scaleIn" delay={500 + index * 100}>
                 <figure
                   className={`flex flex-col items-start  justify-start gap-4 p-8 bg-white border-gray-200 ${index < 4 ? "border-b" : ""
                     } ${index % 2 === 0 ? "md:border-e" : ""} dark:bg-gray-800 dark:border-gray-700`}
@@ -143,10 +142,10 @@ const EntrepriseTraining = () => {
             ))}
           </div>
         </section>
-      </AnimatedElement>
+   
 
       {/* CE QUE VOUS RECEVEZ */}
-      <AnimatedElement animation="slideUp" delay={1000}>
+     
         <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img
@@ -166,10 +165,10 @@ const EntrepriseTraining = () => {
             </ul>
           </div>
         </section>
-      </AnimatedElement>
+     
 
       {/* AVANTAGES COMPARATIFS */}
-      <AnimatedElement animation="fadeIn" delay={1200}>
+     
         <section className="space-y-8 text-center py-10 px-5 md:px-20">
           <AnimatedText text="Pourquoi Oralise est différent" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <div className="grid md:grid-cols-2 gap-6 text-left">
@@ -199,10 +198,10 @@ const EntrepriseTraining = () => {
             </AnimatedElement>
           </div>
         </section>
-      </AnimatedElement>
+     
 
       {/* APPEL À L’ACTION */}
-      <AnimatedElement animation="fadeIn" delay={1400}>
+      <AnimatedElement animation="fadeIn" delay={400}>
         <section className="flex flex-col items-center text-center gap-6 py-16 px-4 md:px-20">
           <AnimatedText text="Prêt à renforcer les soft skills de vos équipes ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <AnimatedText text="Oralise propose un accompagnement sur-mesure, pensé pour vos enjeux de communication. Faites le choix d’une formation humaine, impactante et orientée résultats." type="reveal" delay={1600} className="max-w-3xl text-base md:text-lg" />

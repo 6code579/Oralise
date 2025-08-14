@@ -7,7 +7,6 @@ function GroupTraining() {
     return (
         <div className="  text-gray-800 dark:text-white">
             {/* SECTION 1: HERO */}
-            <AnimatedElement animation="fadeIn" delay={200}>
                 <section className="min-h-[50vh] flex flex-col items-start text-start md:items-center justify-center md:text-center px-5 md:px-20 gap-2 mt-5">
                     <AnimatedText text="Parler, s’exprimer, échanger… ensemble, c’est plus motivant." type="typing" speed={60} className="text-4xl md:text-5xl font-bold mb-4 main-color" />
                     <AnimatedText text="Les formations en groupe Oralise vous plongent dans une expérience collective stimulante, bienveillante et 100 % orientée pratique orale." type="reveal" delay={800} className="text-lg md:text-xl max-w-4xl mb-6" />
@@ -15,9 +14,7 @@ function GroupTraining() {
                         <Button label="Rejoignez un groupe maintenant" changeColor={true} to="/contact" />
                     </AnimatedElement>
                 </section>
-            </AnimatedElement>
             {/* SECTION 2: POURQUOI CHOISIR LA FORMATION EN GROUPE */}
-            <AnimatedElement animation="slideUp" delay={400}>
                 <section className="py-10 px-5 md:px-20">
                     <AnimatedText text="Pourquoi choisir la formation en groupe ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <div className="mt-6 space-y-4">
@@ -44,9 +41,7 @@ function GroupTraining() {
                         ))}
                     </ul>
                 </section>
-            </AnimatedElement>
             {/* SECTION 3: POUR QUI EST-CE FAIT ? */}
-            <AnimatedElement animation="fadeIn" delay={600}>
                 <section className="bg-main-color-opacity dark:bg-gray-800 py-10 px-5 md:px-20  ">
                     <AnimatedText text="Pour qui est-ce fait ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <ul className="mt-6 space-y-3 ">
@@ -62,9 +57,7 @@ function GroupTraining() {
                         ))}
                     </ul>
                 </section>
-            </AnimatedElement>
             {/* SECTION 4: CE QUE VOUS RECEVEZ */}
-            <AnimatedElement animation="slideUp" delay={800}>
                 <section className="py-10 px-5 md:px-20 flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16">
                     {/* Texte à gauche sur desktop */}
                     <div className="w-full md:w-1/2">
@@ -93,9 +86,7 @@ function GroupTraining() {
                         />
                     </div>
                 </section>
-            </AnimatedElement>
             {/* SECTION 5: CONTENU TYPE D’UNE SÉANCE */}
-            <AnimatedElement animation="fadeIn" delay={1000}>
                 <section className="py-10 px-5 md:px-20 bg-white dark:bg-gray-800 shadow-2xl">
                     <AnimatedText text="Contenu type d’une séance" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color md:text-right" />
                     <div className="overflow-x-auto mt-8 md:mt-12">
@@ -125,9 +116,9 @@ function GroupTraining() {
                         </AnimatedElement>
                     </div>
                 </section>
-            </AnimatedElement>
+      
             {/* SECTION 6: AVANTAGES SPÉCIFIQUES */}
-            <AnimatedElement animation="slideUp" delay={1200}>
+          
                 <section className="py-8 md:py-16 px-6 md:px-20">
                     <AnimatedText text="Avantages spécifiques du groupe" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <ul className="mt-6 space-y-3 ">
@@ -143,9 +134,9 @@ function GroupTraining() {
                         ))}
                     </ul>
                 </section>
-            </AnimatedElement>
+           
             {/* SECTION 7: APPEL FINAL */}
-            <AnimatedElement animation="fadeIn" delay={1400}>
+       
                 <section className="bg-none py-8  md:py-24 px-6 md:px-20 text-center">
                     <AnimatedText text="Et si parler devenait enfin un plaisir ?" type="typing" speed={60} className="main-color text-3xl md:text-4xl font-bold mb-6" />
                     <AnimatedText text="Rejoignez un groupe, trouvez votre voix, et transformez votre oral. Avec Oralise, vous êtes entendu, accompagné et encouragé." type="reveal" delay={1600} className="text-lg mb-8 max-w-2xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed" />
@@ -153,7 +144,7 @@ function GroupTraining() {
                         <Button label="Réservez une séance d’essai gratuite" changeColor={true} to="/contact" />
                     </AnimatedElement>
                 </section>
-            </AnimatedElement>
+           
         </div>
     );
 }

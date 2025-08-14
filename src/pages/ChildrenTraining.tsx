@@ -31,7 +31,7 @@ const ChildrenTraining = () => {
     return (
         <>
             {/* HERO SECTION */}
-            <AnimatedElement animation="fadeIn" delay={200}>
+            <AnimatedElement animation="fadeIn" delay={100}>
                 <Banner
                     title="Oralise Bourgeons : l’oral épanoui dès l’enfance."
                     description="Développer la parole, la confiance et l’expression des enfants dès le plus jeune âge. Des séances ludiques, vivantes et bienveillantes pour faire germer leur voix."
@@ -41,7 +41,7 @@ const ChildrenTraining = () => {
             </AnimatedElement>
 
             {/* SECTION 2 - Pourquoi une formation orale pour enfants */}
-            <AnimatedElement animation="slideUp" delay={400}>
+            <AnimatedElement animation="slideUp" delay={200}>
                 <section className="py-10 px-5 md:px-20 md:mt-8 flex flex-col items-start ">
                     <AnimatedText text="Parler bien, ça commence tôt." type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <div className="max-w-4xl text-left mt-6 text-lg ">
@@ -56,7 +56,7 @@ const ChildrenTraining = () => {
             </AnimatedElement>
 
             {/* SECTION 3 - Pour qui ? */}
-            <AnimatedElement animation="fadeIn" delay={600}>
+            <AnimatedElement animation="fadeIn" delay={300}>
                 <section className="py-10 px-5 md:px-20 flex flex-col justify-center items-start">
                     <AnimatedText text="Pour qui ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <div className="grid gap-6 md:grid-cols-2 mt-6 items-center ">
@@ -64,19 +64,19 @@ const ChildrenTraining = () => {
                             <AnimatedText text="Enfants de 6 à 12 ans et des Ados de 13 à 17 ans, débutants ou déjà sensibilisés à une langue. Adapté aux enfants francophones comme à ceux qui veulent apprendre une langue étrangère (Français, Anglais)." type="reveal" delay={800} />
                         </div>
                         <div className="space-y-4">
-                            <AnimatedElement animation="slideLeft" delay={1000}>
+                            <AnimatedElement animation="slideLeft" delay={300}>
                                 <div className="flex items-center gap-2">
                                     <Smile className="main-color w-8 h-8 mt-1" />
                                     <p>Des formateurs formés à la pédagogie enfantine</p>
                                 </div>
                             </AnimatedElement>
-                            <AnimatedElement animation="slideLeft" delay={1200}>
+                            <AnimatedElement animation="slideLeft" delay={400}>
                                 <div className="flex items-center gap-2">
                                     <BookOpenCheck className="main-color  w-8 h-8 mt-1" />
                                     <p>Des approches douces et actives, selon l’âge et la langue</p>
                                 </div>
                             </AnimatedElement>
-                            <AnimatedElement animation="slideLeft" delay={1400}>
+                            <AnimatedElement animation="slideLeft" delay={500}>
                                 <div className="flex items-center gap-2">
                                     <Users className="main-color  w-8 h-8 mt-1" />
                                     <p>Séances 100 % en ligne, en mini-groupes ou individuels</p>
@@ -88,7 +88,6 @@ const ChildrenTraining = () => {
             </AnimatedElement>
 
             {/* SECTION 4 - Formules proposées */}
-            <AnimatedElement animation="slideUp" delay={800}>
                 <section className="py-10 px-5 md:px-20">
                     <AnimatedText text="Formules proposées" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color md:text-end" />
                     <div className="overflow-x-auto mt-6  rounded-2xl shadow-2xl">
@@ -122,10 +121,10 @@ const ChildrenTraining = () => {
                         </AnimatedElement>
                     </div>
                 </section>
-            </AnimatedElement>
+           
 
             {/* SECTION 5 - Résultats */}
-            <AnimatedElement animation="fadeIn" delay={1000}>
+            <AnimatedElement animation="fadeIn" delay={400}>
                 <section className="py-10 px-5 md:px-20">
                     <AnimatedText text="Résultats observés chez les enfants" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                     <div className="mt-6">
@@ -137,7 +136,7 @@ const ChildrenTraining = () => {
             </AnimatedElement>
 
             {/* SECTION 6 - Pourquoi Oralise Bourgeons ? */}
-            <AnimatedElement animation="slideUp" delay={1200}>
+            <AnimatedElement animation="slideUp" delay={300}>
                 <section className="py-10 px-5 md:px-20 flex flex-col-reverse md:flex-row gap-8 items-center md:items-end justify-center md:justify-end">
                     <div className="w-full md:w-auto">
                         <img
@@ -151,7 +150,7 @@ const ChildrenTraining = () => {
                         <AnimatedText text="Pourquoi Oralise Bourgeons ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
                         <div className="space-y-4 text-gray-700 dark:text-white mt-6 flex flex-col items-start">
                             {points.map(({ text, icon: Icon }, index) => (
-                                <AnimatedElement key={index} animation="slideLeft" delay={1400 + index * 200}>
+                                <AnimatedElement key={index} animation="slideLeft" delay={500 + index * 200}>
                                     <div className="flex md:flex-row gap-2  items-start text-left md:text-right">
                                         <Icon className="main-color w-5 h-5 mt-1" />
                                         <p className="max-w-xs">{text}</p>
@@ -164,7 +163,7 @@ const ChildrenTraining = () => {
             </AnimatedElement>
 
             {/* SECTION 7 - Call to action final */}
-            <AnimatedElement animation="fadeIn" delay={1400}>
+            <AnimatedElement animation="fadeIn" delay={400}>
                 <section className="flex flex-col py-10 px-5 md:px-20 items-start  md:gap-6">
                     <AnimatedText text="Chaque enfant mérite de se sentir à l’aise avec sa voix." type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color w-2/3 md:mb-4" />
                     <AnimatedText text="Offrez-lui un espace d’expression joyeux, encadré, et pensé pour l’aider à grandir avec assurance." type="reveal" delay={1600} className="max-w-3xl  mb-6" />

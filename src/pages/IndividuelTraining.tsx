@@ -36,7 +36,7 @@ const IndividuelTraining = () => {
   return (
     <>
       {/* Section Hero */}
-      <AnimatedElement animation="fadeIn" delay={200}>
+
         <div className="flex flex-col items-center justify-center gap-12 text-center mt-4 md:py-20 px-4 md:px-0">
           <div className="w-full mt-3 md:max-w-5xl text-start md:text-center flex flex-col gap-4">
             <AnimatedText text="Avancez 3 fois plus vite avec un coach dédié rien que pour vous." type="typing" speed={60} className="text-3xl md:text-5xl font-bold main-color uppercase" />
@@ -57,9 +57,9 @@ const IndividuelTraining = () => {
             </AnimatedElement>
           </div>
         </div>
-      </AnimatedElement>
+
       {/* SECTION 2 */}
-      <AnimatedElement animation="slideUp" delay={400}>
+
         <section className="flex flex-col md:flex-row items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img src="/images/individuel/why.jpg" alt="Formation individuelle" className="w-full rounded-2xl object-cover shadow-lg md:scale-90" />
@@ -69,9 +69,9 @@ const IndividuelTraining = () => {
             <AnimatedText text="Et si votre blocage à l’oral venait simplement du fait que vous n’avez jamais eu un espace personnalisé pour apprendre ? Avec la formation 1:1 Oralise, vous bénéficiez d’un programme unique, conçu autour de votre profil, de vos horaires et de vos ambitions." type="reveal" delay={800} className="text-base md:text-lg" />
           </div>
         </section>
-      </AnimatedElement>
+
       {/* SECTION 3 */}
-      <AnimatedElement animation="fadeIn" delay={600}>
+    
         <section className="flex flex-col md:flex-row-reverse items-center gap-8 py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img src="/images/individuel/whom.png" alt="Pour qui" className="w-full rounded-2xl object-cover " />
@@ -90,9 +90,9 @@ const IndividuelTraining = () => {
             </AnimatedElement>
           </div>
         </section>
-      </AnimatedElement>
+     
       {/* SECTION 4 */}
-      <AnimatedElement animation="slideUp" delay={800}>
+
         <section className="flex flex-col md:flex-row items-center gap-8  md:py-10 px-5 md:px-20">
           <div className="md:w-1/2">
             <img src="/images/individuel/receive.jpg" alt="Contenu de la formation" className="w-full rounded-2xl object-cover shadow-lg md:scale-90" />
@@ -108,13 +108,12 @@ const IndividuelTraining = () => {
             </ul>
           </div>
         </section>
-      </AnimatedElement>
+     
       {/* SECTION 5 */}
-      <AnimatedElement animation="fadeIn" delay={1000}>
         <section className="space-y-8 md:space-y-12 text-center py-10 px-5 md:px-20">
           <AnimatedText text="Les avantages Oralise (vs autres formations)" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <div className="grid md:grid-cols-2 gap-6 text-left">
-            <AnimatedElement animation="scaleIn" delay={1200}>
+            <AnimatedElement animation="scaleIn" delay={400}>
               <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70 rounded-2xl shadow-2xl  duration-300 hover:scale-95 ">
                 <h3 className="font-semibold text-2xl mb-2 main-color">Oralise 1:1</h3>
                 <ul className="list-disc list-inside space-y-1 dark:text-white">
@@ -126,7 +125,7 @@ const IndividuelTraining = () => {
                 </ul>
               </div>
             </AnimatedElement>
-            <AnimatedElement animation="scaleIn" delay={1400}>
+            <AnimatedElement animation="scaleIn" delay={400}>
               <div className="p-6 bg-main-color-opacity dark:bg-gray-800/70   rounded-2xl shadow-2xl   duration-300 hover:scale-95">
                 <h3 className="font-semibold text-2xl mb-2 main-color">Formations classiques</h3>
                 <ul className="list-disc list-inside space-y-1  dark:text-white">
@@ -140,9 +139,8 @@ const IndividuelTraining = () => {
             </AnimatedElement>
           </div>
         </section>
-      </AnimatedElement>
+     
       {/* SECTION 6 */}
-      <AnimatedElement animation="slideUp" delay={1200}>
         <section className="flex flex-col items-center gap-6 text-center py-10 px-5 md:px-20">
           <AnimatedText text="Prêt(e) à faire un vrai bond en avant ?" type="typing" speed={50} className="text-2xl md:text-4xl font-bold main-color" />
           <AnimatedText text="Avec la formation individuelle Oralise, vous ne suivez pas un cours : vous êtes accompagné, encadré, et valorisé. Vous progressez Vraiment !" type="reveal" delay={1400} className="max-w-3xl text-base md:text-lg" />
@@ -150,7 +148,6 @@ const IndividuelTraining = () => {
            <WhatsAppButton text="Commencer mon parcours individuel" textMessage="Bonjour Oralise, je suis intéressé(e) par votre formation individuelle et je voudrais débuter avec." className="w-fit"/>
           </AnimatedElement>
         </section>
-      </AnimatedElement>
     </>
   );
 };

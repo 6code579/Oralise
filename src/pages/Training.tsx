@@ -12,7 +12,6 @@ function Training() {
         <div className="space-y-16">
 
             {/* HERO */}
-            <AnimatedElement animation="fadeIn" delay={200}>
                 <section className="text-start md:text-center py-7 md:py-10 px-5 md:px-20 max-w-6xl mx-auto">
                     <AnimatedText 
                         text="Exprimez-vous. Dans la bonne langue, au bon rythme, avec la bonne méthode."
@@ -50,10 +49,8 @@ function Training() {
                     </AnimatedElement>
                </div>
             </section>
-            </AnimatedElement>
 
             {/* LANGUAGES */}
-            <AnimatedElement animation="slideUp" delay={400}>
                 <section className="px-5 md:px-20 max-w-5xl mx-auto space-y-10">
                 <Title title="Formations en langues" color />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -65,7 +62,6 @@ function Training() {
                         "Français pour enfants (6–12 ans)",
                         "Français pour ados (13–17 ans)",
                     ].map((label, i) => (
-                            <AnimatedElement key={i} animation="scaleIn" delay={600 + i * 100}>
                         <div
                             className="dark:bg-gray-800/70 rounded-2xl p-6 shadow-2xl hover:shadow-md  duration-300 hover:scale-90 "
                         >
@@ -84,14 +80,11 @@ function Training() {
                             </p>
                             <Button label='Je prends un rendez-vous' changeColor className=" mt-2 md:mt-3"/>
                         </div>
-                            </AnimatedElement>
                     ))}
                 </div>
             </section>
-            </AnimatedElement>
 
             {/* EXPRESSION & LEADERSHIP */}
-            <AnimatedElement animation="slideUp" delay={800}>
                 <section className="px-5 md:px-20 max-w-5xl  mx-auto space-y-10">
                 <Title title="Formations en expression, leadership & soft skills" color className="text-center" />
                     <AnimatedText 
@@ -140,7 +133,6 @@ function Training() {
                             desc: "Créer et délivrer un pitch oral clair, convaincant et professionnel.",
                         },
                     ].map((item, i) => (
-                            <AnimatedElement key={i} animation="scaleIn" delay={1200 + i * 150}>
                         <div
                             className=" rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-2"
                         >
@@ -152,14 +144,12 @@ function Training() {
                             <p className="dark:text-white  ">{item.desc}</p>
                             <Button label='Je prends un rendez-vous' changeColor to="/" className="mt-4 md:mt-4"/>
                         </div>
-                            </AnimatedElement>
                     ))}
                 </div>
             </section>
-            </AnimatedElement>
 
             {/* CTA */}
-            <AnimatedElement animation="fadeIn" delay={1200}>
+           
             <section className="text-start md:text-center md:py-16 px-4 max-w-4xl mx-auto space-y-6">
                     <AnimatedText 
                         text="Quand on travaille sa parole, on travaille sa posture. Et quand on change sa posture, tout change."
@@ -175,7 +165,7 @@ function Training() {
                 </div>
                     </AnimatedElement>
             </section>
-            </AnimatedElement>
+           
         </div>
     );
 }
