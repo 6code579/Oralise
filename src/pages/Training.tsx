@@ -132,8 +132,8 @@ function Training() {
                             subtitle: "Vendre une idée, une offre, un projet en 3 minutes.",
                             desc: "Créer et délivrer un pitch oral clair, convaincant et professionnel.",
                         },
-                    ].map((item, i) => (
-                        <div
+                    ].map((item,index) => (
+                        <div key={index}
                             className=" rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow space-y-2"
                         >
                             <div className="flex items-center gap-3 text-lg font-semibold main-color">
