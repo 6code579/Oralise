@@ -221,8 +221,8 @@ const Navbar = () => {
               <li>Email : <a href="mailto:contact@oralise.pro" className="hover:underline main-color">contact@oralise.pro</a></li>
               <li>Téléphone : <a href="tel:+212607041226" className="hover:underline main-color">+212 607041226</a></li>
               <li className="flex gap-3 mt-2">
-                <a href="https://www.facebook.com/profile.php?id=61571529371866"  target="_blank" aria-label="Facebook" className="hover:text-blue-600"><Facebook /></a>
-                <a href="#" aria-label="Instagram" className="hover:text-pink-500"><Instagram /></a>
+                <a href="https://www.facebook.com/share/1CiA8gdtMP/"  target="_blank" aria-label="Facebook" className="hover:text-blue-600"><Facebook /></a>
+                <a href="https://www.instagram.com/oralise.pro?igsh=MXJzaWZ6M3g4bHg3ZA==" aria-label="Instagram" className="hover:text-pink-500"><Instagram /></a>
                 <a href="#" aria-label="LinkedIn" className="hover:text-sky-500"><Linkedin /></a>
                 <a href="https://wa.me/212607041226"   target="_blank" aria-label="Message" className="hover:text-green-600"><MessageCircle /></a>
               </li>
